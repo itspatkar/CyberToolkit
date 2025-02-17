@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Title",
+        "url": "https://www.example.com/",
+        "source": "https://github.com/github",
+        "description": "Description",
+        "techniques": [
+            "technique"
+        ],
+        "categories": [
+            "category"
+        ],
+        "targets": [
+            "target"
+        ]
+    }
+]

@@ -1,14 +1,47 @@
 {
-    "techniques": [
-        "technique"
-    ],
-    "categories": [
-        "category"
-    ],
-    "targets": [
-        "target"
-    ],
-    "catRed": [
-        "red"
-    ]
+	"techniques": [
+		"digital_forensics",
+		"enumeration",
+		"fingerprinting",
+		"footprinting",
+		"password",
+		"pentesting",
+		"privilege_escalation",
+		"reconnaissance",
+		"sniffing",
+		"social_engineering",
+		"SQL_injection"
+	],
+	"categories": [
+		"active",
+		"data_extraction",
+		"exploit",
+		"hashing",
+		"network_scanner",
+		"OSINT",
+		"passive",
+		"search_engine",
+		"shell_generator",
+		"vulnerability_scanner"
+	],
+	"targets": [
+		"android",
+		"database",
+		"hardware",
+		"human",
+		"IoT",
+		"linux",
+		"mac",
+		"metadata",
+		"network",
+		"web",
+		"windows"
+	],
+	"catRed": [
+		"active",
+		"data_extraction",
+		"exploit",
+		"shell_generator",
+		"vulnerability_scanner"
+	]
 }

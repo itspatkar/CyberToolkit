@@ -2,14 +2,12 @@
 let selectedTags = new Set(); // Track selected tags
 let tagsJSON = {}; // Store Tags JSON
 let dataJSON = []; // Store Lists JSON
-let catRed = []; // Red Colored
 
 // Event listener for load JSON
 document.addEventListener("DOMContentLoaded", () => {
     loadJSON('assets/data/tags.json', (data) => {
         if (data) {
             tagsJSON = data;
-            catRed = tagsJSON['catRed'] || [];
             generateFilter();
         }
     });
@@ -88,11 +86,7 @@ function generateList() {
         if (Array.isArray(item.categories)) {
             item.categories.forEach(function(itemcategory) {
                 let category = document.createElement('span');
-                if (catRed.includes(itemcategory)) {
-                    category.classList.add('alert', 'alert-danger');
-                } else {
-                    category.classList.add('alert', 'alert-success');
-                }
+                category.classList.add('alert', 'alert-success');
                 category.setAttribute('data-tag', itemcategory);
                 category.textContent = capitalize(itemcategory);
                 filters.appendChild(category);
@@ -138,7 +132,7 @@ function generateFilter() {
     tagsJSON['techniques'].forEach(item => {
         let btn = document.createElement('button');
         btn.setAttribute('type', 'button');
-        btn.classList.add('btn', 'btn-primary', 'btn-sm');
+        btn.classList.add('btn', 'btn-outline-primary', 'btn-sm');
         btn.setAttribute('data-tag', item);
         btn.textContent = capitalize(item);
 
@@ -164,11 +158,7 @@ function generateFilter() {
     tagsJSON['categories'].forEach(item => {
         let btn = document.createElement('button');
         btn.setAttribute('type', 'button');
-        if (catRed.includes(item)) {
-            btn.classList.add('btn', 'btn-danger', 'btn-sm');
-        } else {
-            btn.classList.add('btn', 'btn-success', 'btn-sm');
-        }
+        btn.classList.add('btn', 'btn-outline-success', 'btn-sm');
         btn.setAttribute('data-tag', item);
         btn.textContent = capitalize(item);
 
@@ -194,7 +184,7 @@ function generateFilter() {
     tagsJSON['targets'].forEach(item => {
         let btn = document.createElement('button');
         btn.setAttribute('type', 'button');
-        btn.classList.add('btn', 'btn-secondary', 'btn-sm');
+        btn.classList.add('btn', 'btn-outline-secondary', 'btn-sm');
         btn.setAttribute('data-tag', item);
         btn.textContent = capitalize(item);
 

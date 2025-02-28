@@ -1,47 +1,51 @@
 {
-	"techniques": [
-		"digital_forensics",
-		"enumeration",
-		"fingerprinting",
-		"footprinting",
-		"password",
-		"pentesting",
-		"privilege_escalation",
-		"reconnaissance",
-		"sniffing",
-		"social_engineering",
-		"SQL_injection"
-	],
-	"categories": [
-		"active",
-		"data_extraction",
-		"exploit",
-		"hashing",
-		"network_scanner",
-		"OSINT",
-		"passive",
-		"search_engine",
-		"shell_generator",
-		"vulnerability_scanner"
-	],
-	"targets": [
-		"android",
-		"database",
-		"hardware",
-		"human",
-		"IoT",
-		"linux",
-		"mac",
-		"metadata",
-		"network",
-		"web",
-		"windows"
-	],
-	"catRed": [
-		"active",
-		"data_extraction",
-		"exploit",
-		"shell_generator",
-		"vulnerability_scanner"
-	]
+    "techniques": [
+        "digital_forensics",
+        "directory_traversal",
+        "enumeration",
+        "footprinting",
+        "malware_analysis",
+        "password",
+        "pentesting",
+        "post_exploitation",
+        "privilege_escalation",
+        "reconnaissance",
+        "sniffing",
+        "social_engineering",
+        "SQL_injection"
+    ],
+    "categories": [
+        "active",
+        "active_directory",
+        "credential_dumping",
+        "data_extraction",
+        "exploitation",
+        "fingerprinting",
+        "network_scanner",
+        "OSINT",
+        "passive",
+        "RAT",
+        "search_engine",
+        "shell_generator",
+        "vulnerability_database",
+        "vulnerability_scanner",
+        "WAF_detection",
+        "web_scraper",
+        "wordlist_generator"
+    ],
+    "targets": [
+        "android",
+        "database",
+        "hardware",
+        "IoT",
+        "linux",
+        "mac",
+        "malware",
+        "metadata",
+        "network",
+        "people",
+        "vulnerability_database",
+        "web",
+        "windows"
+    ]
 }

@@ -578,6 +578,24 @@
         ]
     },
     {
+        "name": "Nikto",
+        "url": "https://cirt.net/Nikto2",
+        "source": "https://github.com/sullo/nikto",
+        "description": "Nikto is an Open Source web server scanner which performs comprehensive tests against web servers for multiple items, including over 7,000 potentially dangerous files/programs, checks for outdated versions of over 1250 servers, and version specific problems on over 270 servers. It also checks for server configuration items such as the presence of multiple index files, HTTP server options, and will attempt to identify installed web servers and software.",
+        "techniques": [
+            "pentesting",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
         "name": "Nmap",
         "url": "https://nmap.org/",
         "source": "https://github.com/nmap/",
@@ -960,6 +978,27 @@
         ]
     },
     {
+        "name": "Sn1per",
+        "url": "https://sn1persecurity.com/wordpress/",
+        "source": "https://github.com/1N3/Sn1per",
+        "description": "Sn1per is an automated penetration testing tool for reconnaissance, vulnerability scanning, and web security assessment. It gathers subdomains, WHOIS data, DNS details, and other OSINT while scanning for vulnerabilities using tools like Nmap, Nikto, and OpenVAS. It detects web application threats such as SQL injection and XSS, performs brute-force attacks on SSH and FTP, and identifies open ports and running services.",
+        "techniques": [
+            "enumeration",
+            "pentesting",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "network_scanner",
+            "OSINT",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
         "name": "SQLMap",
         "url": "https://sqlmap.org/",
         "source": "https://github.com/sqlmapproject/sqlmap",
@@ -1123,6 +1162,25 @@
         ]
     },
     {
+        "name": "Uniscan",
+        "url": "https://uniscan.sourceforge.io/",
+        "source": "https://sourceforge.net/projects/uniscan/",
+        "description": "Uniscan is a simple Remote File Include, Local File Include and Remote Command Execution vulnerability scanner.",
+        "techniques": [
+            "pentesting",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner",
+            "passive"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
         "name": "URL Extractor",
         "url": "https://urlextractor.net/",
         "source": "https://urlextractor.net/",
@@ -1260,6 +1318,43 @@
         ],
         "categories": [
             "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
+        "name": "WPScan",
+        "url": "https://wpscan.com/",
+        "source": "https://github.com/wpscanteam/wpscan/",
+        "description": " WPScan WordPress security scanner. Written for security professionals and blog maintainers to test the security of their WordPress websites.",
+        "techniques": [
+            "pentesting",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
+        "name": "XSSer",
+        "url": "https://xsser.03c8.net/",
+        "source": "https://code.03c8.net/epsylon/xsser",
+        "description": "Cross-Site Scripter (aka XSSer) is an automated penetration testing tool designed to detect, exploit, and report Cross-Site Scripting (XSS) vulnerabilities in web applications. It supports automated scanning for XSS vulnerabilities, multiple types of XSS attacks, the ability to generate and obfuscate payloads, and integration with Tor for anonymous testing.",
+        "techniques": [
+            "pentesting",
+            "XSS"
+        ],
+        "categories": [
+            "active",
+            "exploitation",
             "vulnerability_scanner"
         ],
         "targets": [

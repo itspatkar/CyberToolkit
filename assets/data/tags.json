@@ -12,7 +12,8 @@
         "reconnaissance",
         "sniffing",
         "social_engineering",
-        "SQL_injection"
+        "SQL_injection",
+        "XSS"
     ],
     "categories": [
         "active",

@@ -2,6 +2,9 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: #edf2f7;
 }
+main {
+    margin: 1.5rem 6rem;
+}
 header {
     width: 100%;
     background-color: #1a202c;
@@ -63,7 +66,7 @@ a {
 }
 .lists {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 5px;
 }
 .list-item {
@@ -78,7 +81,18 @@ a {
 }
 
 /* Responsiveness */
+@media only screen and (max-width: 1400px) {
+    main {
+        margin: 1.5rem 3rem;
+    }
+    .lists {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 @media only screen and (max-width: 768px) {
+    main {
+        margin: 1.5rem 0;
+    }
     .navbar {
         padding: 10px 5px;
     }

@@ -1,7 +1,7 @@
 {
     "techniques": [
+        "defensive_security",
         "digital_forensics",
-        "directory_traversal",
         "enumeration",
         "footprinting",
         "malware_analysis",
@@ -18,8 +18,10 @@
     "categories": [
         "active",
         "active_directory",
+        "content_discovery",
         "credential_dumping",
         "data_extraction",
+        "directory_traversal",
         "exploitation",
         "fingerprinting",
         "network_scanner",

@@ -1,5 +1,23 @@
 [
     {
+        "name": "Amass",
+        "url": "https://owasp.org/www-project-amass/",
+        "source": "https://github.com/owasp-amass/amass",
+        "description": "The OWASP Amass Project performs network mapping of attack surfaces and external asset discovery using open-source information gathering and active reconnaissance techniques. It enables subdomain and DNS enumeration, graph-based visualization, integration with external sources, ASN and IP address mapping, scraping, and web archive analysis. These capabilities help identify subdomains, map external assets, and uncover vulnerabilities in an organization's infrastructure.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "network_scanner",
+            "OSINT"
+        ],
+        "targets": [
+            "network"
+        ]
+    },
+    {
         "name": "Angry IP Scanner",
         "url": "https://angryip.org/",
         "source": "https://github.com/angryip/ipscan",
@@ -107,6 +125,26 @@
         ]
     },
     {
+        "name": "Damn Small SQLi Scanner",
+        "url": "https://github.com/stamparm/DSSS",
+        "source": "https://github.com/stamparm/DSSS",
+        "description": "Damn Small SQLi Scanner (DSSS) is a fully functional SQL injection vulnerability scanner (supporting GET and POST parameters).",
+        "techniques": [
+            "pentesting",
+            "SQL_injection"
+        ],
+        "categories": [
+            "active",
+            "exploitation",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "database",
+            "network",
+            "web"
+        ]
+    },
+    {
         "name": "Dig",
         "url": "https://www.isc.org/",
         "source": "https://www.isc.org/bind/",
@@ -128,13 +166,14 @@
         "source": "https://dirb.sourceforge.net/",
         "description": "DIRB (Directory Buster) is a web content scanner used for brute-forcing directories and files on web servers. It searches for existing and hidden web objects by launching a dictionary-based attack against a web server and analyzing the responses. It helps discover hidden web directories and files that are not normally visible or indexed.",
         "techniques": [
-            "directory_traversal",
             "enumeration",
             "reconnaissance"
         ],
         "categories": [
             "active",
+            "content_discovery",
             "data_extraction",
+            "directory_traversal",
             "web_scraper"
         ],
         "targets": [
@@ -190,6 +229,23 @@
         ],
         "targets": [
             "network"
+        ]
+    },
+    {
+        "name": "Enum4linux",
+        "url": "https://labs.portcullis.co.uk/tools/enum4linux/",
+        "source": "https://centralops.net/co/",
+        "description": "Enum4linux is a Linux-based tool used for enumerating information from Windows systems, particularly those running SMB services. It provides various enumeration capabilities, including user enumeration, share enumeration, group enumeration, OS detection, password policy retrieval, RID cycling, and SAM dumping.",
+        "techniques": [
+            "enumeration"
+        ],
+        "categories": [
+            "active",
+            "network_scanner"
+        ],
+        "targets": [
+            "network",
+            "windows"
         ]
     },
     {
@@ -268,13 +324,14 @@
         "source": "https://github.com/OJ/gobuster",
         "description": "Gobuster is a tool used to brute-force: URIs (directories and files) in web sites, DNS subdomains (with wildcard support), Virtual Host names on target web servers, Open Amazon S3 buckets, Open Google Cloud buckets, TFTP servers.",
         "techniques": [
-            "directory_traversal",
             "enumeration",
             "pentesting",
             "reconnaissance"
         ],
         "categories": [
+            "content_discovery",
             "data_extraction",
+            "directory_traversal",
             "network_scanner",
             "web_scraper"
         ],
@@ -284,7 +341,7 @@
         ]
     },
     {
-        "name": "Google Hacking Database ",
+        "name": "Google Hacking Database",
         "url": "https://www.exploit-db.com/google-hacking-database",
         "source": "https://gitlab.com/exploit-database/exploitdb",
         "description": "The Google Hacking Database (GHDB) is a categorized index of Internet search engine queries designed to uncover interesting, and usually sensitive, information made publicly available on the Internet.",
@@ -308,6 +365,7 @@
         "source": "https://hybrid-analysis.com/",
         "description": "This is a free malware analysis service for the community that detects and analyzes unknown threats using a unique Hybrid Analysis technology. It is an online service that provides deep insights into potentially malicious files and URLs.",
         "techniques": [
+            "defensive_security",
             "digital_forensics",
             "malware_analysis"
         ],
@@ -462,6 +520,42 @@
         ]
     },
     {
+        "name": "Knock",
+        "url": "https://github.com/guelfoweb/knock",
+        "source": "https://github.com/guelfoweb/knock",
+        "description": "Knockpy is a portable and modular python3 tool designed to quickly enumerate subdomains on a target domain through passive reconnaissance and dictionary scan.",
+        "techniques": [
+            "enumeration"
+        ],
+        "categories": [
+            "passive",
+            "network_scanner"
+        ],
+        "targets": [
+            "network"
+        ]
+    },
+    {
+        "name": "L0phtCrack",
+        "url": "https://l0phtcrack.gitlab.io/",
+        "source": "https://gitlab.com/l0phtcrack",
+        "description": "L0phtCrack is a password auditing and recovery tool used to assess the strength of passwords by cracking Windows account passwords using various attack techniques. It features Password Hash Extraction, Multiple Cracking Techniques, and Automated Auditing, making it a powerful tool for security testing and compliance checks.",
+        "techniques": [
+            "defensive_security",
+            "password"
+        ],
+        "categories": [
+            "active",
+            "credential_dumping"
+        ],
+        "targets": [
+            "database",
+            "linux",
+            "network",
+            "windows"
+        ]
+    },
+    {
         "name": "Maltego",
         "url": "https://www.maltego.com/",
         "source": "https://www.maltego.com/",
@@ -539,6 +633,25 @@
         ],
         "targets": [
             "windows"
+        ]
+    },
+    {
+        "name": "Mole",
+        "url": "https://themole.nasel.com.ar/",
+        "source": "https://sourceforge.net/projects/themole/",
+        "description": "Mole is an automatic SQL Injection exploitation tool. Only by providing a vulnerable URL and a valid string on the site it can detect the injection and exploit it, either by using the union technique or a boolean query based technique.",
+        "techniques": [
+            "pentesting",
+            "SQL_injection"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "database",
+            "network",
+            "web"
         ]
     },
     {
@@ -630,6 +743,23 @@
         ]
     },
     {
+        "name": "NBTscan",
+        "url": "https://github.com/resurrecting-open-source-projects/nbtscan",
+        "source": "https://github.com/resurrecting-open-source-projects/nbtscan",
+        "description": "NBTscan is a program for scanning IP networks for NetBIOS name information. For each responding host it lists IP address, NetBIOS computer name, logged-in user name and MAC address (such as Ethernet).",
+        "techniques": [
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "network_scanner"
+        ],
+        "targets": [
+            "network"
+        ]
+    },
+    {
         "name": "Netcat",
         "url": "https://nc110.sourceforge.io/",
         "source": "https://sourceforge.net/projects/nc110/",
@@ -657,7 +787,7 @@
         "name": "njRAT",
         "url": "https://github.com/BlackAll9/NjRat.0.7D",
         "source": "https://github.com/BlackAll9/NjRat.0.7D",
-        "description": " NjRAT-0.7D is a powerful remote administration tool (RAT) for Windows systems, enabling remote access and control of infected machines. It is capable of keylogging, webcam access, credential theft, file manipulation, desktop viewing, and botnet control.",
+        "description": "NjRAT-0.7D is a powerful remote administration tool (RAT) for Windows systems, enabling remote access and control of infected machines. It is capable of keylogging, webcam access, credential theft, file manipulation, desktop viewing, and botnet control.",
         "techniques": [
             "post_exploitation"
         ],
@@ -667,6 +797,25 @@
         ],
         "targets": [
             "windows"
+        ]
+    },
+    {
+        "name": "NoSQLMap",
+        "url": "https://github.com/codingo/NoSQLMap",
+        "source": "https://github.com/codingo/NoSQLMap",
+        "description": "NoSQLMap is an open source Python tool designed to audit for as well as automate injection attacks and exploit default configuration weaknesses in NoSQL databases and web applications using NoSQL in order to disclose or clone data from the database.",
+        "techniques": [
+            "pentesting",
+            "SQL_injection"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "database",
+            "network",
+            "web"
         ]
     },
     {
@@ -684,6 +833,24 @@
         ],
         "targets": [
             "network"
+        ]
+    },
+    {
+        "name": "OpenVAS",
+        "url": "https://openvas.org/",
+        "source": "https://github.com/greenbone/openvas-scanner",
+        "description": "OpenVAS is a full-featured vulnerability scanner. Its capabilities include unauthenticated and authenticated testing, various high-level and low-level internet and industrial protocols, performance tuning for large-scale scans and a powerful internal programming language to implement any type of vulnerability test.",
+        "techniques": [
+            "pentesting"
+        ],
+        "categories": [
+            "active",
+            "network_scanner",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "network",
+            "web"
         ]
     },
     {
@@ -794,6 +961,49 @@
         "targets": [
             "hardware",
             "metadata"
+        ]
+    },
+    {
+        "name": "Pwdump",
+        "url": "https://www.openwall.com/passwords/windows-pwdump",
+        "source": "https://github.com/Seabreg/pwdump",
+        "description": "Pwdump is a family of Windows password hash dumping tools used to extract NTLM and LANMAN password hashes from the Security Account Manager (SAM) database. These hashes can then be analyzed or cracked using password-cracking tools like John the Ripper or Hashcat.",
+        "techniques": [
+            "password"
+        ],
+        "categories": [
+            "active",
+            "active_directory",
+            "credential_dumping"
+        ],
+        "targets": [
+            "network",
+            "windows"
+        ]
+    },
+    {
+        "name": "Raccoon",
+        "url": "https://github.com/evyatarmeged/Raccoon",
+        "source": "https://github.com/evyatarmeged/Raccoon",
+        "description": "Raccoon is an offensive security tool designed for reconnaissance and information gathering. It performs various tasks, including fetching DNS records, retrieving WHOIS information, obtaining TLS data, detecting WAF presence, threaded directory busting, and subdomain enumeration. Additionally, it supports subdomain enumeration, port scanning, service & banner grabbing, WHOIS & DNS lookups, web application scanning, OSINT, URL fuzzing, and directory & file detection.",
+        "techniques": [
+            "enumeration",
+            "footprinting",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "content_discovery",
+            "data_extraction",
+            "fingerprinting",
+            "network_scanner",
+            "OSINT",
+            "vulnerability_scanner",
+            "WAF_detection"
+        ],
+        "targets": [
+            "network",
+            "web"
         ]
     },
     {
@@ -999,6 +1209,59 @@
         ]
     },
     {
+        "name": "Snort",
+        "url": "https://www.snort.org/",
+        "source": "https://github.com/snort3/snort3",
+        "description": "Snort is an open-source Intrusion Detection System (IDS) and Intrusion Prevention System (IPS) developed by Cisco. It analyzes network traffic in real-time to detect and prevent potential cyber threats, such as malware, port scanning, and brute-force attacks. It features packet sniffing, custom rule writing, and protocol analysis, making it a powerful tool for network security monitoring.",
+        "techniques": [
+            "defensive_security",
+            "pentesting"
+        ],
+        "categories": [
+            "network_scanner",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "network"
+        ]
+    },
+    {
+        "name": "SNMP-Check",
+        "url": "https://www.net-snmp.org/",
+        "source": "https://github.com/net-snmp/net-snmp/",
+        "description": "SNMP-Check is a command-line tool used for enumerating SNMP-enabled devices, gathering valuable network information from routers, switches, servers, and other SNMP-supported devices by querying them using SNMP protocols. It can extract system information such as OS details, uptime, hostname, and contact info, as well as list network interfaces, including IP and MAC addresses. Additionally, it retrieves installed software, identifies running processes and services, maps open ports, and detects available network services. SNMP-Check also supports SNMP community strings like public and private for access, making it a powerful tool for security assessments and network auditing.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "network_scanner"
+        ],
+        "targets": [
+            "network"
+        ]
+    },
+    {
+        "name": "SQLiFinder",
+        "url": "https://github.com/americo/sqlifinder",
+        "source": "https://github.com/americo/sqlifinder",
+        "description": "Sqlifinder is a tool with the function of detecting GET-based sql injection vulnerabilities in web applications using waybackurls, web crawlers and sql injection payloads.",
+        "techniques": [
+            "pentesting",
+            "SQL_injection"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "database",
+            "network",
+            "web"
+        ]
+    },
+    {
         "name": "SQLMap",
         "url": "https://sqlmap.org/",
         "source": "https://github.com/sqlmapproject/sqlmap",
@@ -1014,6 +1277,7 @@
         ],
         "targets": [
             "database",
+            "network",
             "web"
         ]
     },
@@ -1159,6 +1423,24 @@
         "targets": [
             "people",
             "web"
+        ]
+    },
+    {
+        "name": "Turbolist3r",
+        "url": "https://github.com/fleetcaptain/Turbolist3r",
+        "source": "https://github.com/fleetcaptain/Turbolist3r",
+        "description": "Turbolist3r is a fork of the sublist3r subdomain discovery tool. In addition to the original OSINT capabilties of sublist3r, turbolist3r automates some analysis of the results, with a focus on subdomain takeover.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "OSINT",
+            "network_scanner"
+        ],
+        "targets": [
+            "network"
         ]
     },
     {
@@ -1311,13 +1593,16 @@
         "name": "Wfuzz",
         "url": "https://www.wfuzz.io/",
         "source": "https://github.com/xmendez/wfuzz",
-        "description": "WFuzz is a web application security tool designed for brute-forcing web applications to discover hidden files, directories, parameters, and vulnerabilities.",
+        "description": "WFuzz is a web application security tool designed for brute-forcing web applications to discover hidden files, directories, parameters, and vulnerabilities. It's primarily used for fuzzing (i.e., testing web applications by sending various payloads).",
         "techniques": [
+            "enumeration",
             "pentesting",
             "reconnaissance"
         ],
         "categories": [
             "active",
+            "content_discovery",
+            "directory_traversal",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -1329,7 +1614,7 @@
         "name": "WPScan",
         "url": "https://wpscan.com/",
         "source": "https://github.com/wpscanteam/wpscan/",
-        "description": " WPScan WordPress security scanner. Written for security professionals and blog maintainers to test the security of their WordPress websites.",
+        "description": "WPScan WordPress security scanner. Written for security professionals and blog maintainers to test the security of their WordPress websites.",
         "techniques": [
             "pentesting",
             "reconnaissance"

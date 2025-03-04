@@ -269,13 +269,13 @@ function addReadMoreBtns() {
         if (event.target.classList.contains('read-more')) {
             let description = event.target.previousElementSibling;
             description.classList.add('expanded');
-            event.target.classList.add('invisible');
+            event.target.classList.add('d-none');
             event.stopPropagation();
         }
     });
 
     document.addEventListener('click', () => {
         document.querySelectorAll('.description.expanded').forEach(desc => desc.classList.remove('expanded'));
-        document.querySelectorAll('.read-more.invisible').forEach(btn => btn.classList.remove('invisible'));
+        document.querySelectorAll('.read-more.d-none').forEach(btn => btn.classList.remove('d-none'));
     });
 }

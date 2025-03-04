@@ -1,4 +1,3 @@
-
 let selectedTags = new Set(); // Track selected tags
 let tagsJSON = {}; // Store Tags JSON
 let dataJSON = []; // Store Lists JSON
@@ -60,8 +59,13 @@ function generateList() {
 
         // Description
         let description = document.createElement('div');
-        description.classList.add('text-muted');
+        description.classList.add('text-muted', 'description');
         description.textContent = item.description;
+
+        // Read More
+        let read_more = document.createElement('span');
+        read_more.classList.add('read-more');
+        read_more.textContent = "Read More";
 
         // Link
         let source = document.createElement('a');
@@ -105,6 +109,7 @@ function generateList() {
 
         listItem.appendChild(title);
         listItem.appendChild(description);
+        listItem.appendChild(read_more);
         listItem.appendChild(source);
         listItem.appendChild(filters);
         dataList.appendChild(listItem);
@@ -112,6 +117,8 @@ function generateList() {
     });
 
     document.getElementById("counter").textContent = --counter;
+
+    addReadMoreBtns();
 }
 
 // Generate filters
@@ -254,4 +261,21 @@ function toggleTagFilter(button, tag) {
         }
     }
     filterItems();
+}
+
+// Read More btns
+function addReadMoreBtns() {
+    document.getElementById('dataList').addEventListener('click', event => {
+        if (event.target.classList.contains('read-more')) {
+            let description = event.target.previousElementSibling;
+            description.classList.add('expanded');
+            event.target.classList.add('invisible');
+            event.stopPropagation();
+        }
+    });
+
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.description.expanded').forEach(desc => desc.classList.remove('expanded'));
+        document.querySelectorAll('.read-more.invisible').forEach(btn => btn.classList.remove('invisible'));
+    });
 }

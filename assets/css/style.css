@@ -23,11 +23,13 @@ a {
     margin-right: 4px;
     margin-bottom: 4px;
     padding: 1px 4px;
+    font-size: 12.5px;
+    font-weight: 500;
 }
 .alert {
     margin: 4px 4px 0 0;
     padding: 0 2px;
-    font-size: 14px;
+    font-size: 12.5px;
 }
 .head-title {
     font-family: "Lobster Two", serif;
@@ -78,6 +80,25 @@ a {
 }
 .list-item a {
     font-size: 15px;
+}
+.description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.description.expanded {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    overflow: visible;
+}
+.read-more {
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+    color: blue;
 }
 
 /* Responsiveness */

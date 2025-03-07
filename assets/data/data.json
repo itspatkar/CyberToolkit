@@ -1,5 +1,46 @@
 [
     {
+        "name": "Aircrack-ng",
+        "url": "https://www.aircrack-ng.org/",
+        "source": "https://github.com/aircrack-ng/aircrack-ng",
+        "description": "Aircrack-ng is a comprehensive suite of tools designed to assess Wi-Fi network security. It focuses on various aspects of Wi-Fi security, including monitoring (packet capture), attacking (replay attacks, deauthentication, fake access points, and other techniques using packet injection), testing (evaluating Wi-Fi card and driver capabilities for packet capture and injection), and cracking (breaking WEP and WPA-PSK encryption for WPA1 and WPA2). Key Components of Aircrack-ng Suite: Airbase-ng, Aircrack-ng, Airdecap-ng, Airdrop-ng, Aireplay-ng, Airgraph-ng, Airmon-ng, Airodump-ng, Airolib-ng, Airtun-ng.",
+        "techniques": [
+            "pentesting",
+            "wireless"
+        ],
+        "categories": [
+            "exploitation",
+            "network_auditor",
+            "network_scanner"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
+        "name": "Airgeddon",
+        "url": "https://github.com/v1s1t0r1sh3r3/airgeddon",
+        "source": "https://github.com/v1s1t0r1sh3r3/airgeddon",
+        "description": "Airgeddon is a powerful, multi-functional Wi-Fi auditing tool designed for penetration testing and security assessments of wireless networks. It provides an automated framework to perform various attacks, including wireless network scanning, Evil Twin attacks (rogue AP), WPA/WPA2 handshake capture and cracking, WPS attacks using Reaver, Bully, and Pixie-Dust, Denial-of-Service (DoS) attacks, and Man-in-the-Middle (MITM) attacks. Additionally, it features an automated mode for easy execution, making it accessible for both beginners and advanced users in Wi-Fi security testing.",
+        "techniques": [
+            "pentesting",
+            "wireless"
+        ],
+        "categories": [
+            "exploitation",
+            "network_auditor",
+            "network_scanner",
+            "rogue_attack"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
         "name": "Amass",
         "url": "https://owasp.org/www-project-amass/",
         "source": "https://github.com/owasp-amass/amass",
@@ -30,6 +71,33 @@
             "network_scanner"
         ],
         "targets": [
+            "network"
+        ]
+    },
+    {
+        "name": "Bettercap",
+        "url": "https://www.bettercap.org/",
+        "source": "https://github.com/bettercap/bettercap",
+        "description": "The Swiss Army knife for WiFi, Bluetooth Low Energy, wireless HID hijacking, CAN-bus and IPv4 and IPv6 networks reconnaissance and MITM attacks. WiFi scanning, deauthentication and PMKID attacks, and automatic WPA/WPA2 handshake capture; Bluetooth Low Energy scanning, characteristics enumeration, and data read/write; 2.4GHz device scanning and MouseJacking attacks with HID frame injection (DuckyScript support); passive and active IP probing; ARP, DNS, DHCPv6, and NDP spoofing for MITM on IPv4/IPv6; scriptable proxies at packet, TCP, and HTTP/HTTPS levels; a network sniffer for credential harvesting and protocol fuzzing; a fast port scanner; and CAN-bus support for reading, injecting, fuzzing, DBC loading, and OBD2 PIDs parsing.",
+        "techniques": [
+            "enumeration",
+            "pentesting",
+            "reconnaissance",
+            "sniffing",
+            "spoofing",
+            "wireless"
+        ],
+        "categories": [
+            "active",
+            "credential_dumping",
+            "exploitation",
+            "network_scanner",
+            "swiss_army_knife",
+            "wireless_analyzer"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
             "network"
         ]
     },
@@ -103,8 +171,8 @@
             "wordlist_generator"
         ],
         "targets": [
-            "IoT",
             "network",
+            "password",
             "web"
         ]
     },
@@ -121,7 +189,8 @@
             "data_extraction"
         ],
         "targets": [
-            "hardware"
+            "hardware",
+            "password"
         ]
     },
     {
@@ -249,6 +318,52 @@
         ]
     },
     {
+        "name": "EAPHammer",
+        "url": "https://github.com/s0lst1c3/eaphammer",
+        "source": "https://github.com/s0lst1c3/eaphammer",
+        "description": "EAPHammer is a toolkit for performing targeted evil twin attacks against WPA2-Enterprise networks. Indirect wireless pivots using hostile portal attacks. It automates evil twin and credential harvesting attacks against 802.1X networks, including Evil Twin attacks on WPA2-EAP (Enterprise), MSCHAPv2 credential theft, automated Hostapd setup, captive portal attacks, support for both 2.4GHz and 5GHz frequencies, and Man-in-the-Middle (MITM) capabilities.",
+        "techniques": [
+            "pentesting",
+            "wireless"
+        ],
+        "categories": [
+            "credential_dumping",
+            "exploitation",
+            "rogue_attack"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
+        "name": "Ettercap",
+        "url": "https://www.ettercap-project.org/",
+        "source": "https://github.com/Ettercap/ettercap",
+        "description": "Ettercap is a comprehensive suite for man-in-the-middle (MITM) attacks. It features live connection sniffing, real-time content filtering, and various advanced network manipulation techniques. It supports both active and passive protocol dissection and offers numerous tools for network and host analysis. Commonly used for network security testing and penetration testing to identify vulnerabilities in both wired and wireless networks. Key features include MITM attacks, packet sniffing, active and passive network scanning, SSL/TLS stripping, ARP spoofing, DNS spoofing, and plugin support.",
+        "techniques": [
+            "enumeration",
+            "pentesting",
+            "reconnaissance",
+            "sniffing",
+            "spoofing",
+            "wireless"
+        ],
+        "categories": [
+            "active",
+            "exploitation",
+            "network_scanner",
+            "vulnerability_scanner",
+            "wireless_analyzer"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
         "name": "ExifTool",
         "url": "https://exiftool.org/",
         "source": "https://github.com/exiftool/exiftool",
@@ -284,6 +399,24 @@
         ]
     },
     {
+        "name": "Fern Wifi Cracker",
+        "url": "https://github.com/savio-code/fern-wifi-cracker",
+        "source": "https://github.com/savio-code/fern-wifi-cracker",
+        "description": "Fern WiFi Cracker is a GUI-based wireless security auditing tool for WiFi vulnerability assessments. It automates WiFi attacks on WEP, WPA, and WPA2 networks and includes features like WEP and WPA/WPA2 cracking, deauthentication attacks, session hijacking, MITM attacks, supports external tools such as Aircrack-ng, Reaver, xHydra, and more.",
+        "techniques": [
+            "wireless"
+        ],
+        "categories": [
+            "rogue_attack",
+            "wireless_analyzer"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
         "name": "Fierce",
         "url": "https://github.com/mschwager/fierce",
         "source": "https://github.com/mschwager/fierce",
@@ -296,6 +429,27 @@
             "network_scanner"
         ],
         "targets": [
+            "network"
+        ]
+    },
+    {
+        "name": "Fing - Network Tools",
+        "url": "https://www.fing.com/",
+        "source": "https://www.fing.com/",
+        "description": "Fing - Network Tools is a powerful network scanning and troubleshooting app that helps users analyze and secure their home or office network. It features a network scanner, device recognition (fingerprinting), port scanner, Wi-Fi security analysis, internet speed test, and network troubleshooting tools.",
+        "techniques": [
+            "defensive_security",
+            "footprinting",
+            "wireless"
+        ],
+        "categories": [
+            "network_scanner",
+            "vulnerability_scanner",
+            "wireless_analyzer"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
             "network"
         ]
     },
@@ -360,20 +514,38 @@
         ]
     },
     {
-        "name": "Hybrid Analysis",
-        "url": "https://hybrid-analysis.com/",
-        "source": "https://hybrid-analysis.com/",
-        "description": "This is a free malware analysis service for the community that detects and analyzes unknown threats using a unique Hybrid Analysis technology. It is an online service that provides deep insights into potentially malicious files and URLs.",
+        "name": "Hashcat",
+        "url": "https://hashcat.net/",
+        "source": "https://github.com/hashcat/hashcat",
+        "description": "Hashcat is the world's fastest and most advanced password recovery utility, supporting five unique attack modes and over 300 highly optimized hashing algorithms. It runs on CPUs, GPUs, and other hardware accelerators across Linux, Windows, and macOS and includes features for distributed password cracking. Hashcat uses brute force, dictionary attacks, rule-based attacks, and GPU acceleration to crack hashes efficiently. It supports a wide range of hashing algorithms, including MD5, SHA-256, NTLM, WPA/WPA2, bcrypt, and more.",
         "techniques": [
-            "defensive_security",
-            "digital_forensics",
-            "malware_analysis"
+            "password"
         ],
         "categories": [
-            "OSINT"
+            "active"
         ],
         "targets": [
-            "malware"
+            "password"
+        ]
+    },
+    {
+        "name": "Hcxtools",
+        "url": "https://github.com/ZerBea/hcxtools",
+        "source": "https://github.com/ZerBea/hcxtools",
+        "description": "Hcxtools is a small set of tools designed to convert packets from capture files into hash files for use with Hashcat or John the Ripper. It is a collection of WiFi penetration testing tools that capture and analyze WPA/WPA2/WPA3 authentication handshakes for offline password cracking. Widely used in network security assessments, it supports multiple attack vectors, including PMKID attacks, hash extraction, and raw frame capturing. Key features include WPA/WPA2/WPA3 handshake capture, PMKID attack support, deauthentication and disassociation attacks, AP-less attacks, conversion tools, and support for IoT & industrial WiFi networks.",
+        "techniques": [
+            "pentesting",
+            "wireless"
+        ],
+        "categories": [
+            "exploitation",
+            "network_auditor",
+            "rogue_attack"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
         ]
     },
     {
@@ -411,21 +583,23 @@
         ]
     },
     {
-        "name": "httprint",
-        "url": "https://net-square.com/httprint.html",
-        "source": "https://net-square.com/httprint.html",
-        "description": "httprint is a web server fingerprinting tool that helps identify web server software and versions based on their HTTP responses.",
+        "name": "Hostapd-Mana",
+        "url": "https://w1f1.net/",
+        "source": "https://github.com/sensepost/hostapd-mana",
+        "description": "Hostapd-Mana is a feature-rich rogue Wi-Fi access point tool. It can be used for various purposes, including tracking and deanonymizing devices (Snoopy), gathering corporate credentials from devices attempting EAP authentication (WPE), or attracting multiple devices to connect for MITM attacks. It enhances rogue access point (AP) attacks by bypassing common security mechanisms and capturing credentials from clients. Key features include Rogue Access Point (Evil Twin AP), EAP credential harvesting, Karma attack, SSID mimicry, SSL strip support, captive portal attacks, and integration with tools such as Bettercap, Aircrack-ng, and Responder.",
         "techniques": [
-            "reconnaissance"
+            "password",
+            "pentesting",
+            "wireless"
         ],
         "categories": [
-            "active",
-            "fingerprinting"
+            "exploitation",
+            "rogue_attack"
         ],
         "targets": [
-            "network",
-            "OSINT",
-            "web"
+            "hardware",
+            "IoT",
+            "network"
         ]
     },
     {
@@ -446,6 +620,24 @@
         ]
     },
     {
+        "name": "httprint",
+        "url": "https://net-square.com/httprint.html",
+        "source": "https://net-square.com/httprint.html",
+        "description": "httprint is a web server fingerprinting tool that helps identify web server software and versions based on their HTTP responses.",
+        "techniques": [
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "fingerprinting"
+        ],
+        "targets": [
+            "network",
+            "OSINT",
+            "web"
+        ]
+    },
+    {
         "name": "HTTrack Website Copier",
         "url": "https://www.httrack.com/",
         "source": "https://github.com/xroche/httrack",
@@ -459,6 +651,23 @@
         ],
         "targets": [
             "web"
+        ]
+    },
+    {
+        "name": "Hybrid Analysis",
+        "url": "https://hybrid-analysis.com/",
+        "source": "https://hybrid-analysis.com/",
+        "description": "This is a free malware analysis service for the community that detects and analyzes unknown threats using a unique Hybrid Analysis technology. It is an online service that provides deep insights into potentially malicious files and URLs.",
+        "techniques": [
+            "defensive_security",
+            "digital_forensics",
+            "malware_analysis"
+        ],
+        "categories": [
+            "OSINT"
+        ],
+        "targets": [
+            "malware"
         ]
     },
     {
@@ -479,6 +688,25 @@
         ],
         "targets": [
             "windows"
+        ]
+    },
+    {
+        "name": "inSSIDer",
+        "url": "https://www.metageek.com/inssider/",
+        "source": "https://www.metageek.com/inssider/",
+        "description": "inSSIDer is a Wi-Fi network analysis tool developed by MetaGeek. It helps users analyze and optimize their Wi-Fi networks by providing insights into signal strength, interference, and channel usage.",
+        "techniques": [
+            "footprinting",
+            "wireless"
+        ],
+        "categories": [
+            "network_scanner",
+            "wireless_analyzer"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
         ]
     },
     {
@@ -513,10 +741,7 @@
             "active"
         ],
         "targets": [
-            "database",
-            "linux",
-            "network",
-            "windows"
+            "password"
         ]
     },
     {
@@ -549,10 +774,43 @@
             "credential_dumping"
         ],
         "targets": [
-            "database",
-            "linux",
-            "network",
-            "windows"
+            "password"
+        ]
+    },
+    {
+        "name": "Linux Router",
+        "url": "https://github.com/garywill/linux-router",
+        "source": "https://github.com/garywill/linux-router",
+        "description": "Set up Linux as a router with a single command, supporting internet sharing, a transparent proxy (redsocks), WiFi hotspot, and IPv6. It can also be used for routing VMs and containers. Key features include creating a NATed sub-network, providing internet access, running a DHCP server (with RA), acting as a DNS server, supporting IPv6 behind a NATed LAN (similar to IPv4), creating a WiFi hotspot or access point, enabling a transparent proxy (redsocks), and hijacking port 53 packets for transparent DNS proxying.",
+        "techniques": [
+            "pentesting",
+            "wireless"
+        ],
+        "categories": [
+            "rogue_attack"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
+        "name": "Linux Wifi Hotspot",
+        "url": "https://github.com/lakinduakash/linux-wifi-hotspot",
+        "source": "https://github.com/lakinduakash/linux-wifi-hotspot",
+        "description": "Feature-rich wifi hotspot creator for Linux which provides both GUI and command-line interface. It is also able to create a hotspot using the same wifi card which is connected to an AP already ( Similar to Windows 10). The tool supports 2.4GHz and 5GHz frequencies, works with WPA3 encryption, and includes a bridged mode for sharing an existing connection. It also offers MAC filtering support and an easy setup with a single script.",
+        "techniques": [
+            "pentesting",
+            "wireless"
+        ],
+        "categories": [
+            "rogue_attack"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
         ]
     },
     {
@@ -572,6 +830,27 @@
         "targets": [
             "people",
             "web"
+        ]
+    },
+    {
+        "name": "MDK4",
+        "url": "https://aircrack-ng.org/",
+        "source": "https://github.com/aircrack-ng/mdk4",
+        "description": "MDK4 is a network penetration testing tool used for Wi-Fi security assessments. MDK4 is a new version of MDK3. It is specifically designed to test wireless networks by exploiting vulnerabilities in various Wi-Fi protocols, including WEP, WPA, WPA2, and WPA3. MDK4 can be used for multiple Wi-Fi attack scenarios, such as deauthentication attacks, authentication flooding, beacon flooding, probe request/response attacks, EAPOL attacks, TKIP MIC attacks, and Wi-Fi channel hopping attacks.",
+        "techniques": [
+            "password",
+            "pentesting",
+            "wireless"
+        ],
+        "categories": [
+            "exploitation",
+            "network_auditor",
+            "network_scanner"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
         ]
     },
     {
@@ -773,7 +1052,8 @@
         "categories": [
             "active",
             "network_scanner",
-            "shell_generator"
+            "shell_generator",
+            "swiss_army_knife"
         ],
         "targets": [
             "IoT",
@@ -982,6 +1262,25 @@
         ]
     },
     {
+        "name": "Reaver",
+        "url": "https://github.com/t6x/reaver-wps-fork-t6x",
+        "source": "https://github.com/tiagob0b/Reaver-WPS",
+        "description": "Reaver is a Wi-Fi hacking tool used to crack WPS (Wi-Fi Protected Setup) PINs and recover WPA/WPA2 passwords. It performs a brute force attack against Wifi Protected Setup (WPS) registrar PINs in order to recover WPA/WPA2 passphrases.",
+        "techniques": [
+            "password",
+            "pentesting",
+            "wireless"
+        ],
+        "categories": [
+            "exploitation"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
         "name": "Raccoon",
         "url": "https://github.com/evyatarmeged/Raccoon",
         "source": "https://github.com/evyatarmeged/Raccoon",
@@ -1019,7 +1318,8 @@
             "active",
             "fingerprinting",
             "network_scanner",
-            "OSINT"
+            "OSINT",
+            "swiss_army_knife"
         ],
         "targets": [
             "network",
@@ -1058,7 +1358,8 @@
         "categories": [
             "active",
             "active_directory",
-            "credential_dumping"
+            "credential_dumping",
+            "rogue_attack"
         ],
         "targets": [
             "windows"
@@ -1236,9 +1537,29 @@
         ],
         "categories": [
             "active",
+            "network_auditor",
             "network_scanner"
         ],
         "targets": [
+            "network"
+        ]
+    },
+    {
+        "name": "Sparrow WiFi",
+        "url": "https://github.com/ghostop14/sparrow-wifi",
+        "source": "https://github.com/ghostop14/sparrow-wifi",
+        "description": "Sparrow-wifi is an advanced graphical Wi-Fi and Bluetooth analyzer designed specifically for Linux systems. Developed as a next-generation tool for 2.4 GHz and 5 GHz Wi-Fi spectral awareness, it offers a comprehensive GUI-based alternative to tools like inSSIDer and LinSSID.",
+        "techniques": [
+            "footprinting",
+            "wireless"
+        ],
+        "categories": [
+            "network_scanner",
+            "wireless_analyzer"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
             "network"
         ]
     },
@@ -1516,6 +1837,25 @@
         ]
     },
     {
+        "name": "Wash",
+        "url": "https://github.com/t6x/reaver-wps-fork-t6x",
+        "source": "https://github.com/tiagob0b/Reaver-WPS",
+        "description": "Wash is a tool used alongside Reaver to identify WPS-enabled networks before launching an attack. It helps filter out networks that are vulnerable to WPS brute-force attacks by scanning nearby Wi-Fi networks and checking if WPS is enabled. Additionally, Wash determines whether a router is protected against Reaver attacks (e.g., if WPS Lockout is enabled) and displays essential details such as BSSID (MAC address), channel, and WPS version.",
+        "techniques": [
+            "pentesting",
+            "wireless"
+        ],
+        "categories": [
+            "network_scanner",
+            "wireless_analyzer"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
         "name": "Wayback Machine",
         "url": "https://web.archive.org/",
         "source": "https://web.archive.org/",
@@ -1534,6 +1874,46 @@
         "targets": [
             "database",
             "web"
+        ]
+    },
+    {
+        "name": "WepCrackGUI",
+        "url": "https://wepcrackgui.sourceforge.io/",
+        "source": "https://sourceforge.net/projects/wepcrackgui/",
+        "description": "A GUI for Aircrack-ng that can crack WEP and WPA networks, automatically scans for available networks, and provides fake authentication and injection support. Features include cracking WEP and WPA-encrypted networks, support for multiple interfaces, network scanning, packet injection, fake authentication (Open and Shared key), MAC address changer, hidden SSID discovery, WEP dictionary attack, and a password generator for WPA networks.",
+        "techniques": [
+            "pentesting",
+            "wireless"
+        ],
+        "categories": [
+            "rogue_attack",
+            "wireless_analyzer"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
+        "name": "Wifite",
+        "url": "https://github.com/kimocoder/wifite2",
+        "source": "https://github.com/derv82/wifite2",
+        "description": "Wifite is an automated wireless auditing tool designed for penetration testers and ethical hackers, using all known methods to retrieve the password of a wireless access point. It simplifies WiFi attacks by automating WEP, WPA, and WPA2 cracking techniques with tools like Aircrack-ng, Reaver, and Bully. Wifite is particularly useful for Evil Twin, WPS, and handshake capture attacks with minimal user input. Key features include automated WiFi hacking, WPA/WPA2 handshake capture, WPS attacks, Evil Twin attack, deauthentication attack, hidden SSID discovery, WiFi signal jammer, block specific accesspoints or multiple, and support for multiple WiFi adapters.",
+        "techniques": [
+            "pentesting",
+            "wireless"
+        ],
+        "categories": [
+            "credential_dumping",
+            "network_auditor",
+            "network_scanner",
+            "rogue_attack"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
         ]
     },
     {
@@ -1586,6 +1966,84 @@
             "passive"
         ],
         "targets": [
+            "network"
+        ]
+    },
+    {
+        "name": "Wi-Fi Scanner",
+        "url": "https://lizardsystems.com/wi-fi-scanner/",
+        "source": "https://lizardsystems.com/wi-fi-scanner/",
+        "description": "Wi-Fi Scanner is a Wi-Fi network analysis tool designed to help users find and troubleshoot wireless networks. It provides detailed information about nearby Wi-Fi networks, including the network name (SSID), signal strength (RSSI) and quality, MAC address (BSSID), channel, maximum and achievable data rates, security settings, channel usage, and bandwidth.",
+        "techniques": [
+            "footprinting",
+            "wireless"
+        ],
+        "categories": [
+            "network_scanner",
+            "wireless_analyzer"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
+        "name": "WiFi Analyzer",
+        "url": "https://vremsoftwaredevelopment.github.io/WiFiAnalyzer/",
+        "source": "https://github.com/VREMSoftwareDevelopment/WiFiAnalyzer",
+        "description": "WiFi Analyzer is a free, open-source Wi-Fi analysis tool available for Android devices. It helps users optimize their Wi-Fi networks by providing detailed insights into signal strength, channel usage, and interference. Key features include real-time signal strength monitoring, SSID & BSSID information, and more.",
+        "techniques": [
+            "footprinting",
+            "wireless"
+        ],
+        "categories": [
+            "network_scanner",
+            "wireless_analyzer"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
+        "name": "Wifiphisher",
+        "url": "https://wifiphisher.org/",
+        "source": "https://github.com/wifiphisher/wifiphisher",
+        "description": "Wifiphisher is a rogue access point framework designed for red team engagements and Wi-Fi security testing. It allows penetration testers to achieve a man-in-the-middle position against wireless clients by performing targeted Wi-Fi association attacks. Wifiphisher can also be used for victim-customized web phishing attacks, capturing credentials from third-party login pages or WPA/WPA2 Pre-Shared Keys, and even infecting victim devices with malware. Key features include Evil Twin attacks, Deauthentication attacks, Captive Portal Phishing, Payload Injection, Multiple Attack Modes, and the ability to bypass password cracking.",
+        "techniques": [
+            "pentesting",
+            "social_engineering",
+            "wireless"
+        ],
+        "categories": [
+            "credential_dumping",
+            "exploitation",
+            "rogue_attack"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
+        "name": "WiFiman",
+        "url": "https://www.ui.com/download",
+        "source": "https://www.ui.com/download",
+        "description": "WiFiman is a Wi-Fi and network analysis tool developed by Ubiquiti Inc. It helps users scan Wi-Fi networks, analyze signal strength, detect interference, and test internet speed.",
+        "techniques": [
+            "footprinting",
+            "wireless"
+        ],
+        "categories": [
+            "network_scanner",
+            "wireless_analyzer"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
             "network"
         ]
     },

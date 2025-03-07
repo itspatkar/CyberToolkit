@@ -12,7 +12,9 @@
         "reconnaissance",
         "sniffing",
         "social_engineering",
+        "spoofing",
         "SQL_injection",
+        "wireless",
         "XSS"
     ],
     "categories": [
@@ -24,16 +26,20 @@
         "directory_traversal",
         "exploitation",
         "fingerprinting",
+        "network_auditor",
         "network_scanner",
         "OSINT",
         "passive",
         "RAT",
+        "rogue_attack",
         "search_engine",
         "shell_generator",
+        "swiss_army_knife",
         "vulnerability_database",
         "vulnerability_scanner",
         "WAF_detection",
         "web_scraper",
+        "wireless_analyzer",
         "wordlist_generator"
     ],
     "targets": [
@@ -46,6 +52,7 @@
         "malware",
         "metadata",
         "network",
+        "password",
         "people",
         "vulnerability_database",
         "web",

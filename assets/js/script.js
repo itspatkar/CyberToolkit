@@ -38,7 +38,16 @@ function capitalize(phrase) {
 
 // Clean URL
 function cleanURL(url) {
-    return url.replace(/^https?:\/\//, '').replace(/\/+$/, '');
+    const maxLength = 45;
+    const cleanUrl = url.replace(/^https?:\/\//, '').replace(/\/+$/, '');
+
+    if (cleanUrl.length <= maxLength) return cleanUrl;
+
+    // Trim URL
+    const start = cleanUrl.slice(0, 15);
+    const end = cleanUrl.slice(-10);
+
+    return `${start}...${end}`;
 }
 
 // Generate list

@@ -24,6 +24,7 @@
     "categories": [
         "active",
         "active_directory",
+        "APK_analyzer",
         "content_discovery",
         "credential_dumping",
         "data_extraction",
@@ -51,6 +52,7 @@
         "android",
         "database",
         "hardware",
+        "iOS",
         "IoT",
         "linux",
         "mac",

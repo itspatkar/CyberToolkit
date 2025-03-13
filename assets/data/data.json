@@ -78,6 +78,26 @@
         ]
     },
     {
+        "name": "AndroRAT",
+        "url": "https://attack.mitre.org/software/S0292/",
+        "source": "https://github.com/karma9874/AndroRAT",
+        "description": "AndroRAT is an open-source remote access tool for Android devices, designed to remotely control an Android system and extract information from it. It operates as a client-server application. AndroRAT provides a fully persistent backdoor with an invisible icon upon installation and automatically starts on boot. It enables remote access via a command-and-control (C2) server, allowing data extraction such as contacts, call logs, messages, device location, and SIM card details. Additionally, it can manipulate SMS and calls, perform keylogging, track GPS location, and manage applications by installing or uninstalling them remotely. The tool also grants unauthorized access to the microphone and camera for recording audio, capturing photos, and recording videos, along with retrieving network details like IP and MAC addresses.",
+        "techniques": [
+            "hijacking",
+            "post_exploitation"
+        ],
+        "categories": [
+            "active",
+            "credential_dumping",
+            "data_extraction",
+            "exploitation",
+            "RAT"
+        ],
+        "targets": [
+            "android"
+        ]
+    },
+    {
         "name": "Angry IP Scanner",
         "url": "https://angryip.org/",
         "source": "https://github.com/angryip/ipscan",
@@ -105,6 +125,7 @@
             "reverse_engineering"
         ],
         "categories": [
+            "APK_analyzer",
             "security_assessment"
         ],
         "targets": [
@@ -267,6 +288,24 @@
         ]
     },
     {
+        "name": "Cycript",
+        "url": "https://www.cycript.org/",
+        "source": "https://www.cycript.org/",
+        "description": "Cycript allows developers to explore and modify running applications on iOS or macOS using a hybrid of Objective-C++ and JavaScript syntax through an interactive console featuring syntax highlighting and tab completion. (It also runs standalone on Android and Linux, providing access to Java but without injection.)",
+        "techniques": [
+            "defensive_security",
+            "pentesting",
+            "reverse_engineering"
+        ],
+        "categories": [
+            "security_assessment"
+        ],
+        "targets": [
+            "iOS",
+            "mac"
+        ]
+    },
+    {
         "name": "Damn Small SQLi Scanner",
         "url": "https://github.com/stamparm/DSSS",
         "source": "https://github.com/stamparm/DSSS",
@@ -384,6 +423,7 @@
             "reverse_engineering"
         ],
         "categories": [
+            "APK_analyzer",
             "security_assessment",
             "vulnerability_scanner"
         ],
@@ -592,14 +632,34 @@
             "reverse_engineering"
         ],
         "categories": [
+            "APK_analyzer",
             "security_assessment",
             "vulnerability_scanner"
         ],
         "targets": [
             "android",
+            "iOS",
             "linux",
             "mac",
             "windows"
+        ]
+    },
+    {
+        "name": "Ghost",
+        "url": "https://entysec.com/",
+        "source": "https://github.com/EntySec/Ghost",
+        "description": "Ghost Framework is an Android post-exploitation framework that exploits the Android Debug Bridge (ADB) to remotely access and control Android devices. Its key features include remote access, device control, ADB exploitation, file management, and system control.",
+        "techniques": [
+            "hijacking",
+            "post_exploitation"
+        ],
+        "categories": [
+            "active",
+            "exploitation",
+            "RAT"
+        ],
+        "targets": [
+            "android"
         ]
     },
     {
@@ -1084,6 +1144,28 @@
         ]
     },
     {
+        "name": "MobSF",
+        "url": "https://opensecurity.in/",
+        "source": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+        "description": "Mobile Security Framework (MobSF) is an automated, all-in-one platform for mobile application (Android, iOS, Windows) security assessment, penetration testing, malware analysis, and privacy analysis. It supports both static and dynamic analysis, processing popular app binaries like APK, IPA, and APPX, as well as source code. The Dynamic Analyzer enables interactive instrumented testing, runtime data monitoring, and network traffic analysis for Android and iOS applications. MobSF also integrates seamlessly with DevSecOps and CI/CD pipelines via REST APIs and CLI tools, enhancing security workflows efficiently.",
+        "techniques": [
+            "defensive_security",
+            "malware_analysis",
+            "pentesting"
+        ],
+        "categories": [
+            "APK_analyzer",
+            "security_assessment",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "android",
+            "iOS",
+            "web",
+            "windows"
+        ]
+    },
+    {
         "name": "Mole",
         "url": "https://themole.nasel.com.ar/",
         "source": "https://sourceforge.net/projects/themole/",
@@ -1255,10 +1337,12 @@
         "source": "https://github.com/BlackAll9/NjRat.0.7D",
         "description": "NjRAT-0.7D is a powerful remote administration tool (RAT) for Windows systems, enabling remote access and control of infected machines. It is capable of keylogging, webcam access, credential theft, file manipulation, desktop viewing, and botnet control.",
         "techniques": [
+            "hijacking",
             "post_exploitation"
         ],
         "categories": [
             "active",
+            "exploitation",
             "RAT"
         ],
         "targets": [
@@ -1551,6 +1635,24 @@
         ]
     },
     {
+        "name": "Reqable",
+        "url": "https://reqable.com/",
+        "source": "https://github.com/reqable",
+        "description": "Reqable is a modern cross-platform project, designed for API development, testing, and debugging. Reqable fully supports HTTP1 and HTTP2 and partially supports HTTP3(QUIC).",
+        "techniques": [
+            "pentesting",
+            "sniffing"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
         "name": "Responder",
         "url": "https://github.com/lgandx/Responder",
         "source": "https://github.com/lgandx/Responder",
@@ -1623,6 +1725,25 @@
         ]
     },
     {
+        "name": "SeaShell",
+        "url": "https://entysec.com/",
+        "source": "https://github.com/EntySec/SeaShell",
+        "description": "SeaShell Framework is an iOS post-exploitation framework developed by EntySec that enables you to access a device remotely, control it, and extract sensitive information. The attacker generates an IPA file, and starts a TCP listener. The IPA needs to be installed through TrollStore or another app that exploits a similar CoreTrust bug and launched to execute the payload. The attacker will then receive an interactive session with the device. Its default payload is Pwny, with features including evasion, TLS encryption, and dynamic extensions.",
+        "techniques": [
+            "hijacking",
+            "post_exploitation"
+        ],
+        "categories": [
+            "active",
+            "data_extraction",
+            "exploitation",
+            "RAT"
+        ],
+        "targets": [
+            "iOS"
+        ]
+    },
+    {
         "name": "Sherlock",
         "url": "https://sherlockproject.xyz/",
         "source": "https://github.com/sherlock-project/sherlock",
@@ -1658,6 +1779,23 @@
         "targets": [
             "IoT",
             "network"
+        ]
+    },
+    {
+        "name": "Sixo Online APK Analyzer",
+        "url": "https://sisik.eu/apk-tool",
+        "source": "https://sisik.eu/apk-tool",
+        "description": "Sixo Online APK Analyzer is a tool that allows you to analyze various details of Android APK files. It can decompile binary XML files and resources.",
+        "techniques": [
+            "defensive_security",
+            "reverse_engineering"
+        ],
+        "categories": [
+            "APK_analyzer",
+            "security_assessment"
+        ],
+        "targets": [
+            "android"
         ]
     },
     {

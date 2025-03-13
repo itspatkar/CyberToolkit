@@ -1,5 +1,22 @@
 [
     {
+        "name": "AdvPhishing",
+        "url": "https://github.com/Ignitetch/AdvPhishing",
+        "source": "https://github.com/Ignitetch/AdvPhishing",
+        "description": "AdvPhishing is an advanced phishing tool used for creating fake login pages to steal credentials. This tool generates realistic-looking login pages for various popular websites, such as Facebook, Instagram, Twitter, and Gmail, and captures the credentials entered by victims.",
+        "techniques": [
+            "phishing",
+            "social_engineering"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "people",
+            "web"
+        ]
+    },
+    {
         "name": "Aircrack-ng",
         "url": "https://www.aircrack-ng.org/",
         "source": "https://github.com/aircrack-ng/aircrack-ng",
@@ -25,6 +42,7 @@
         "source": "https://github.com/v1s1t0r1sh3r3/airgeddon",
         "description": "Airgeddon is a powerful, multi-functional Wi-Fi auditing tool designed for penetration testing and security assessments of wireless networks. It provides an automated framework to perform various attacks, including wireless network scanning, Evil Twin attacks (rogue AP), WPA/WPA2 handshake capture and cracking, WPS attacks using Reaver, Bully, and Pixie-Dust, Denial-of-Service (DoS) attacks, and Man-in-the-Middle (MITM) attacks. Additionally, it features an automated mode for easy execution, making it accessible for both beginners and advanced users in Wi-Fi security testing.",
         "techniques": [
+            "DoS",
             "pentesting",
             "wireless"
         ],
@@ -32,7 +50,8 @@
             "exploitation",
             "network_auditor",
             "network_scanner",
-            "rogue_attack"
+            "rogue_attack",
+            "security_assessment"
         ],
         "targets": [
             "hardware",
@@ -75,12 +94,31 @@
         ]
     },
     {
+        "name": "Apktool",
+        "url": "https://apktool.org/",
+        "source": "https://github.com/iBotPeaches/Apktool",
+        "description": "Apktool is a tool for reverse engineering third-party, closed, binary Android apps. It can decode resources to nearly their original form and rebuild them after modifications, enabling step-by-step debugging of smali code. It simplifies working with apps through a project-like file structure and automates repetitive tasks such as building APKs. It can disassemble, assemble, and analyze Android applications.",
+        "techniques": [
+            "digital_forensics",
+            "malware_analysis",
+            "pentesting",
+            "reverse_engineering"
+        ],
+        "categories": [
+            "security_assessment"
+        ],
+        "targets": [
+            "android"
+        ]
+    },
+    {
         "name": "Bettercap",
         "url": "https://www.bettercap.org/",
         "source": "https://github.com/bettercap/bettercap",
         "description": "The Swiss Army knife for WiFi, Bluetooth Low Energy, wireless HID hijacking, CAN-bus and IPv4 and IPv6 networks reconnaissance and MITM attacks. WiFi scanning, deauthentication and PMKID attacks, and automatic WPA/WPA2 handshake capture; Bluetooth Low Energy scanning, characteristics enumeration, and data read/write; 2.4GHz device scanning and MouseJacking attacks with HID frame injection (DuckyScript support); passive and active IP probing; ARP, DNS, DHCPv6, and NDP spoofing for MITM on IPv4/IPv6; scriptable proxies at packet, TCP, and HTTP/HTTPS levels; a network sniffer for credential harvesting and protocol fuzzing; a fast port scanner; and CAN-bus support for reading, injecting, fuzzing, DBC loading, and OBD2 PIDs parsing.",
         "techniques": [
             "enumeration",
+            "hijacking",
             "pentesting",
             "reconnaissance",
             "sniffing",
@@ -136,6 +174,41 @@
         ],
         "targets": [
             "network",
+            "web"
+        ]
+    },
+    {
+        "name": "CamOver",
+        "url": "https://entysec.com/",
+        "source": "https://github.com/EntySec/CamOver",
+        "description": "CamOver is a camera exploitation tool designed to disclose network camera admin passwords. It exploits vulnerabilities in popular camera models such as CCTV, GoAhead, and Netwave. The tool is optimized for efficiency, allowing users to target multiple cameras simultaneously using threading.",
+        "techniques": [
+            "hijacking"
+        ],
+        "categories": [
+            "active",
+            "exploitation"
+        ],
+        "targets": [
+            "hardware",
+            "network"
+        ]
+    },
+    {
+        "name": "CamPhish",
+        "url": "https://github.com/techchipnet/CamPhish",
+        "source": "https://github.com/techchipnet/CamPhish",
+        "description": "CamPhish is a technique used to capture cam shots from a target's phone front camera or PC webcam. It hosts a fake website on an in-built PHP server and utilizes Ngrok and Cloudflare Tunnel to generate a shareable link, allowing access over the internet. When the target opens the link, the website requests camera permissions, and if granted, the tool captures cam shots from the target's device. Additionally, it can obtain GPS location data, all by simply sending a link.",
+        "techniques": [
+            "hijacking",
+            "phishing",
+            "social_engineering"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "people",
             "web"
         ]
     },
@@ -301,6 +374,41 @@
         ]
     },
     {
+        "name": "Drozer",
+        "url": "https://labs.withsecure.com/tools/drozer",
+        "source": "https://github.com/WithSecureLabs/drozer",
+        "description": "Drozer is an open-source security assessment framework for the Android platform. It helps identify vulnerabilities in apps and devices by interacting with the Android Runtime, other apps' IPC endpoints, and the underlying operating system. Drozer also provides tools to analyze and utilize public Android exploits. It can perform actions similar to an installed application, such as leveraging Android’s Inter-Process Communication (IPC) mechanism. Its key features include Application Attack Surface Analysis, Privilege Escalation, Exploit Misconfigurations, Reverse Engineering, and Remote Exploitation.",
+        "techniques": [
+            "defensive_security",
+            "pentesting",
+            "reverse_engineering"
+        ],
+        "categories": [
+            "security_assessment",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "android"
+        ]
+    },
+    {
+        "name": "E-TOOL",
+        "url": "https://github.com/Expert-Hacker/E-TOOL",
+        "source": "https://github.com/Expert-Hacker/E-TOOL",
+        "description": "E-TOOL is a tool that can capture microphone voice notes and retrieve photos from a victim's phone. It works on both rooted and non-rooted Android devices.",
+        "techniques": [
+            "hijacking",
+            "phishing"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "android",
+            "hardware"
+        ]
+    },
+    {
         "name": "Enum4linux",
         "url": "https://labs.portcullis.co.uk/tools/enum4linux/",
         "source": "https://centralops.net/co/",
@@ -404,6 +512,7 @@
         "source": "https://github.com/savio-code/fern-wifi-cracker",
         "description": "Fern WiFi Cracker is a GUI-based wireless security auditing tool for WiFi vulnerability assessments. It automates WiFi attacks on WEP, WPA, and WPA2 networks and includes features like WEP and WPA/WPA2 cracking, deauthentication attacks, session hijacking, MITM attacks, supports external tools such as Aircrack-ng, Reaver, xHydra, and more.",
         "techniques": [
+            "hijacking",
             "wireless"
         ],
         "categories": [
@@ -473,6 +582,27 @@
         ]
     },
     {
+        "name": "Frida",
+        "url": "https://frida.re/",
+        "source": "https://github.com/frida/frida",
+        "description": "Frida is a powerful dynamic instrumentation toolkit used for reverse engineering, security research, and application debugging. It allows developers and researchers to inject JavaScript or Python code into running applications on platforms like Windows, macOS, Linux, iOS, and Android. Frida is commonly used for mobile app testing, bypassing root or jailbreak detection, reverse engineering, and cybersecurity research.",
+        "techniques": [
+            "defensive_security",
+            "pentesting",
+            "reverse_engineering"
+        ],
+        "categories": [
+            "security_assessment",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "android",
+            "linux",
+            "mac",
+            "windows"
+        ]
+    },
+    {
         "name": "Gobuster",
         "url": "https://github.com/OJ/gobuster",
         "source": "https://github.com/OJ/gobuster",
@@ -514,6 +644,25 @@
         ]
     },
     {
+        "name": "HACK-CAMERA",
+        "url": "https://github.com/hackerxphantom/HACK-CAMERA",
+        "source": "https://github.com/hackerxphantom/HACK-CAMERA",
+        "description": "Hack a victim's Android camera using a link with Termux or Kali Linux. Capture IP address, location, device type, and browser information. Supports dual tunneling using Cloudflare and Ngrok for secure access.",
+        "techniques": [
+            "hijacking",
+            "phishing",
+            "social_engineering"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "android",
+            "IoT",
+            "hardware"
+        ]
+    },
+    {
         "name": "Hashcat",
         "url": "https://hashcat.net/",
         "source": "https://github.com/hashcat/hashcat",
@@ -540,7 +689,8 @@
         "categories": [
             "exploitation",
             "network_auditor",
-            "rogue_attack"
+            "rogue_attack",
+            "security_assessment"
         ],
         "targets": [
             "hardware",
@@ -783,6 +933,7 @@
         "source": "https://github.com/garywill/linux-router",
         "description": "Set up Linux as a router with a single command, supporting internet sharing, a transparent proxy (redsocks), WiFi hotspot, and IPv6. It can also be used for routing VMs and containers. Key features include creating a NATed sub-network, providing internet access, running a DHCP server (with RA), acting as a DNS server, supporting IPv6 behind a NATed LAN (similar to IPv4), creating a WiFi hotspot or access point, enabling a transparent proxy (redsocks), and hijacking port 53 packets for transparent DNS proxying.",
         "techniques": [
+            "hijacking",
             "pentesting",
             "wireless"
         ],
@@ -811,6 +962,23 @@
             "hardware",
             "IoT",
             "network"
+        ]
+    },
+    {
+        "name": "LOIC",
+        "url": "https://github.com/NewEraCracker/LOIC/",
+        "source": "https://github.com/NewEraCracker/LOIC/",
+        "description": "Low Orbit Ion Cannon (LOIC) is an open source network stress tool, written in C#. LOIC is based on Praetox's LOIC project.",
+        "techniques": [
+            "DoS",
+            "pentesting"
+        ],
+        "categories": [
+            "active",
+            "exploitation"
+        ],
+        "targets": [
+            "android"
         ]
     },
     {
@@ -845,7 +1013,8 @@
         "categories": [
             "exploitation",
             "network_auditor",
-            "network_scanner"
+            "network_scanner",
+            "security_assessment"
         ],
         "targets": [
             "hardware",
@@ -930,6 +1099,23 @@
         "targets": [
             "database",
             "network",
+            "web"
+        ]
+    },
+    {
+        "name": "Mrphish",
+        "url": "https://www.noob-hackers.com/",
+        "source": "https://github.com/noob-hackers/mrphish",
+        "description": "MrPhish is a Bash-based script officially designed for phishing social media accounts with port forwarding and OTP bypass control. This tool works on both rooted and non-rooted Android devices.",
+        "techniques": [
+            "phishing",
+            "social_engineering"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "people",
             "web"
         ]
     },
@@ -1208,6 +1394,25 @@
         ]
     },
     {
+        "name": "PhoneSploit Pro",
+        "url": "https://github.com/AzeemIdrisi/PhoneSploit-Pro",
+        "source": "https://github.com/AzeemIdrisi/PhoneSploit-Pro",
+        "description": "An all-in-one hacking tool designed to remotely exploit Android devices using ADB and the Metasploit Framework to establish a Meterpreter session. This tool can automatically create, install, and execute payloads on a target device using Metasploit Framework and ADB, enabling complete control of the Android device in a single click. It streamlines the process of payload creation, installation, and execution, making penetration testing and vulnerability assessments more efficient.",
+        "techniques": [
+            "hijacking",
+            "pentesting"
+        ],
+        "categories": [
+            "active",
+            "exploitation",
+            "security_assessment",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "android"
+        ]
+    },
+    {
         "name": "Photon",
         "url": "https://github.com/s0md3v/Photon",
         "source": "https://github.com/s0md3v/Photon",
@@ -1387,7 +1592,7 @@
     },
     {
         "name": "RustScan",
-        "url": "https://rustscan.github.io/RustScan/",
+        "url": "https://github.com/RustScan/RustScan",
         "source": "https://github.com/RustScan/RustScan",
         "description": "A modern port scanner designed for high-speed scanning of open ports on target machines, featuring full scripting engine support. It can automatically pipe results into Nmap or utilize custom scripts for further analysis.",
         "techniques": [
@@ -1502,6 +1707,7 @@
             "active",
             "network_scanner",
             "OSINT",
+            "security_assessment",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -1538,10 +1744,29 @@
         "categories": [
             "active",
             "network_auditor",
-            "network_scanner"
+            "network_scanner",
+            "security_assessment"
         ],
         "targets": [
             "network"
+        ]
+    },
+    {
+        "name": "Social-Engineer Toolkit (SET)",
+        "url": "https://www.trustedsec.com/",
+        "source": "https://github.com/trustedsec/social-engineer-toolkit",
+        "description": "The Social-Engineer Toolkit is an open-source penetration testing framework designed for social engineering.",
+        "techniques": [
+            "phishing",
+            "social_engineering"
+        ],
+        "categories": [
+            "active",
+            "credential_dumping"
+        ],
+        "targets": [
+            "people",
+            "web"
         ]
     },
     {
@@ -1600,6 +1825,26 @@
             "database",
             "network",
             "web"
+        ]
+    },
+    {
+        "name": "StormBreaker",
+        "url": "https://github.com/ultrasecurity/Storm-Breaker",
+        "source": "https://github.com/ultrasecurity/Storm-Breaker",
+        "description": "Storm-Breaker is a social engineering tool that allows access to a target's webcam, microphone, and location using Python, JavaScript, and PHP. It can obtain device information without requiring explicit permission, access location data specifically from smartphones, and remotely control the webcam and microphone.",
+        "techniques": [
+            "hijacking",
+            "phishing",
+            "social_engineering"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "android",
+            "hardware",
+            "IoT",
+            "people"
         ]
     },
     {
@@ -1724,24 +1969,6 @@
         ],
         "targets": [
             "network",
-            "people",
-            "web"
-        ]
-    },
-    {
-        "name": "The Social-Engineer Toolkit (SET)",
-        "url": "https://www.trustedsec.com/",
-        "source": "https://github.com/trustedsec/social-engineer-toolkit",
-        "description": "The Social-Engineer Toolkit is an open-source penetration testing framework designed for social engineering.",
-        "techniques": [
-            "pentesting",
-            "social_engineering"
-        ],
-        "categories": [
-            "active",
-            "exploitation"
-        ],
-        "targets": [
             "people",
             "web"
         ]
@@ -2014,6 +2241,7 @@
         "description": "Wifiphisher is a rogue access point framework designed for red team engagements and Wi-Fi security testing. It allows penetration testers to achieve a man-in-the-middle position against wireless clients by performing targeted Wi-Fi association attacks. Wifiphisher can also be used for victim-customized web phishing attacks, capturing credentials from third-party login pages or WPA/WPA2 Pre-Shared Keys, and even infecting victim devices with malware. Key features include Evil Twin attacks, Deauthentication attacks, Captive Portal Phishing, Payload Injection, Multiple Attack Modes, and the ability to bypass password cracking.",
         "techniques": [
             "pentesting",
+            "phishing",
             "social_engineering",
             "wireless"
         ],

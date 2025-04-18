@@ -1,5 +1,21 @@
 [
     {
+        "name": "AADInternals",
+        "url": "https://aadinternals.com/",
+        "source": "https://github.com/Gerenios/AADInternals",
+        "description": "AADInternals and AADInternals-Endpoints toolkits are PowerShell modules containing tools for administering and hacking Entra ID (ex. Azure AD), Office 365, and Entra ID related endpoints. It is listed in MITRE ATT&CK with id S0677.",
+        "techniques": [
+            "cloud_attack",
+            "exploitation"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
         "name": "AdvPhishing",
         "url": "https://github.com/Ignitetch/AdvPhishing",
         "source": "https://github.com/Ignitetch/AdvPhishing",
@@ -22,10 +38,10 @@
         "source": "https://github.com/aircrack-ng/aircrack-ng",
         "description": "Aircrack-ng is a comprehensive suite of tools designed to assess Wi-Fi network security. It focuses on various aspects of Wi-Fi security, including monitoring (packet capture), attacking (replay attacks, deauthentication, fake access points, and other techniques using packet injection), testing (evaluating Wi-Fi card and driver capabilities for packet capture and injection), and cracking (breaking WEP and WPA-PSK encryption for WPA1 and WPA2). Key Components of Aircrack-ng Suite: Airbase-ng, Aircrack-ng, Airdecap-ng, Airdrop-ng, Aireplay-ng, Airgraph-ng, Airmon-ng, Airodump-ng, Airolib-ng, Airtun-ng.",
         "techniques": [
-            "wireless"
+            "exploitation",
+            "wireless_attack"
         ],
         "categories": [
-            "exploitation",
             "network_auditor",
             "network_scanner"
         ],
@@ -42,14 +58,14 @@
         "description": "Airgeddon is a powerful, multi-functional Wi-Fi auditing tool designed for penetration testing and security assessments of wireless networks. It provides an automated framework to perform various attacks, including wireless network scanning, Evil Twin attacks (rogue AP), WPA/WPA2 handshake capture and cracking, WPS attacks using Reaver, Bully, and Pixie-Dust, Denial-of-Service (DoS) attacks, and Man-in-the-Middle (MITM) attacks. Additionally, it features an automated mode for easy execution, making it accessible for both beginners and advanced users in Wi-Fi security testing.",
         "techniques": [
             "DoS",
+            "exploitation",
             "vulnerability_assessment",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
-            "exploitation",
             "network_auditor",
             "network_scanner",
-            "rogue_attack"
+            "rogue_access_point"
         ],
         "targets": [
             "hardware",
@@ -69,10 +85,29 @@
         "categories": [
             "active",
             "network_scanner",
-            "OSINT"
+            "OSINT",
+            "subdomain"
         ],
         "targets": [
             "network"
+        ]
+    },
+    {
+        "name": "Androguard",
+        "url": "https://androguard.readthedocs.io/",
+        "source": "https://github.com/androguard/androguard",
+        "description": "Androguard is a comprehensive Python-based tool designed specifically for analyzing and reverse engineering Android application files. It is compatible exclusively with Python 3 and provides extensive support for working with various Android components. These include DEX and ODEX files, APK packages, Android’s binary XML format, and Android resource files. Androguard also enables disassembly of DEX/ODEX bytecode and includes a decompiler to convert these files into a more human-readable format, making it a powerful asset for security researchers and penetration testers.",
+        "techniques": [
+            "digital_forensics",
+            "malware_analysis",
+            "reverse_engineering",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "APK_analyzer"
+        ],
+        "targets": [
+            "android"
         ]
     },
     {
@@ -82,14 +117,13 @@
         "description": "AndroRAT is an open-source remote access tool for Android devices, designed to remotely control an Android system and extract information from it. It operates as a client-server application. AndroRAT provides a fully persistent backdoor with an invisible icon upon installation and automatically starts on boot. It enables remote access via a command-and-control (C2) server, allowing data extraction such as contacts, call logs, messages, device location, and SIM card details. Additionally, it can manipulate SMS and calls, perform keylogging, track GPS location, and manage applications by installing or uninstalling them remotely. The tool also grants unauthorized access to the microphone and camera for recording audio, capturing photos, and recording videos, along with retrieving network details like IP and MAC addresses.",
         "techniques": [
             "hijacking",
+            "exploitation",
             "post_exploitation",
             "remote_code_execution"
         ],
         "categories": [
             "active",
             "credential_dumping",
-            "data_extraction",
-            "exploitation",
             "RAT"
         ],
         "targets": [
@@ -113,6 +147,22 @@
         ]
     },
     {
+        "name": "APK Editor Studio",
+        "url": "https://qwertycube.com/apk-editor-studio/download/",
+        "source": "https://github.com/kefir500/apk-editor-studio",
+        "description": "APK Editor Studio is a powerful yet easy-to-use APK reverse-engineering tool. It allows you to easily extract, edit, or replace APK resources. With APK Editor Studio, you can change the Android application icon and title, remove unwanted permissions, explore the internal structure of an app, automatically sign APK, install it on your device, and much more. Lots of handy built-in tools will cover all your needs, from making minor changes to creating full-fledged APK mods.",
+        "techniques": [
+            "malware_analysis",
+            "reverse_engineering"
+        ],
+        "categories": [
+            "APK_analyzer"
+        ],
+        "targets": [
+            "android"
+        ]
+    },
+    {
         "name": "Apktool",
         "url": "https://apktool.org/",
         "source": "https://github.com/iBotPeaches/Apktool",
@@ -131,22 +181,92 @@
         ]
     },
     {
+        "name": "Autopsy",
+        "url": "https://www.autopsy.com/",
+        "source": "https://www.sleuthkit.org/autopsy/",
+        "description": "Autopsy is a free, open-source digital forensics tool that provides a user-friendly interface for analyzing hard drives, smartphones, and other digital evidence. Built on The Sleuth Kit, it helps investigators recover deleted files, analyze browser history, extract metadata, and create activity timelines, making it widely used in cybercrime investigations, law enforcement, and cybersecurity.",
+        "techniques": [
+            "digital_forensics"
+        ],
+        "categories": [
+            "OSINT"
+        ],
+        "targets": [
+            "files",
+            "hardware"
+        ]
+    },
+    {
+        "name": "AWS Recon",
+        "url": "https://github.com/joshlarsen/aws-recon",
+        "source": "https://github.com/joshlarsen/aws-recon",
+        "description": "Multi-threaded AWS inventory collection tool with a focus on security-relevant resources and metadata. This tool was created to facilitate efficient collection of a large amount of AWS resource attributes and metadata. It aims to collect nearly everything that is relevant to the security configuration and posture of an AWS environment.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
+        "name": "AzureADRecon",
+        "url": "https://github.com/adrecon/AzureADRecon",
+        "source": "https://github.com/adrecon/AzureADRecon",
+        "description": "AzureADRecon is a tool which extracts and combines various artefacts (as highlighted below) out of an Azure AD environment with a valid credential. The information can be presented in a specially formatted Microsoft Excel report that includes summary views with metrics to facilitate analysis and provide a holistic picture of the current state of the target environment.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
+        "name": "BeEF",
+        "url": "https://beefproject.com/",
+        "source": "https://github.com/beefproject/beef",
+        "description": "BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser. Amid growing concerns about web-borne attacks against clients, including mobile clients, BeEF allows the professional penetration tester to assess the actual security posture of a target environment by using client-side attack vectors.",
+        "techniques": [
+            "exploitation",
+            "social_engineering",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "OSINT"
+        ],
+        "targets": [
+            "files",
+            "hardware"
+        ]
+    },
+    {
         "name": "Bettercap",
         "url": "https://www.bettercap.org/",
         "source": "https://github.com/bettercap/bettercap",
         "description": "The Swiss Army knife for WiFi, Bluetooth Low Energy, wireless HID hijacking, CAN-bus and IPv4 and IPv6 networks reconnaissance and MITM attacks. WiFi scanning, deauthentication and PMKID attacks, and automatic WPA/WPA2 handshake capture; Bluetooth Low Energy scanning, characteristics enumeration, and data read/write; 2.4GHz device scanning and MouseJacking attacks with HID frame injection (DuckyScript support); passive and active IP probing; ARP, DNS, DHCPv6, and NDP spoofing for MITM on IPv4/IPv6; scriptable proxies at packet, TCP, and HTTP/HTTPS levels; a network sniffer for credential harvesting and protocol fuzzing; a fast port scanner; and CAN-bus support for reading, injecting, fuzzing, DBC loading, and OBD2 PIDs parsing.",
         "techniques": [
             "enumeration",
+            "exploitation",
             "hijacking",
             "reconnaissance",
             "sniffing",
             "spoofing",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
             "active",
             "credential_dumping",
-            "exploitation",
             "network_scanner",
             "wireless_analyzer"
         ],
@@ -178,11 +298,49 @@
         ]
     },
     {
+        "name": "Bucket Flaws",
+        "url": "https://github.com/nikhil1232/Bucket-Flaws",
+        "source": "https://github.com/nikhil1232/Bucket-Flaws",
+        "description": "Bucket Flaws (S3 Bucket Mass Scanner) is a simple, lightweight script that takes a list of bucket names and checks for common S3 bucket misconfigurations.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
+        "name": "BucketLoot",
+        "url": "https://github.com/redhuntlabs/BucketLoot",
+        "source": "https://github.com/redhuntlabs/BucketLoot",
+        "description": "BucketLoot is an automated S3-compatible Bucket inspector that can help users extract assets, flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
         "name": "Burp Suite",
         "url": "https://portswigger.net/",
         "source": "https://github.com/PortSwigger",
         "description": "Burp Suite is a Java-based web application vulnerability scanner and penetration testing framework, allowing for the interception and manipulation of HTTP/HTTPS traffic between a browser and server.",
         "techniques": [
+            "directory_traversal",
+            "exploitation",
             "hijacking",
             "sniffing",
             "SQL_injection",
@@ -191,12 +349,27 @@
         ],
         "categories": [
             "active",
-            "prime",
             "vulnerability_scanner"
         ],
         "targets": [
             "network",
             "web"
+        ]
+    },
+    {
+        "name": "Bytecode Viewer",
+        "url": "https://bytecodeviewer.com/",
+        "source": "https://github.com/Konloch/bytecode-viewer",
+        "description": "Bytecode Viewer - a lightweight user-friendly Java/Android Bytecode Viewer, Decompiler & More.",
+        "techniques": [
+            "reverse_engineering"
+        ],
+        "categories": [
+            "active",
+            "APK_analyzer"
+        ],
+        "targets": [
+            "android"
         ]
     },
     {
@@ -246,7 +419,6 @@
         "categories": [
             "network_scanner",
             "passive",
-            "prime",
             "web_app"
         ],
         "targets": [
@@ -261,15 +433,137 @@
         "source": "https://github.com/digininja/CeWL",
         "description": "CeWL (Custom Word List generator) is a tool used for creating wordlists by crawling a specified URL and extracting words from it. It is used to create custom wordlists for password cracking or dictionary attacks. It can scan web pages recursively to gather more words and extract metadata from documents like PDFs and Office files.",
         "techniques": [
-            "password"
+            "password_attack"
         ],
         "categories": [
-            "data_extraction",
             "wordlist_generator"
         ],
         "targets": [
-            "network",
-            "password",
+            "web"
+        ]
+    },
+    {
+        "name": "Cloud Container Attack Tool (CCAT)",
+        "url": "https://rhinosecuritylabs.com/aws/cloud-container-attack-tool/",
+        "source": "https://github.com/RhinoSecurityLabs/ccat",
+        "description": "Cloud Container Attack Tool (CCAT) is a tool for testing security of container environments.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration",
+            "exploitation",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
+        "name": "Cloud_enum",
+        "url": "https://github.com/initstring/cloud_enum",
+        "source": "https://github.com/initstring/cloud_enum",
+        "description": "Multi-cloud OSINT tool. Enumerate public resources in AWS, Azure, and Google Cloud.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration"
+        ],
+        "categories": [
+            "active",
+            "OSINT"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
+        "name": "CloudBrute",
+        "url": "https://github.com/0xsha/CloudBrute",
+        "source": "https://github.com/0xsha/CloudBrute",
+        "description": "A tool to find a company (target) infrastructure, files, and apps on the top cloud providers (Amazon, Google, Microsoft, DigitalOcean, Alibaba, Vultr, Linode). The outcome is useful for bug bounty hunters, red teamers, and penetration testers alike.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
+        "name": "CloudFox",
+        "url": "https://bishopfox.com/tools/cloudfox-tool",
+        "source": "https://github.com/BishopFox/cloudfox",
+        "description": "A collection of enumeration commands that illuminate attack paths for cloud penetration testing. CloudFox helps you gain situational awareness in unfamiliar cloud environments. It’s an open source command line tool created to help penetration testers and other offensive security professionals find exploitable attack paths in cloud infrastructure.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
+        "name": "Cloudlist",
+        "url": "https://projectdiscovery.io/",
+        "source": "https://github.com/projectdiscovery/cloudlist",
+        "description": "Cloudlist is a multi-cloud tool for getting Assets from Cloud Providers. Cloudlist is designed for the blue team to augment Attack Surface Management efforts by maintaining a centralized list of assets across multiple clouds with very little configuration efforts.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
+        "name": "Cloudsplaining",
+        "url": "https://cloudsplaining.readthedocs.io/",
+        "source": "https://github.com/salesforce/cloudsplaining",
+        "description": "Cloudsplaining is an AWS IAM security assessment tool that identifies violations of the principle of least privilege and generates a risk-prioritized HTML report. It can analyze all IAM policies in your AWS account or a single policy file. The tool produces an easy-to-read HTML report along with a triage worksheet for efficient policy review.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
+        "name": "CloudSploit",
+        "url": "https://www.aquasec.com/",
+        "source": "https://github.com/aquasecurity/cloudsploit",
+        "description": "CloudSploit by Aqua is an open-source project designed to allow detection of security risks in cloud infrastructure accounts, including: Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), Oracle Cloud Infrastructure (OCI), and GitHub. These scripts are designed to return a series of potential misconfigurations and security risks.",
+        "techniques": [
+            "cloud_attack",
+            "exploitation",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud",
             "web"
         ]
     },
@@ -280,14 +574,50 @@
         "description": "CmosPwd is an open-source tool used to decrypt, recover, or reset BIOS/CMOS passwords and reset BIOS settings on various computer systems. It can also back up, restore, and erase/kill CMOS.",
         "techniques": [
             "digital_forensics",
-            "password"
+            "password_attack"
         ],
         "categories": [
-            "data_extraction"
+            "credential_dumping"
         ],
         "targets": [
-            "hardware",
-            "password"
+            "hardware"
+        ]
+    },
+    {
+        "name": "CrossLinked",
+        "url": "https://github.com/m8sec/CrossLinked",
+        "source": "https://github.com/m8sec/CrossLinked",
+        "description": "CrossLinked is a LinkedIn enumeration tool that uses search engine scraping to collect valid employee names from an organization. This technique provides accurate results without the use of API keys, credentials, or accessing LinkedIn directly.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "OSINT",
+            "passive"
+        ],
+        "targets": [
+            "web"
+        ]
+    },
+    {
+        "name": "cURL",
+        "url": "https://curl.se/",
+        "source": "https://github.com/curl/curl",
+        "description": "CmosPwd is an open-source tool used to decrypt, recover, or reset BIOS/CMOS passwords and reset BIOS settings on various computer systems. It can also back up, restore, and erase/kill CMOS.",
+        "techniques": [
+            "enumeration",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "network_scanner",
+            "WAF_detection",
+            "website_mirroring"
+        ],
+        "targets": [
+            "network",
+            "web"
         ]
     },
     {
@@ -314,17 +644,58 @@
         "source": "https://github.com/stamparm/DSSS",
         "description": "Damn Small SQLi Scanner (DSSS) is a fully functional SQL injection vulnerability scanner (supporting GET and POST parameters).",
         "techniques": [
+            "exploitation",
             "SQL_injection"
         ],
         "categories": [
             "active",
-            "exploitation",
             "vulnerability_scanner"
         ],
         "targets": [
             "database",
             "network",
             "web"
+        ]
+    },
+    {
+        "name": "DeepFind.Me",
+        "url": "https://www.deepfind.me/",
+        "source": "https://www.deepfind.me/",
+        "description": "Depix is a PoC for a technique to recover plaintext from pixelized screenshots.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance",
+            "footprinting"
+        ],
+        "categories": [
+            "dark_web",
+            "network_scanner",
+            "OSINT",
+            "passive",
+            "subdomain",
+            "web_app"
+        ],
+        "targets": [
+            "files",
+            "network",
+            "people",
+            "web"
+        ]
+    },
+    {
+        "name": "Depix",
+        "url": "https://github.com/spipm/Depixelization_poc",
+        "source": "https://github.com/spipm/Depixelization_poc",
+        "description": "Depix is a PoC for a technique to recover plaintext from pixelized screenshots.",
+        "techniques": [
+            "digital_forensics",
+            "reverse_engineering"
+        ],
+        "categories": [
+            "OSINT"
+        ],
+        "targets": [
+            "files"
         ]
     },
     {
@@ -349,14 +720,12 @@
         "source": "https://dirb.sourceforge.net/",
         "description": "DIRB (Directory Buster) is a web content scanner used for brute-forcing directories and files on web servers. It searches for existing and hidden web objects by launching a dictionary-based attack against a web server and analyzing the responses. It helps discover hidden web directories and files that are not normally visible or indexed.",
         "techniques": [
+            "content_discovery",
             "enumeration",
             "reconnaissance"
         ],
         "categories": [
-            "active",
-            "content_discovery",
-            "data_extraction",
-            "directory_traversal"
+            "active"
         ],
         "targets": [
             "web"
@@ -391,7 +760,8 @@
         ],
         "categories": [
             "active",
-            "network_scanner"
+            "network_scanner",
+            "subdomain"
         ],
         "targets": [
             "network"
@@ -472,12 +842,12 @@
         "source": "https://github.com/s0lst1c3/eaphammer",
         "description": "EAPHammer is a toolkit for performing targeted evil twin attacks against WPA2-Enterprise networks. Indirect wireless pivots using hostile portal attacks. It automates evil twin and credential harvesting attacks against 802.1X networks, including Evil Twin attacks on WPA2-EAP (Enterprise), MSCHAPv2 credential theft, automated Hostapd setup, captive portal attacks, support for both 2.4GHz and 5GHz frequencies, and Man-in-the-Middle (MITM) capabilities.",
         "techniques": [
-            "wireless"
+            "exploitation",
+            "wireless_attack"
         ],
         "categories": [
             "credential_dumping",
-            "exploitation",
-            "rogue_attack"
+            "rogue_access_point"
         ],
         "targets": [
             "hardware",
@@ -492,14 +862,14 @@
         "description": "Ettercap is a comprehensive suite for man-in-the-middle (MITM) attacks. It features live connection sniffing, real-time content filtering, and various advanced network manipulation techniques. It supports both active and passive protocol dissection and offers numerous tools for network and host analysis. Commonly used for network security testing and penetration testing to identify vulnerabilities in both wired and wireless networks. Key features include MITM attacks, packet sniffing, active and passive network scanning, SSL/TLS stripping, ARP spoofing, DNS spoofing, and plugin support.",
         "techniques": [
             "enumeration",
+            "exploitation",
             "reconnaissance",
             "sniffing",
             "spoofing",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
             "active",
-            "exploitation",
             "network_scanner",
             "vulnerability_scanner",
             "wireless_analyzer"
@@ -520,11 +890,10 @@
         ],
         "categories": [
             "active",
-            "data_extraction",
             "OSINT"
         ],
         "targets": [
-            "metadata"
+            "files"
         ]
     },
     {
@@ -533,20 +902,17 @@
         "source": "https://gitlab.com/exploit-database/exploitdb",
         "description": "The Exploit Database is a CVE compliant archive of public exploits and corresponding vulnerable software, developed for use by penetration testers and vulnerability researchers. The Exploit Database is a repository for exploits and proof-of-concepts rather than advisories, making it a valuable resource for those who need actionable data right away.",
         "techniques": [
-            "reconnaissance",
             "enumeration",
+            "exploitation",
+            "reconnaissance",
             "post_exploitation",
             "vulnerability_assessment"
         ],
         "categories": [
-            "exploitation",
             "OSINT",
-            "prime",
             "vulnerability_database"
         ],
-        "targets": [
-            "vulnerability_database"
-        ]
+        "targets": []
     },
     {
         "name": "Fern Wifi Cracker",
@@ -555,10 +921,10 @@
         "description": "Fern WiFi Cracker is a GUI-based wireless security auditing tool for WiFi vulnerability assessments. It automates WiFi attacks on WEP, WPA, and WPA2 networks and includes features like WEP and WPA/WPA2 cracking, deauthentication attacks, session hijacking, MITM attacks, supports external tools such as Aircrack-ng, Reaver, xHydra, and more.",
         "techniques": [
             "hijacking",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
-            "rogue_attack",
+            "rogue_access_point",
             "wireless_analyzer"
         ],
         "targets": [
@@ -591,7 +957,7 @@
         "techniques": [
             "defensive_security",
             "footprinting",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
             "network_scanner",
@@ -614,12 +980,30 @@
             "footprinting"
         ],
         "categories": [
-            "data_extraction",
             "fingerprinting",
             "passive"
         ],
         "targets": [
-            "metadata",
+            "files",
+            "web"
+        ]
+    },
+    {
+        "name": "FOFA",
+        "url": "https://en.fofa.info/",
+        "source": "https://en.fofa.info/",
+        "description": "FOFA is a search engine for global cyberspace mapping belonging to Beijing Huashun Xin'an Technology Co., Ltd. Through continuous active detection of global Internet assets, more than 4 billion assets and more than 350,000 fingerprint rules have been accumulated, identifying most software and hardware network assets. Asset data supports external presentation and application in various ways and can perform hierarchical portraits of assets based on IP.",
+        "techniques": [
+            "footprinting",
+            "reconnaissance"
+        ],
+        "categories": [
+            "passive",
+            "network_scanner",
+            "search_engine"
+        ],
+        "targets": [
+            "network",
             "web"
         ]
     },
@@ -646,18 +1030,97 @@
         ]
     },
     {
+        "name": "Fsociety",
+        "url": "https://github.com/Manisso/fsociety",
+        "source": "https://github.com/Manisso/fsociety",
+        "description": "Fsociety is an open-source hacking toolkit inspired by the TV show Mr. Robot, created by Manisso. It bundles a wide range of popular penetration testing tools for tasks like information gathering, password cracking, wireless attacks, exploitation, and web hacking—all accessible through a single Python-based interface.",
+        "techniques": [
+            "enumeration",
+            "exploitation",
+            "password_attack",
+            "post_exploitation",
+            "reconnaissance",
+            "sniffing",
+            "spoofing",
+            "wireless_attack"
+        ],
+        "categories": [
+            "active",
+            "credential_dumping",
+            "network_scanner",
+            "OSINT",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
+        "name": "GCP Scanner",
+        "url": "https://github.com/google/gcp_scanner",
+        "source": "https://github.com/google/gcp_scanner",
+        "description": "This is a GCP resource scanner that can help determine what level of access certain credentials possess on GCP. The scanner is designed to help security engineers evaluate the impact of a certain VM/container compromise, GCP service account, or OAuth2 token key leak.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
+        "name": "GCPBucketBrute",
+        "url": "https://rhinosecuritylabs.com/gcp/google-cloud-platform-gcp-bucket-enumeration/",
+        "source": "https://github.com/RhinoSecurityLabs/GCPBucketBrute",
+        "description": "A script to enumerate Google Storage buckets, determine what access you have to them, and determine if they can be privilege escalated.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
+        "name": "Ghidra",
+        "url": "https://ghidra-sre.org/",
+        "source": "https://github.com/NationalSecurityAgency/ghidra",
+        "description": "Ghidra is a software reverse engineering (SRE) framework created and maintained by the National Security Agency Research Directorate. This framework includes a suite of full-featured, high-end software analysis tools that enable users to analyze compiled code on a variety of platforms including Windows, macOS, and Linux. Capabilities include disassembly, assembly, decompilation, graphing, and scripting, along with hundreds of other features.",
+        "techniques": [
+            "digital_forensics",
+            "malware_analysis",
+            "reverse_engineering"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "android",
+            "files"
+        ]
+    },
+    {
         "name": "Ghost",
         "url": "https://entysec.com/",
         "source": "https://github.com/EntySec/Ghost",
         "description": "Ghost Framework is an Android post-exploitation framework that exploits the Android Debug Bridge (ADB) to remotely access and control Android devices. Its key features include remote access, device control, ADB exploitation, file management, and system control.",
         "techniques": [
+            "exploitation",
             "hijacking",
             "post_exploitation",
             "remote_code_execution"
         ],
         "categories": [
             "active",
-            "exploitation",
             "RAT"
         ],
         "targets": [
@@ -670,18 +1133,31 @@
         "source": "https://github.com/OJ/gobuster",
         "description": "Gobuster is a tool used to brute-force: URIs (directories and files) in web sites, DNS subdomains (with wildcard support), Virtual Host names on target web servers, Open Amazon S3 buckets, Open Google Cloud buckets, TFTP servers.",
         "techniques": [
+            "content_discovery",
             "enumeration",
             "reconnaissance"
         ],
         "categories": [
-            "content_discovery",
-            "data_extraction",
-            "directory_traversal",
-            "prime",
-            "network_scanner"
+            "active"
         ],
         "targets": [
-            "metadata",
+            "web"
+        ]
+    },
+    {
+        "name": "Gophish",
+        "url": "https://getgophish.com/",
+        "source": "https://github.com/gophish/gophish",
+        "description": "Gophish is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.",
+        "techniques": [
+            "phishing",
+            "social_engineering"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "people",
             "web"
         ]
     },
@@ -698,12 +1174,28 @@
         ],
         "categories": [
             "OSINT",
-            "prime",
             "search_engine",
             "vulnerability_database"
         ],
+        "targets": []
+    },
+    {
+        "name": "Grep.app",
+        "url": "https://grep.app/",
+        "source": "https://grep.app/",
+        "description": "Effortlessly search for code, files, and paths across a million GitHub repositories.",
+        "techniques": [
+            "reconnaissance",
+            "enumeration"
+        ],
+        "categories": [
+            "OSINT",
+            "passive",
+            "search_engine",
+            "web_app"
+        ],
         "targets": [
-            "vulnerability_database"
+            "web"
         ]
     },
     {
@@ -726,19 +1218,30 @@
         ]
     },
     {
+        "name": "Hash-identifier",
+        "url": "https://github.com/blackploit/hash-identifier",
+        "source": "https://github.com/blackploit/hash-identifier",
+        "description": "Software to identify the different types of hashes used to encrypt data and especially passwords.",
+        "techniques": [
+            "password_attack"
+        ],
+        "categories": [
+            "passive"
+        ],
+        "targets": []
+    },
+    {
         "name": "Hashcat",
         "url": "https://hashcat.net/",
         "source": "https://github.com/hashcat/hashcat",
         "description": "Hashcat is the world's fastest and most advanced password recovery utility, supporting five unique attack modes and over 300 highly optimized hashing algorithms. It runs on CPUs, GPUs, and other hardware accelerators across Linux, Windows, and macOS and includes features for distributed password cracking. Hashcat uses brute force, dictionary attacks, rule-based attacks, and GPU acceleration to crack hashes efficiently. It supports a wide range of hashing algorithms, including MD5, SHA-256, NTLM, WPA/WPA2, bcrypt, and more.",
         "techniques": [
-            "password"
+            "password_attack"
         ],
         "categories": [
             "active"
         ],
-        "targets": [
-            "password"
-        ]
+        "targets": []
     },
     {
         "name": "Hcxtools",
@@ -746,13 +1249,31 @@
         "source": "https://github.com/ZerBea/hcxtools",
         "description": "Hcxtools is a small set of tools designed to convert packets from capture files into hash files for use with Hashcat or John the Ripper. It is a collection of WiFi penetration testing tools that capture and analyze WPA/WPA2/WPA3 authentication handshakes for offline password cracking. Widely used in network security assessments, it supports multiple attack vectors, including PMKID attacks, hash extraction, and raw frame capturing. Key features include WPA/WPA2/WPA3 handshake capture, PMKID attack support, deauthentication and disassociation attacks, AP-less attacks, conversion tools, and support for IoT & industrial WiFi networks.",
         "techniques": [
+            "exploitation",
             "vulnerability_assessment",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
-            "exploitation",
             "network_auditor",
-            "rogue_attack"
+            "rogue_access_point"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
+        "name": "HiJackThis+",
+        "url": "https://github.com/dragokas/hijackthis",
+        "source": "https://github.com/dragokas/hijackthis",
+        "description": "HiJackThis+ is a free utility for Microsoft Windows that scans your computer for settings changed by adware, spyware, malware and other unwanted programs. Shortly, consider it like Sysinternals Autoruns.",
+        "techniques": [
+            "malware_analysis"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
         ],
         "targets": [
             "hardware",
@@ -766,11 +1287,11 @@
         "source": "https://github.com/t3l3machus/hoaxshell",
         "description": "A Windows reverse shell payload generator and handler that abuses the http(s) protocol to establish a beacon-like reverse shell.",
         "techniques": [
+            "exploitation",
             "remote_code_execution"
         ],
         "categories": [
             "active",
-            "exploitation",
             "shell_generator"
         ],
         "targets": [
@@ -800,12 +1321,12 @@
         "source": "https://github.com/sensepost/hostapd-mana",
         "description": "Hostapd-Mana is a feature-rich rogue Wi-Fi access point tool. It can be used for various purposes, including tracking and deanonymizing devices (Snoopy), gathering corporate credentials from devices attempting EAP authentication (WPE), or attracting multiple devices to connect for MITM attacks. It enhances rogue access point (AP) attacks by bypassing common security mechanisms and capturing credentials from clients. Key features include Rogue Access Point (Evil Twin AP), EAP credential harvesting, Karma attack, SSID mimicry, SSL strip support, captive portal attacks, and integration with tools such as Bettercap, Aircrack-ng, and Responder.",
         "techniques": [
-            "password",
-            "wireless"
+            "exploitation",
+            "password_attack",
+            "wireless_attack"
         ],
         "categories": [
-            "exploitation",
-            "rogue_attack"
+            "rogue_access_point"
         ],
         "targets": [
             "hardware",
@@ -878,7 +1399,7 @@
             "web_app"
         ],
         "targets": [
-            "malware"
+            "files"
         ]
     },
     {
@@ -887,12 +1408,11 @@
         "source": "https://github.com/vanhauser-thc/thc-hydra",
         "description": "THC-Hydra is a parallelized login cracker capable of performing rapid brute-force and dictionary attacks against various services. It is commonly used in penetration testing environments like Kali Linux and Parrot OS. The tool supports numerous protocols.",
         "techniques": [
-            "password"
+            "password_attack"
         ],
         "categories": [
             "active",
-            "exploitation",
-            "prime"
+            "exploitation"
         ],
         "targets": [
             "database",
@@ -906,7 +1426,7 @@
         "source": "https://github.com/fortra/impacket",
         "description": "Impacket is a collection of Python classes for working with network protocols.",
         "techniques": [
-            "password",
+            "password_attack",
             "post_exploitation"
         ],
         "categories": [
@@ -926,7 +1446,7 @@
         "description": "inSSIDer is a Wi-Fi network analysis tool developed by MetaGeek. It helps users analyze and optimize their Wi-Fi networks by providing insights into signal strength, interference, and channel usage.",
         "techniques": [
             "footprinting",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
             "network_scanner",
@@ -936,6 +1456,25 @@
             "hardware",
             "IoT",
             "network"
+        ]
+    },
+    {
+        "name": "Intelligence X",
+        "url": "https://intelx.io/",
+        "source": "https://intelx.io/",
+        "description": "Intelligence X stands out from other search engines by enabling searches using specific selectors like email addresses, domains, IPs, Bitcoin addresses, and more. It explores unique sources such as the darknet, document sharing platforms, public data leaks, and WHOIS data, while also maintaining a historical archive of results, similar to the Wayback Machine.",
+        "techniques": [
+            "footprinting",
+            "reconnaissance"
+        ],
+        "categories": [
+            "dark_web",
+            "passive",
+            "OSINT",
+            "search_engine"
+        ],
+        "targets": [
+            "web"
         ]
     },
     {
@@ -959,18 +1498,93 @@
         ]
     },
     {
+        "name": "Investigator",
+        "url": "https://abhijithb200.github.io/investigator/",
+        "source": "https://github.com/abhijithb200/investigator",
+        "description": "Internet Archive is a non-profit library of millions of free texts, movies, software, music, websites, and more.",
+        "techniques": [
+            "enumeration",
+            "footprinting",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "fingerprinting",
+            "network_scanner",
+            "OSINT",
+            "web_app"
+        ],
+        "targets": [
+            "people",
+            "web"
+        ]
+    },
+    {
+        "name": "IoTSeeker",
+        "url": "https://information.rapid7.com/iotseeker.html",
+        "source": "https://github.com/rapid7/IoTSeeker",
+        "description": "IoTSeeker allows you to scan your network for known device types that could be used as unwilling participants in a distributed denial-of-service attack.  With this tool you can find out if you have connected “Things” which are using the default factory password leaving them potentially vulnerable to a hostile takeover. Use the local scan output to determine which devices need to be secured or removed from the network.",
+        "techniques": [
+            "IoT_attack",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "network_scanner",
+            "OSINT"
+        ],
+        "targets": [
+            "IoT"
+        ]
+    },
+    {
         "name": "John the Ripper",
         "url": "https://www.openwall.com/john/",
         "source": "https://github.com/openwall/john",
         "description": "John the Ripper Jumbo is an advanced offline password cracker that supports hundreds of hash and cipher types. Its primary purpose is to identify weak Unix passwords. It is an open-source tool for password security auditing and recovery.",
         "techniques": [
-            "password"
+            "password_attack"
         ],
         "categories": [
             "active"
         ],
+        "targets": []
+    },
+    {
+        "name": "KisMAC",
+        "url": "https://kismac-ng.org/",
+        "source": "https://github.com/IGRSoft/KisMac2",
+        "description": "KisMAC is a free, open-source WiFi scanner for Mac that helps you gather key information about nearby networks. It can detect SSIDs, display connected clients, map WiFi coverage, and more.",
+        "techniques": [
+            "wireless_attack"
+        ],
+        "categories": [
+            "active",
+            "network_scanner",
+            "wireless_analyzer"
+        ],
         "targets": [
-            "password"
+            "mac",
+            "network"
+        ]
+    },
+    {
+        "name": "Kismet",
+        "url": "https://www.kismetwireless.net/",
+        "source": "https://github.com/kismetwireless/kismet",
+        "description": "Kismet is an open source sniffer, WIDS, wardriver, and packet capture tool for Wi-Fi, Bluetooth, BTLE, wireless thermometers, airplanes, power meters, Zigbee, and more.",
+        "techniques": [
+            "sniffing",
+            "wireless_attack"
+        ],
+        "categories": [
+            "active",
+            "network_scanner"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
         ]
     },
     {
@@ -990,20 +1604,86 @@
         ]
     },
     {
+        "name": "Kube-bench",
+        "url": "https://github.com/aquasecurity/kube-bench",
+        "source": "https://github.com/aquasecurity/kube-bench",
+        "description": "Kube-hunter hunts for security weaknesses in Kubernetes clusters. The tool was developed to increase awareness and visibility for security issues in Kubernetes environments.",
+        "techniques": [
+            "cloud_attack",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
+        "name": "Kube-hunter",
+        "url": "https://github.com/aquasecurity/kube-hunter",
+        "source": "https://github.com/aquasecurity/kube-hunter",
+        "description": "Kube-hunter hunts for security weaknesses in Kubernetes clusters. The tool was developed to increase awareness and visibility for security issues in Kubernetes environments.",
+        "techniques": [
+            "cloud_attack",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
+        "name": "Kubescape",
+        "url": "https://kubescape.io/",
+        "source": "https://github.com/kubescape/kubescape",
+        "description": "Kubescape is an open-source Kubernetes security platform that provides comprehensive security coverage, from left to right across the entire development and deployment lifecycle. It offers hardening, posture management, and runtime security capabilities to ensure robust protection for Kubernetes environments. It saves Kubernetes users and admins precious time, effort, and resources.",
+        "techniques": [
+            "cloud_attack",
+            "defensive_security",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
         "name": "L0phtCrack",
         "url": "https://l0phtcrack.gitlab.io/",
         "source": "https://gitlab.com/l0phtcrack",
         "description": "L0phtCrack is a password auditing and recovery tool used to assess the strength of passwords by cracking Windows account passwords using various attack techniques. It features Password Hash Extraction, Multiple Cracking Techniques, and Automated Auditing, making it a powerful tool for security testing and compliance checks.",
         "techniques": [
             "defensive_security",
-            "password"
+            "password_attack"
         ],
         "categories": [
             "active",
             "credential_dumping"
         ],
+        "targets": []
+    },
+    {
+        "name": "Linkook",
+        "url": "https://github.com/JackJuly/linkook",
+        "source": "https://github.com/JackJuly/linkook",
+        "description": "Linkook is an OSINT tool for discovering linked/connected social accounts and associated emails across multiple platforms using a single username. It also supports exporting the gathered relationships in a Neo4j-friendly format for visual analysis.",
+        "techniques": [
+            "reconnaissance",
+            "social_engineering"
+        ],
+        "categories": [
+            "passive"
+        ],
         "targets": [
-            "password"
+            "people"
         ]
     },
     {
@@ -1013,10 +1693,10 @@
         "description": "Set up Linux as a router with a single command, supporting internet sharing, a transparent proxy (redsocks), WiFi hotspot, and IPv6. It can also be used for routing VMs and containers. Key features include creating a NATed sub-network, providing internet access, running a DHCP server (with RA), acting as a DNS server, supporting IPv6 behind a NATed LAN (similar to IPv4), creating a WiFi hotspot or access point, enabling a transparent proxy (redsocks), and hijacking port 53 packets for transparent DNS proxying.",
         "techniques": [
             "hijacking",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
-            "rogue_attack"
+            "rogue_access_point"
         ],
         "targets": [
             "hardware",
@@ -1030,15 +1710,32 @@
         "source": "https://github.com/lakinduakash/linux-wifi-hotspot",
         "description": "Feature-rich wifi hotspot creator for Linux which provides both GUI and command-line interface. It is also able to create a hotspot using the same wifi card which is connected to an AP already ( Similar to Windows 10). The tool supports 2.4GHz and 5GHz frequencies, works with WPA3 encryption, and includes a bridged mode for sharing an existing connection. It also offers MAC filtering support and an easy setup with a single script.",
         "techniques": [
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
-            "rogue_attack"
+            "rogue_access_point"
         ],
         "targets": [
             "hardware",
             "IoT",
             "network"
+        ]
+    },
+    {
+        "name": "Linux Exploit Suggester",
+        "url": "https://github.com/The-Z-Labs/linux-exploit-suggester",
+        "source": "https://github.com/The-Z-Labs/linux-exploit-suggester",
+        "description": "The LES tool is designed to assist in detecting security deficiencies in a given Linux kernel or Linux-based machine by assessing kernel exposure to publicly known exploits and verifying the state of kernel hardening security measures.",
+        "techniques": [
+            "exploitation",
+            "privilege_escalation",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "linux"
         ]
     },
     {
@@ -1055,6 +1752,32 @@
         ],
         "targets": [
             "android"
+        ]
+    },
+    {
+        "name": "MagicRecon",
+        "url": "https://github.com/robotshell/magicRecon",
+        "source": "https://github.com/robotshell/magicRecon",
+        "description": "MagicRecon is a powerful shell script to maximize the recon and data collection process of an objective and finding common vulnerabilities, all this saving the results obtained in an organized way in directories and with various formats.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration",
+            "reconnaissance",
+            "SQL_injection",
+            "vulnerability_assessment",
+            "XSS"
+        ],
+        "categories": [
+            "active",
+            "fingerprinting",
+            "network_scanner",
+            "OSINT",
+            "subdomain",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "people",
+            "web"
         ]
     },
     {
@@ -1082,12 +1805,12 @@
         "source": "https://github.com/aircrack-ng/mdk4",
         "description": "MDK4 is a network penetration testing tool used for Wi-Fi security assessments. MDK4 is a new version of MDK3. It is specifically designed to test wireless networks by exploiting vulnerabilities in various Wi-Fi protocols, including WEP, WPA, WPA2, and WPA3. MDK4 can be used for multiple Wi-Fi attack scenarios, such as deauthentication attacks, authentication flooding, beacon flooding, probe request/response attacks, EAPOL attacks, TKIP MIC attacks, and Wi-Fi channel hopping attacks.",
         "techniques": [
-            "password",
+            "exploitation",
+            "password_attack",
             "vulnerability_assessment",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
-            "exploitation",
             "network_auditor",
             "network_scanner"
         ],
@@ -1107,12 +1830,11 @@
             "reconnaissance"
         ],
         "categories": [
-            "data_extraction",
             "OSINT",
             "passive"
         ],
         "targets": [
-            "metadata"
+            "web"
         ]
     },
     {
@@ -1121,12 +1843,11 @@
         "source": "https://github.com/rapid7/metasploit-framework",
         "description": "An open-source project that provides the infrastructure, content, and tools for performing penetration tests and extensive security audits. It is a framework used for exploiting, testing, and securing systems, offering a collection of exploits, payloads, scanners, and post-exploitation tools.",
         "techniques": [
+            "exploitation",
             "remote_code_execution"
         ],
         "categories": [
             "active",
-            "exploitation",
-            "prime",
             "shell_generator",
             "vulnerability_scanner"
         ],
@@ -1141,12 +1862,31 @@
         ]
     },
     {
+        "name": "MicroBurst",
+        "url": "https://github.com/NetSPI/MicroBurst",
+        "source": "https://github.com/NetSPI/MicroBurst",
+        "description": "MicroBurst includes functions and scripts that support Azure Services discovery, weak configuration auditing, and post exploitation actions such as credential dumping. It is intended to be used during penetration tests where Azure is in use.",
+        "techniques": [
+            "cloud_attack",
+            "exploitation",
+            "post_exploitation",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "credential_dumping"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
         "name": "Mimikatz",
         "url": "https://parrotsec.org/",
         "source": "https://gitlab.com/parrotsec",
         "description": "Extract plaintext passwords, hashes, PINs, and Kerberos tickets from memory, as well as perform pass-the-hash, pass-the-ticket, and create Golden Tickets.",
         "techniques": [
-            "password",
+            "password_attack",
             "post_exploitation",
             "privilege_escalation"
         ],
@@ -1229,7 +1969,6 @@
             "web_app"
         ],
         "targets": [
-            "metadata",
             "web"
         ]
     },
@@ -1292,13 +2031,13 @@
         "source": "https://github.com/nmap/ncrack",
         "description": "Ncrack is a high-speed network authentication cracking tool. It was built to help companies secure their networks by proactively testing all their hosts and networking devices for poor passwords. Security professionals also rely on Ncrack when auditing their clients.",
         "techniques": [
-            "password"
+            "password_attack"
         ],
         "categories": [
             "active"
         ],
         "targets": [
-            "password"
+            "network"
         ]
     },
     {
@@ -1330,7 +2069,6 @@
         "categories": [
             "active",
             "network_scanner",
-            "prime",
             "shell_generator"
         ],
         "targets": [
@@ -1381,13 +2119,13 @@
         "source": "https://github.com/BlackAll9/NjRat.0.7D",
         "description": "NjRAT-0.7D is a powerful remote administration tool (RAT) for Windows systems, enabling remote access and control of infected machines. It is capable of keylogging, webcam access, credential theft, file manipulation, desktop viewing, and botnet control.",
         "techniques": [
+            "exploitation",
             "hijacking",
             "post_exploitation",
             "remote_code_execution"
         ],
         "categories": [
             "active",
-            "exploitation",
             "RAT"
         ],
         "targets": [
@@ -1405,7 +2143,6 @@
         ],
         "categories": [
             "active",
-            "prime",
             "network_scanner"
         ],
         "targets": [
@@ -1448,6 +2185,25 @@
         ]
     },
     {
+        "name": "Objection",
+        "url": "https://github.com/sensepost/objection",
+        "source": "https://github.com/sensepost/objection",
+        "description": "Objection is a runtime mobile exploration toolkit powered by Frida, designed to help assess the security posture of mobile applications without requiring a jailbreak. It supports both iOS and Android, allowing you to inspect and interact with container file systems, bypass SSL pinning, dump keychains, perform memory-related tasks like dumping and patching, explore and manipulate objects on the heap, and much more.",
+        "techniques": [
+            "digital_forensics",
+            "enumeration",
+            "malware_analysis"
+        ],
+        "categories": [
+            "active",
+            "credential_dumping"
+        ],
+        "targets": [
+            "android",
+            "iOS"
+        ]
+    },
+    {
         "name": "OpenVAS",
         "url": "https://openvas.org/",
         "source": "https://github.com/greenbone/openvas-scanner",
@@ -1457,7 +2213,6 @@
         ],
         "categories": [
             "active",
-            "prime",
             "network_scanner",
             "vulnerability_scanner"
         ],
@@ -1467,11 +2222,28 @@
         ]
     },
     {
+        "name": "Ophcrack",
+        "url": "https://ophcrack.sourceforge.io/",
+        "source": "https://gitlab.com/objectifsecurite/ophcrack",
+        "description": "Ophcrack is a free and open-source tool used for cracking Windows login passwords using rainbow tables. It's a popular tool among ethical hackers, penetration testers, and forensic investigators to recover lost or forgotten passwords, especially on older versions of Windows.",
+        "techniques": [
+            "password_attack"
+        ],
+        "categories": [
+            "active",
+            "credential_dumping"
+        ],
+        "targets": [
+            "windows"
+        ]
+    },
+    {
         "name": "OSINT.SH",
         "url": "https://osint.sh/",
         "source": "https://github.com/secgron/osint.sh",
         "description": "All in one Information Gathering Tools - Public Buckets Search, Subdomain Finder, DNS History, Reverse IP Lookup, Technology Lookup, Certificate Search, DNS Lookup, Reverse Google Analytics/AdSense, Whois History, Reverse Whois, OCR Text Extractor, and MD5 Hash Guessing.",
         "techniques": [
+            "cloud_attack",
             "enumeration",
             "footprinting",
             "reconnaissance"
@@ -1479,11 +2251,51 @@
         "categories": [
             "active",
             "network_scanner",
-            "OSINT"
+            "OSINT",
+            "web_app"
         ],
         "targets": [
+            "cloud",
             "network",
             "web"
+        ]
+    },
+    {
+        "name": "OSINT Framework",
+        "url": "https://osintframework.com/",
+        "source": "https://github.com/lockfale/osint-framework",
+        "description": "OSINT framework focused on gathering information from free tools or resources. The intention is to help people find free OSINT resources.",
+        "techniques": [
+            "enumeration",
+            "footprinting",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "OSINT",
+            "web_app"
+        ],
+        "targets": [
+            "people",
+            "web"
+        ]
+    },
+    {
+        "name": "Pacu",
+        "url": "https://rhinosecuritylabs.com/aws/pacu-open-source-aws-exploitation-framework/",
+        "source": "https://github.com/RhinoSecurityLabs/pacu",
+        "description": "Pacu is an open-source AWS exploitation framework, designed for offensive security testing against cloud environments. Created and maintained by Rhino Security Labs, Pacu allows penetration testers to exploit configuration flaws within an AWS account, using modules to easily expand its functionality. Current modules enable a range of attacks, including user privilege escalation, backdooring of IAM users, attacking vulnerable Lambda functions, and much more.",
+        "techniques": [
+            "cloud_attack",
+            "exploitation",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
         ]
     },
     {
@@ -1495,12 +2307,11 @@
             "digital_forensics"
         ],
         "categories": [
-            "data_extraction",
             "OSINT",
             "passive"
         ],
         "targets": [
-            "metadata"
+            "files"
         ]
     },
     {
@@ -1546,13 +2357,13 @@
         "source": "https://github.com/AzeemIdrisi/PhoneSploit-Pro",
         "description": "An all-in-one hacking tool designed to remotely exploit Android devices using ADB and the Metasploit Framework to establish a Meterpreter session. This tool can automatically create, install, and execute payloads on a target device using Metasploit Framework and ADB, enabling complete control of the Android device in a single click. It streamlines the process of payload creation, installation, and execution, making penetration testing and vulnerability assessments more efficient.",
         "techniques": [
+            "exploitation",
             "hijacking",
             "remote_code_execution",
             "vulnerability_assessment"
         ],
         "categories": [
             "active",
-            "exploitation",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -1569,7 +2380,6 @@
         ],
         "categories": [
             "active",
-            "data_extraction",
             "OSINT",
             "website_mirroring"
         ],
@@ -1586,13 +2396,29 @@
             "digital_forensics"
         ],
         "categories": [
-            "data_extraction",
             "OSINT",
             "passive"
         ],
         "targets": [
-            "hardware",
-            "metadata"
+            "hardware"
+        ]
+    },
+    {
+        "name": "Prowler",
+        "url": "https://prowler.com/",
+        "source": "https://github.com/prowler-cloud/prowler",
+        "description": "Prowler is an Open Cloud Security tool for AWS, Azure, GCP and Kubernetes. It helps for continuos monitoring, security assessments and audits, incident response, compliance, hardening and forensics readiness. Includes CIS, NIST 800, NIST CSF, CISA, FedRAMP, PCI-DSS, GDPR, HIPAA, FFIEC, SOC2, GXP, Well-Architected Security, ENS and more. ",
+        "techniques": [
+            "cloud_attack",
+            "defensive_security",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud",
+            "IoT"
         ]
     },
     {
@@ -1601,7 +2427,7 @@
         "source": "https://github.com/Seabreg/pwdump",
         "description": "Pwdump is a family of Windows password hash dumping tools used to extract NTLM and LANMAN password hashes from the Security Account Manager (SAM) database. These hashes can then be analyzed or cracked using password-cracking tools like John the Ripper or Hashcat.",
         "techniques": [
-            "password"
+            "password_attack"
         ],
         "categories": [
             "active",
@@ -1614,13 +2440,37 @@
         ]
     },
     {
+        "name": "Raccoon",
+        "url": "https://github.com/evyatarmeged/Raccoon",
+        "source": "https://github.com/evyatarmeged/Raccoon",
+        "description": "Raccoon is an offensive security tool designed for reconnaissance and information gathering. It performs various tasks, including fetching DNS records, retrieving WHOIS information, obtaining TLS data, detecting WAF presence, threaded directory busting, and subdomain enumeration. Additionally, it supports subdomain enumeration, port scanning, service & banner grabbing, WHOIS & DNS lookups, web application scanning, OSINT, URL fuzzing, and directory & file detection.",
+        "techniques": [
+            "content_discovery",
+            "enumeration",
+            "footprinting",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "fingerprinting",
+            "network_scanner",
+            "OSINT",
+            "vulnerability_scanner",
+            "WAF_detection"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
         "name": "Reaver",
         "url": "https://github.com/t6x/reaver-wps-fork-t6x",
         "source": "https://github.com/tiagob0b/Reaver-WPS",
         "description": "Reaver is a Wi-Fi hacking tool used to crack WPS (Wi-Fi Protected Setup) PINs and recover WPA/WPA2 passwords. It performs a brute force attack against Wifi Protected Setup (WPS) registrar PINs in order to recover WPA/WPA2 passphrases.",
         "techniques": [
-            "password",
-            "wireless"
+            "password_attack",
+            "wireless_attack"
         ],
         "categories": [
             "exploitation"
@@ -1632,24 +2482,18 @@
         ]
     },
     {
-        "name": "Raccoon",
-        "url": "https://github.com/evyatarmeged/Raccoon",
-        "source": "https://github.com/evyatarmeged/Raccoon",
-        "description": "Raccoon is an offensive security tool designed for reconnaissance and information gathering. It performs various tasks, including fetching DNS records, retrieving WHOIS information, obtaining TLS data, detecting WAF presence, threaded directory busting, and subdomain enumeration. Additionally, it supports subdomain enumeration, port scanning, service & banner grabbing, WHOIS & DNS lookups, web application scanning, OSINT, URL fuzzing, and directory & file detection.",
+        "name": "Recon-NG",
+        "url": "https://github.com/lanmaster53/recon-ng",
+        "source": "https://github.com/lanmaster53/recon-ng",
+        "description": "Recon-ng is a full-featured reconnaissance framework designed for fast and thorough open-source web-based intelligence gathering. It is used for OSINT collection, DNS enumeration, domain and host discovery, WHOIS lookups, port scanning, attack surface mapping, etc.",
         "techniques": [
             "enumeration",
-            "footprinting",
             "reconnaissance"
         ],
         "categories": [
-            "active",
-            "content_discovery",
-            "data_extraction",
-            "fingerprinting",
             "network_scanner",
             "OSINT",
-            "vulnerability_scanner",
-            "WAF_detection"
+            "passive"
         ],
         "targets": [
             "network",
@@ -1677,18 +2521,21 @@
         ]
     },
     {
-        "name": "Recon-NG",
+        "name": "ReconFTW",
         "url": "https://github.com/lanmaster53/recon-ng",
         "source": "https://github.com/lanmaster53/recon-ng",
-        "description": "Recon-ng is a full-featured reconnaissance framework designed for fast and thorough open-source web-based intelligence gathering. It is used for OSINT collection, DNS enumeration, domain and host discovery, WHOIS lookups, port scanning, attack surface mapping, etc.",
+        "description": "ReconFTW is a tool designed to perform automated recon on a target domain by running the best set of tools to perform scanning and finding out vulnerabilities. It also performs various vulnerability checks like XSS, Open Redirects, SSRF, CRLF, LFI, SQLi, SSL tests, SSTI, DNS zone transfers, and much more. Along with these, it performs OSINT techniques, directory fuzzing, dorking, ports scanning, screenshots, nuclei scan on your target.",
         "techniques": [
             "enumeration",
-            "reconnaissance"
+            "reconnaissance",
+            "vulnerability_assessment"
         ],
         "categories": [
+            "active",
             "network_scanner",
             "OSINT",
-            "passive"
+            "subdomain",
+            "vulnerability_scanner"
         ],
         "targets": [
             "network",
@@ -1718,15 +2565,14 @@
         "source": "https://github.com/lgandx/Responder",
         "description": "Responder is a LLMNR, NBT-NS and MDNS poisoner, with built-in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server supporting NTLMv1/NTLMv2/LMv2, Extended Security NTLMSSP and Basic HTTP authentication.",
         "techniques": [
-            "password",
+            "password_attack",
             "post_exploitation",
             "privilege_escalation"
         ],
         "categories": [
             "active",
             "active_directory",
-            "credential_dumping",
-            "rogue_attack"
+            "credential_dumping"
         ],
         "targets": [
             "windows"
@@ -1738,13 +2584,12 @@
         "source": "https://github.com/0dayCTF/reverse-shell-generator",
         "description": "Hosted Reverse Shell generator with a ton of functionality.",
         "techniques": [
+            "exploitation",
             "privilege_escalation",
             "remote_code_execution"
         ],
         "categories": [
             "active",
-            "exploitation",
-            "prime",
             "shell_generator",
             "web_app"
         ],
@@ -1752,6 +2597,24 @@
             "linux",
             "mac",
             "windows"
+        ]
+    },
+    {
+        "name": "RouterSploit",
+        "url": "https://github.com/threat9/routersploit",
+        "source": "https://github.com/threat9/routersploit",
+        "description": "The RouterSploit Framework is an open-source exploitation framework dedicated to embedded devices.",
+        "techniques": [
+            "IoT_attack",
+            "exploitation",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "IoT"
         ]
     },
     {
@@ -1768,6 +2631,24 @@
         ],
         "targets": [
             "network"
+        ]
+    },
+    {
+        "name": "S3Scanner",
+        "url": "https://github.com/sa7mon/S3Scanner",
+        "source": "https://github.com/sa7mon/S3Scanner",
+        "description": "A tool for discovering open or misconfigured S3 buckets across AWS and other cloud providers using S3-compatible APIs.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
         ]
     },
     {
@@ -1798,7 +2679,6 @@
         ],
         "categories": [
             "active",
-            "data_extraction",
             "exploitation",
             "RAT"
         ],
@@ -1822,9 +2702,7 @@
             "OSINT",
             "vulnerability_database"
         ],
-        "targets": [
-            "vulnerability_database"
-        ]
+        "targets": []
     },
     {
         "name": "Sherlock",
@@ -1857,7 +2735,6 @@
             "network_scanner",
             "OSINT",
             "passive",
-            "prime",
             "search_engine",
             "web_app"
         ],
@@ -1909,6 +2786,27 @@
         ],
         "categories": [
             "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
+        "name": "Sn0int",
+        "url": "https://sn0int.com/",
+        "source": "https://github.com/kpcyrd/sn0int",
+        "description": "Sn0int is a semi-automatic OSINT framework and package manager. It's used by IT security professionals, bug bounty hunters, law enforcement agencies and in security awareness trainings to gather intelligence about a given target or about yourself. sn0int is enumerating attack surface by semi-automatically processing public information and mapping the results in a unified format for followup investigations.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "network_scanner",
+            "OSINT",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -1998,7 +2896,7 @@
         "description": "Sparrow-wifi is an advanced graphical Wi-Fi and Bluetooth analyzer designed specifically for Linux systems. Developed as a next-generation tool for 2.4 GHz and 5 GHz Wi-Fi spectral awareness, it offers a comprehensive GUI-based alternative to tools like inSSIDer and LinSSID.",
         "techniques": [
             "footprinting",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
             "network_scanner",
@@ -2008,6 +2906,42 @@
             "hardware",
             "IoT",
             "network"
+        ]
+    },
+    {
+        "name": "SpiderFoot",
+        "url": "http://www.spiderfoot.net/",
+        "source": "https://github.com/smicallef/spiderfoot",
+        "description": "SpiderFoot is an open source intelligence (OSINT) automation tool. It integrates with just about every data source available and utilises a range of methods for data analysis, making that data easy to navigate.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "network_scanner",
+            "OSINT"
+        ],
+        "targets": [
+            "hardware",
+            "IoT",
+            "network"
+        ]
+    },
+    {
+        "name": "Spray365",
+        "url": "https://github.com/MarkoH17/Spray365",
+        "source": "https://github.com/MarkoH17/Spray365",
+        "description": "Spray365 makes spraying Microsoft accounts (Office 365 / Azure AD) easy through its customizable two-step password spraying approach. The built-in execution plan features options that attempt to bypass Azure Smart Lockout and insecure conditional access policies.",
+        "techniques": [
+            "cloud_attack",
+            "password_attack"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "cloud"
         ]
     },
     {
@@ -2039,7 +2973,6 @@
         "categories": [
             "active",
             "exploitation",
-            "prime",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -2069,6 +3002,25 @@
         ]
     },
     {
+        "name": "Stratus Red Team",
+        "url": "https://stratus-red-team.cloud/",
+        "source": "https://github.com/DataDog/stratus-red-team",
+        "description": "Stratus Red Team is 'Atomic Red Team' for the cloud, allowing to emulate offensive attack techniques in a granular and self-contained manner.",
+        "techniques": [
+            "cloud_attack",
+            "enumeration",
+            "exploitation",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
         "name": "Subfinder",
         "url": "https://projectdiscovery.io/",
         "source": "https://github.com/projectdiscovery/subfinder",
@@ -2081,7 +3033,7 @@
             "network_scanner",
             "OSINT",
             "passive",
-            "prime"
+            "subdomain"
         ],
         "targets": [
             "network",
@@ -2100,7 +3052,8 @@
         "categories": [
             "network_scanner",
             "OSINT",
-            "passive"
+            "passive",
+            "subdomain"
         ],
         "targets": [
             "network",
@@ -2121,6 +3074,26 @@
         ],
         "targets": [
             "network"
+        ]
+    },
+    {
+        "name": "Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/",
+        "source": "https://learn.microsoft.com/en-us/sysinternals/",
+        "description": "Sysinternals is a suite of powerful Windows utilities widely used in cybersecurity and system diagnostics. Many of the tools are free, with some offering access to source code. Popular tools include RootkitRevealer, which detects hidden registry and file system anomalies indicative of rootkits; Process Explorer, an advanced Task Manager that reveals detailed process information and helps audit permissions; and Autoruns, which displays all executables set to run at startup, a common place for malware to hide. TCPView allows users to monitor real-time network connections, while Procmon (Process Monitor) captures file system, registry, and process activity crucial for malware analysis. Tools like Strings and Sigcheck assist in analyzing binaries and verifying digital signatures. For offline analysis, Disk2vhd creates virtual disk images of live systems, and PsTools provides command-line capabilities for managing processes locally and remotely.",
+        "techniques": [
+            "defensive_security",
+            "defensive_security",
+            "enumeration",
+            "malware_analysis",
+            "sniffing"
+        ],
+        "categories": [
+            "active",
+            "network_scanner"
+        ],
+        "targets": [
+            "windows"
         ]
     },
     {
@@ -2166,11 +3139,26 @@
             "digital_forensics"
         ],
         "categories": [
-            "data_extraction",
-            "OSINT",
-            "passive"
+            "OSINT"
         ],
         "targets": [
+            "files",
+            "hardware"
+        ]
+    },
+    {
+        "name": "The Sleuth Kit",
+        "url": "https://www.sleuthkit.org/sleuthkit/",
+        "source": "https://www.sleuthkit.org/sleuthkit/",
+        "description": "The Sleuth Kit (TSK) is a library and collection of command line tools that allow you to investigate disk images. The core functionality of TSK allows you to analyze volume and file system data. The library can be incorporated into larger digital forensics tools and the command line tools can be directly used to find evidence.",
+        "techniques": [
+            "digital_forensics"
+        ],
+        "categories": [
+            "OSINT"
+        ],
+        "targets": [
+            "files",
             "hardware"
         ]
     },
@@ -2196,18 +3184,36 @@
         ]
     },
     {
+        "name": "Tracee",
+        "url": "https://aquasecurity.github.io/tracee/",
+        "source": "https://github.com/aquasecurity/tracee",
+        "description": "Tracee is a runtime security and observability tool that helps you understand how your system and applications behave. It is using eBPF technology to tap into your system and expose that information as events that you can consume.",
+        "techniques": [
+            "cloud_attack",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "cloud"
+        ]
+    },
+    {
         "name": "Trivy",
         "url": "https://trivy.dev/",
         "source": "https://github.com/aquasecurity/trivy",
         "description": "Trivy is a comprehensive and versatile security scanner that analyzes a variety of targets—including container images, filesystems, remote Git repositories, virtual machine images, and Kubernetes environments—to identify potential security issues. It employs multiple scanners to detect OS packages and software dependencies (SBOM), known vulnerabilities (CVEs), infrastructure-as-code (IaC) misconfigurations, sensitive information and secrets, and software license details.",
         "techniques": [
+            "cloud_attack",
             "vulnerability_assessment"
         ],
         "categories": [
-            "active",
-            "cloud"
+            "active"
         ],
         "targets": [
+            "cloud",
             "network",
             "web"
         ]
@@ -2258,12 +3264,69 @@
             "reconnaissance"
         ],
         "categories": [
-            "data_extraction",
             "OSINT",
             "passive"
         ],
         "targets": [
             "web"
+        ]
+    },
+    {
+        "name": "Urlscan.io",
+        "url": "https://urlscan.io/",
+        "source": "https://urlscan.io/",
+        "description": "Urlscan.io is a free service to scan and analyse websites. When a URL is submitted to urlscan.io, an automated process will browse to the URL like a regular user and record the activity that this page navigation creates. This includes the domains and IPs contacted, the resources (JavaScript, CSS, etc) requested from those domains, as well as additional information about the page itself.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "network_scanner",
+            "OSINT",
+            "passive",
+            "web_app"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
+        "name": "Vulners.com",
+        "url": "https://vulners.com/",
+        "source": "https://vulners.com/",
+        "description": "Vulners is an API-first vulnerability intelligence platform that aggregates data from over 200 diverse sources, including CVE databases, exploit repositories, vendor advisories, and bug bounty reports.",
+        "techniques": [
+            "reconnaissance",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "OSINT",
+            "passive",
+            "vulnerability_database",
+            "web_app"
+        ],
+        "targets": []
+    },
+    {
+        "name": "W3af",
+        "url": "https://docs.w3af.org/",
+        "source": "https://docs.w3af.org/",
+        "description": "W3af (Web Application Attack and Audit Framework) is an open-source web application security scanner designed to identify and exploit vulnerabilities in web applications. It is user-friendly, highly extensible, and includes dozens of plugins for web assessment and exploitation. In many ways, it functions like a web-focused version of Metasploit.",
+        "techniques": [
+            "vulnerability_assessment",
+            "SQL_injection",
+            "XSS"
+        ],
+        "categories": [
+            "active",
+            "exploitation",
+            "network_scanner",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "web",
+            "network"
         ]
     },
     {
@@ -2280,7 +3343,6 @@
             "WAF_detection"
         ],
         "targets": [
-            "database",
             "web"
         ]
     },
@@ -2307,7 +3369,7 @@
         "source": "https://github.com/tiagob0b/Reaver-WPS",
         "description": "Wash is a tool used alongside Reaver to identify WPS-enabled networks before launching an attack. It helps filter out networks that are vulnerable to WPS brute-force attacks by scanning nearby Wi-Fi networks and checking if WPS is enabled. Additionally, Wash determines whether a router is protected against Reaver attacks (e.g., if WPS Lockout is enabled) and displays essential details such as BSSID (MAC address), channel, and WPS version.",
         "techniques": [
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
             "network_scanner",
@@ -2336,7 +3398,6 @@
             "search_engine"
         ],
         "targets": [
-            "database",
             "web"
         ]
     },
@@ -2346,10 +3407,10 @@
         "source": "https://sourceforge.net/projects/wepcrackgui/",
         "description": "A GUI for Aircrack-ng that can crack WEP and WPA networks, automatically scans for available networks, and provides fake authentication and injection support. Features include cracking WEP and WPA-encrypted networks, support for multiple interfaces, network scanning, packet injection, fake authentication (Open and Shared key), MAC address changer, hidden SSID discovery, WEP dictionary attack, and a password generator for WPA networks.",
         "techniques": [
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
-            "rogue_attack",
+            "rogue_access_point",
             "wireless_analyzer"
         ],
         "targets": [
@@ -2359,18 +3420,36 @@
         ]
     },
     {
+        "name": "WES-NG",
+        "url": "https://wepcrackgui.sourceforge.io/",
+        "source": "https://sourceforge.net/projects/wepcrackgui/",
+        "description": "WES-NG (Windows Exploit Suggester - Next Generation) is a tool based on the output of Windows' systeminfo utility which provides the list of vulnerabilities the OS is vulnerable to, including any exploits for these vulnerabilities. Every Windows OS between Windows XP and Windows 11, including their Windows Server counterparts, is supported.",
+        "techniques": [
+            "exploitation",
+            "privilege_escalation",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "windows"
+        ]
+    },
+    {
         "name": "Wifite",
         "url": "https://github.com/kimocoder/wifite2",
         "source": "https://github.com/derv82/wifite2",
         "description": "Wifite is an automated wireless auditing tool designed for penetration testers and ethical hackers, using all known methods to retrieve the password of a wireless access point. It simplifies WiFi attacks by automating WEP, WPA, and WPA2 cracking techniques with tools like Aircrack-ng, Reaver, and Bully. Wifite is particularly useful for Evil Twin, WPS, and handshake capture attacks with minimal user input. Key features include automated WiFi hacking, WPA/WPA2 handshake capture, WPS attacks, Evil Twin attack, deauthentication attack, hidden SSID discovery, WiFi signal jammer, block specific accesspoints or multiple, and support for multiple WiFi adapters.",
         "techniques": [
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
             "credential_dumping",
             "network_auditor",
             "network_scanner",
-            "rogue_attack"
+            "rogue_access_point"
         ],
         "targets": [
             "hardware",
@@ -2388,8 +3467,7 @@
         ],
         "categories": [
             "network_scanner",
-            "passive",
-            "prime"
+            "passive"
         ],
         "targets": [
             "network"
@@ -2439,7 +3517,7 @@
         "description": "Wi-Fi Scanner is a Wi-Fi network analysis tool designed to help users find and troubleshoot wireless networks. It provides detailed information about nearby Wi-Fi networks, including the network name (SSID), signal strength (RSSI) and quality, MAC address (BSSID), channel, maximum and achievable data rates, security settings, channel usage, and bandwidth.",
         "techniques": [
             "footprinting",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
             "network_scanner",
@@ -2458,7 +3536,7 @@
         "description": "WiFi Analyzer is a free, open-source Wi-Fi analysis tool available for Android devices. It helps users optimize their Wi-Fi networks by providing detailed insights into signal strength, channel usage, and interference. Key features include real-time signal strength monitoring, SSID & BSSID information, and more.",
         "techniques": [
             "footprinting",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
             "network_scanner",
@@ -2478,12 +3556,12 @@
         "techniques": [
             "phishing",
             "social_engineering",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
             "credential_dumping",
             "exploitation",
-            "rogue_attack"
+            "rogue_access_point"
         ],
         "targets": [
             "hardware",
@@ -2498,7 +3576,7 @@
         "description": "WiFiman is a Wi-Fi and network analysis tool developed by Ubiquiti Inc. It helps users scan Wi-Fi networks, analyze signal strength, detect interference, and test internet speed.",
         "techniques": [
             "footprinting",
-            "wireless"
+            "wireless_attack"
         ],
         "categories": [
             "network_scanner",
@@ -2516,13 +3594,12 @@
         "source": "https://github.com/xmendez/wfuzz",
         "description": "WFuzz is a web application security tool designed for brute-forcing web applications to discover hidden files, directories, parameters, and vulnerabilities. It's primarily used for fuzzing (i.e., testing web applications by sending various payloads).",
         "techniques": [
+            "content_discovery",
             "enumeration",
             "reconnaissance"
         ],
         "categories": [
             "active",
-            "content_discovery",
-            "directory_traversal",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -2571,12 +3648,33 @@
         "source": "https://github.com/zaproxy",
         "description": "ZAP (Zed Attack Proxy), or ZAP Proxy, is an open-source security tool used to identify vulnerabilities in web applications. It is developed and maintained by the OWASP community. ZAP is used for web application security testing, API penetration testing, and automated vulnerability scanning.",
         "techniques": [
+            "directory_traversal",
+            "reconnaissance",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
+        "name": "Zoomeye",
+        "url": "https://www.zoomeye.ai/",
+        "source": "https://www.zoomeye.ai/",
+        "description": "ZoomEyeis an advanced cyberspace search engine developed and maintained by KnownSec Hong Kong. As a leader in the field of cybersecurity, ZoomEye is dedicated to mapping the global cyberspace, offering in-depth search capabilities for devices connected to the internet, such as routers, servers, and webcams. Leveraging unique technology and an extensive network of surveying nodes, ZoomEye can scan global IPv4 and IPv6 addresses as well as website domain names, identifying and analyzing a wide range of service ports and protocols.",
+        "techniques": [
+            "enumeration",
             "reconnaissance"
         ],
         "categories": [
             "active",
-            "prime",
-            "vulnerability_scanner"
+            "network_scanner",
+            "OSINT",
+            "search_engine"
         ],
         "targets": [
             "network",

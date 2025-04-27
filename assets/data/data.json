@@ -86,7 +86,7 @@
             "active",
             "network_scanner",
             "OSINT",
-            "subdomain"
+            "subdomain_enum"
         ],
         "targets": [
             "network"
@@ -136,11 +136,13 @@
         "source": "https://github.com/angryip/ipscan",
         "description": "Angry IP Scanner (or simply ipscan) is an open-source, cross-platform network scanner that scans IP addresses, IP ranges, and ports. It is used for discovering devices on a network and gathering host information.",
         "techniques": [
+            "enumeration",
             "reconnaissance"
         ],
         "categories": [
             "active",
-            "network_scanner"
+            "network_scanner",
+            "port_scanner"
         ],
         "targets": [
             "network"
@@ -178,6 +180,25 @@
         ],
         "targets": [
             "android"
+        ]
+    },
+    {
+        "name": "ARP Scan",
+        "url": "https://github.com/royhills/arp-scan",
+        "source": "https://github.com/royhills/arp-scan",
+        "description": "ARP Scanner or arp-scan is a network scanning tool that uses the ARP protocol to discover and fingerprint IPv4 hosts on the local network.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "fingerprinting",
+            "host_discovery",
+            "network_scanner"
+        ],
+        "targets": [
+            "network"
         ]
     },
     {
@@ -268,6 +289,7 @@
             "active",
             "credential_dumping",
             "network_scanner",
+            "port_scanner",
             "wireless_analyzer"
         ],
         "targets": [
@@ -289,12 +311,34 @@
         "categories": [
             "active",
             "fingerprinting",
+            "host_discovery",
             "network_scanner",
-            "OSINT"
+            "OSINT",
+            "port_scanner",
+            "subdomain_enum"
         ],
         "targets": [
             "network",
             "web"
+        ]
+    },
+    {
+        "name": "BloodHound",
+        "url": "https://bloodhoundenterprise.io/",
+        "source": "https://github.com/SpecterOps/BloodHound",
+        "description": "BloodHound uses graph theory to reveal hidden and often unintended relationships within Active Directory, Entra ID (formerly Azure AD), and Microsoft Azure IaaS. Defenders (blue teams) and attackers (red teams) use BloodHound for a deeper understanding of privileged relationships in an environment.",
+        "techniques": [
+            "reconnaissance",
+            "post_exploitation",
+            "privilege_escalation"
+        ],
+        "categories": [
+            "active",
+            "active_directory"
+        ],
+        "targets": [
+            "network",
+            "windows"
         ]
     },
     {
@@ -672,7 +716,7 @@
             "network_scanner",
             "OSINT",
             "passive",
-            "subdomain",
+            "subdomain_enum",
             "web_app"
         ],
         "targets": [
@@ -761,7 +805,7 @@
         "categories": [
             "active",
             "network_scanner",
-            "subdomain"
+            "subdomain_enum"
         ],
         "targets": [
             "network"
@@ -960,7 +1004,9 @@
             "wireless_attack"
         ],
         "categories": [
+            "fingerprinting",
             "network_scanner",
+            "port_scanner",
             "vulnerability_scanner",
             "wireless_analyzer"
         ],
@@ -1292,7 +1338,7 @@
         ],
         "categories": [
             "active",
-            "shell_generator"
+            "reverse_shell"
         ],
         "targets": [
             "windows"
@@ -1671,6 +1717,25 @@
         "targets": []
     },
     {
+        "name": "LDAPHunter",
+        "url": "https://github.com/GhnimiWael/LDAPHunter",
+        "source": "https://github.com/GhnimiWael/LDAPHunter",
+        "description": "This Python tool automates LDAP enumeration for penetration testers, extracting users, groups, organizational units (OUs), password policies, and other critical Active Directory/LDAP information.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "active_directory",
+            "network_scanner"
+        ],
+        "targets": [
+            "network",
+            "windows"
+        ]
+    },
+    {
         "name": "Linkook",
         "url": "https://github.com/JackJuly/linkook",
         "source": "https://github.com/JackJuly/linkook",
@@ -1772,7 +1837,7 @@
             "fingerprinting",
             "network_scanner",
             "OSINT",
-            "subdomain",
+            "subdomain_enum",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -1797,6 +1862,26 @@
         "targets": [
             "people",
             "web"
+        ]
+    },
+    {
+        "name": "Masscan",
+        "url": "https://github.com/robertdavidgraham/masscan",
+        "source": "https://github.com/robertdavidgraham/masscan",
+        "description": "Masscan is an Internet-scale TCP port scanner that can scan the entire Internet in under five minutes by asynchronously spewing SYN packets at a rate of 10 million packets per second from a single machine.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "fingerprinting",
+            "host_discovery",
+            "network_scanner",
+            "port_scanner"
+        ],
+        "targets": [
+            "network"
         ]
     },
     {
@@ -1848,7 +1933,7 @@
         ],
         "categories": [
             "active",
-            "shell_generator",
+            "reverse_shell",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -2068,8 +2153,9 @@
         ],
         "categories": [
             "active",
+            "banner_grabbing",
             "network_scanner",
-            "shell_generator"
+            "reverse_shell"
         ],
         "targets": [
             "IoT",
@@ -2143,7 +2229,8 @@
         ],
         "categories": [
             "active",
-            "network_scanner"
+            "network_scanner",
+            "port_scanner"
         ],
         "targets": [
             "network"
@@ -2452,9 +2539,11 @@
         ],
         "categories": [
             "active",
+            "banner_grabbing",
             "fingerprinting",
             "network_scanner",
             "OSINT",
+            "port_scanner",
             "vulnerability_scanner",
             "WAF_detection"
         ],
@@ -2491,9 +2580,12 @@
             "reconnaissance"
         ],
         "categories": [
+            "fingerprinting",
+            "host_discovery",
             "network_scanner",
             "OSINT",
-            "passive"
+            "passive",
+            "port_scanner"
         ],
         "targets": [
             "network",
@@ -2513,7 +2605,8 @@
             "active",
             "fingerprinting",
             "network_scanner",
-            "OSINT"
+            "OSINT",
+            "port_scanner"
         ],
         "targets": [
             "network",
@@ -2534,7 +2627,7 @@
             "active",
             "network_scanner",
             "OSINT",
-            "subdomain",
+            "subdomain_enum",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -2590,7 +2683,7 @@
         ],
         "categories": [
             "active",
-            "shell_generator",
+            "reverse_shell",
             "web_app"
         ],
         "targets": [
@@ -2627,7 +2720,8 @@
         ],
         "categories": [
             "active",
-            "network_scanner"
+            "network_scanner",
+            "port_scanner"
         ],
         "targets": [
             "network"
@@ -3033,7 +3127,7 @@
             "network_scanner",
             "OSINT",
             "passive",
-            "subdomain"
+            "subdomain_enum"
         ],
         "targets": [
             "network",
@@ -3053,7 +3147,7 @@
             "network_scanner",
             "OSINT",
             "passive",
-            "subdomain"
+            "subdomain_enum"
         ],
         "targets": [
             "network",
@@ -3123,6 +3217,7 @@
         ],
         "categories": [
             "active",
+            "banner_grabbing",
             "network_scanner",
             "OSINT"
         ],

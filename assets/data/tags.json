@@ -2,7 +2,6 @@
     "techniques": [
         "cloud_attack",
         "content_discovery",
-        "defensive_security",
         "digital_forensics",
         "directory_traversal",
         "DoS",
@@ -35,6 +34,8 @@
         "credential_dumping",
         "dark_web",
         "fingerprinting",
+        "hash_cracker",
+        "header_analysis",
         "host_discovery",
         "network_auditor",
         "network_scanner",

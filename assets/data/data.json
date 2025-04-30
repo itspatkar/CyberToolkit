@@ -311,6 +311,7 @@
         "categories": [
             "active",
             "fingerprinting",
+            "header_analysis",
             "host_discovery",
             "network_scanner",
             "OSINT",
@@ -628,6 +629,23 @@
         ]
     },
     {
+        "name": "CrackStation",
+        "url": "https://crackstation.net/",
+        "source": "https://crackstation.net/",
+        "description": "CrackStation uses massive pre-computed lookup tables to crack password hashes. These tables store a mapping between the hash of a password, and the correct password for that hash. The hash values are indexed so that it is possible to quickly search the database for a given hash. If the hash is present in the database, the password can be recovered in a fraction of a second.",
+        "techniques": [
+            "password_attack"
+        ],
+        "categories": [
+            "active",
+            "hash_cracker",
+            "web_app"
+        ],
+        "targets": [
+            ""
+        ]
+    },
+    {
         "name": "CrossLinked",
         "url": "https://github.com/m8sec/CrossLinked",
         "source": "https://github.com/m8sec/CrossLinked",
@@ -670,7 +688,6 @@
         "source": "https://www.cycript.org/",
         "description": "Cycript allows developers to explore and modify running applications on iOS or macOS using a hybrid of Objective-C++ and JavaScript syntax through an interactive console featuring syntax highlighting and tab completion. (It also runs standalone on Android and Linux, providing access to Java but without injection.)",
         "techniques": [
-            "defensive_security",
             "reverse_engineering",
             "vulnerability_assessment"
         ],
@@ -834,7 +851,6 @@
         "source": "https://github.com/WithSecureLabs/drozer",
         "description": "Drozer is an open-source security assessment framework for the Android platform. It helps identify vulnerabilities in apps and devices by interacting with the Android Runtime, other apps' IPC endpoints, and the underlying operating system. Drozer also provides tools to analyze and utilize public Android exploits. It can perform actions similar to an installed application, such as leveraging Android’s Inter-Process Communication (IPC) mechanism. Its key features include Application Attack Surface Analysis, Privilege Escalation, Exploit Misconfigurations, Reverse Engineering, and Remote Exploitation.",
         "techniques": [
-            "defensive_security",
             "reverse_engineering",
             "vulnerability_assessment"
         ],
@@ -999,7 +1015,6 @@
         "source": "https://www.fing.com/",
         "description": "Fing - Network Tools is a powerful network scanning and troubleshooting app that helps users analyze and secure their home or office network. It features a network scanner, device recognition (fingerprinting), port scanner, Wi-Fi security analysis, internet speed test, and network troubleshooting tools.",
         "techniques": [
-            "defensive_security",
             "footprinting",
             "wireless_attack"
         ],
@@ -1059,7 +1074,6 @@
         "source": "https://github.com/frida/frida",
         "description": "Frida is a powerful dynamic instrumentation toolkit used for reverse engineering, security research, and application debugging. It allows developers and researchers to inject JavaScript or Python code into running applications on platforms like Windows, macOS, Linux, iOS, and Android. Frida is commonly used for mobile app testing, bypassing root or jailbreak detection, reverse engineering, and cybersecurity research.",
         "techniques": [
-            "defensive_security",
             "reverse_engineering",
             "vulnerability_assessment"
         ],
@@ -1285,7 +1299,8 @@
             "password_attack"
         ],
         "categories": [
-            "active"
+            "active",
+            "hash_cracker"
         ],
         "targets": []
     },
@@ -1436,7 +1451,6 @@
         "source": "https://hybrid-analysis.com/",
         "description": "This is a free malware analysis service for the community that detects and analyzes unknown threats using a unique Hybrid Analysis technology. It is an online service that provides deep insights into potentially malicious files and URLs.",
         "techniques": [
-            "defensive_security",
             "digital_forensics",
             "malware_analysis"
         ],
@@ -1454,11 +1468,11 @@
         "source": "https://github.com/vanhauser-thc/thc-hydra",
         "description": "THC-Hydra is a parallelized login cracker capable of performing rapid brute-force and dictionary attacks against various services. It is commonly used in penetration testing environments like Kali Linux and Parrot OS. The tool supports numerous protocols.",
         "techniques": [
+            "exploitation",
             "password_attack"
         ],
         "categories": [
-            "active",
-            "exploitation"
+            "active"
         ],
         "targets": [
             "database",
@@ -1592,7 +1606,8 @@
             "password_attack"
         ],
         "categories": [
-            "active"
+            "active",
+            "hash_cracker"
         ],
         "targets": []
     },
@@ -1690,7 +1705,6 @@
         "description": "Kubescape is an open-source Kubernetes security platform that provides comprehensive security coverage, from left to right across the entire development and deployment lifecycle. It offers hardening, posture management, and runtime security capabilities to ensure robust protection for Kubernetes environments. It saves Kubernetes users and admins precious time, effort, and resources.",
         "techniques": [
             "cloud_attack",
-            "defensive_security",
             "vulnerability_assessment"
         ],
         "categories": [
@@ -1707,12 +1721,12 @@
         "source": "https://gitlab.com/l0phtcrack",
         "description": "L0phtCrack is a password auditing and recovery tool used to assess the strength of passwords by cracking Windows account passwords using various attack techniques. It features Password Hash Extraction, Multiple Cracking Techniques, and Automated Auditing, making it a powerful tool for security testing and compliance checks.",
         "techniques": [
-            "defensive_security",
             "password_attack"
         ],
         "categories": [
             "active",
-            "credential_dumping"
+            "credential_dumping",
+            "hash_cracker"
         ],
         "targets": []
     },
@@ -1928,11 +1942,14 @@
         "source": "https://github.com/rapid7/metasploit-framework",
         "description": "An open-source project that provides the infrastructure, content, and tools for performing penetration tests and extensive security audits. It is a framework used for exploiting, testing, and securing systems, offering a collection of exploits, payloads, scanners, and post-exploitation tools.",
         "techniques": [
+            "enumeration",
             "exploitation",
+            "post_exploitation",
             "remote_code_execution"
         ],
         "categories": [
             "active",
+            "network_scanner",
             "reverse_shell",
             "vulnerability_scanner"
         ],
@@ -1990,7 +2007,6 @@
         "source": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
         "description": "Mobile Security Framework (MobSF) is an automated, all-in-one platform for mobile application (Android, iOS, Windows) security assessment, penetration testing, malware analysis, and privacy analysis. It supports both static and dynamic analysis, processing popular app binaries like APK, IPA, and APPX, as well as source code. The Dynamic Analyzer enables interactive instrumented testing, runtime data monitoring, and network traffic analysis for Android and iOS applications. MobSF also integrates seamlessly with DevSecOps and CI/CD pipelines via REST APIs and CLI tools, enhancing security workflows efficiently.",
         "techniques": [
-            "defensive_security",
             "malware_analysis",
             "vulnerability_assessment"
         ],
@@ -2119,7 +2135,8 @@
             "password_attack"
         ],
         "categories": [
-            "active"
+            "active",
+            "hash_cracker"
         ],
         "targets": [
             "network"
@@ -2318,7 +2335,8 @@
         ],
         "categories": [
             "active",
-            "credential_dumping"
+            "credential_dumping",
+            "hash_cracker"
         ],
         "targets": [
             "windows"
@@ -2494,10 +2512,9 @@
         "name": "Prowler",
         "url": "https://prowler.com/",
         "source": "https://github.com/prowler-cloud/prowler",
-        "description": "Prowler is an Open Cloud Security tool for AWS, Azure, GCP and Kubernetes. It helps for continuos monitoring, security assessments and audits, incident response, compliance, hardening and forensics readiness. Includes CIS, NIST 800, NIST CSF, CISA, FedRAMP, PCI-DSS, GDPR, HIPAA, FFIEC, SOC2, GXP, Well-Architected Security, ENS and more. ",
+        "description": "Prowler is an Open Cloud Security tool for AWS, Azure, GCP and Kubernetes. It helps for continuos monitoring, security assessments and audits, incident response, compliance, hardening and forensics readiness. Includes CIS, NIST 800, NIST CSF, CISA, FedRAMP, PCI-DSS, GDPR, HIPAA, FFIEC, SOC2, GXP, Well-Architected Security, ENS and more.",
         "techniques": [
             "cloud_attack",
-            "defensive_security",
             "vulnerability_assessment"
         ],
         "categories": [
@@ -2784,7 +2801,7 @@
         "name": "SearchSploit",
         "url": "https://www.exploit-db.com/searchsploit",
         "source": "https://gitlab.com/exploit-database/exploitdb",
-        "description": "SearchSploit is a command-line utility that enables users to search through the Exploit Database (Exploit-DB) for publicly available exploits and shellcode. It's particularly useful for penetration testers and security researchers who require access to exploit information, even in environments without internet connectivity. ​",
+        "description": "SearchSploit is a command-line utility that enables users to search through the Exploit Database (Exploit-DB) for publicly available exploits and shellcode. It's particularly useful for penetration testers and security researchers who require access to exploit information, even in environments without internet connectivity.",
         "techniques": [
             "reconnaissance",
             "enumeration",
@@ -2797,6 +2814,25 @@
             "vulnerability_database"
         ],
         "targets": []
+    },
+    {
+        "name": "Security Headers",
+        "url": "https://securityheaders.com/",
+        "source": "https://gitlab.com/exploit-database/exploitdb",
+        "description": "SecurityHeaders.com scans a website's HTTP response headers to determine if they include key security features that protect against various attacks, such as Cross-Site Scripting (XSS), Clickjacking, and data injection. The tool then provides a grade (A+ to F) based on the presence and configuration of these headers.",
+        "techniques": [
+            "reconnaissance",
+            "enumeration"
+        ],
+        "categories": [
+            "header_analysis",
+            "passive",
+            "web_app"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
     },
     {
         "name": "Sherlock",
@@ -2843,7 +2879,6 @@
         "source": "https://sisik.eu/apk-tool",
         "description": "Sixo Online APK Analyzer is a tool that allows you to analyze various details of Android APK files. It can decompile binary XML files and resources.",
         "techniques": [
-            "defensive_security",
             "reverse_engineering",
             "vulnerability_assessment"
         ],
@@ -2927,23 +2962,6 @@
         "targets": [
             "network",
             "web"
-        ]
-    },
-    {
-        "name": "Snort",
-        "url": "https://www.snort.org/",
-        "source": "https://github.com/snort3/snort3",
-        "description": "Snort is an open-source Intrusion Detection System (IDS) and Intrusion Prevention System (IPS) developed by Cisco. It analyzes network traffic in real-time to detect and prevent potential cyber threats, such as malware, port scanning, and brute-force attacks. It features packet sniffing, custom rule writing, and protocol analysis, making it a powerful tool for network security monitoring.",
-        "techniques": [
-            "defensive_security",
-            "vulnerability_assessment"
-        ],
-        "categories": [
-            "network_scanner",
-            "vulnerability_scanner"
-        ],
-        "targets": [
-            "network"
         ]
     },
     {
@@ -3176,8 +3194,6 @@
         "source": "https://learn.microsoft.com/en-us/sysinternals/",
         "description": "Sysinternals is a suite of powerful Windows utilities widely used in cybersecurity and system diagnostics. Many of the tools are free, with some offering access to source code. Popular tools include RootkitRevealer, which detects hidden registry and file system anomalies indicative of rootkits; Process Explorer, an advanced Task Manager that reveals detailed process information and helps audit permissions; and Autoruns, which displays all executables set to run at startup, a common place for malware to hide. TCPView allows users to monitor real-time network connections, while Procmon (Process Monitor) captures file system, registry, and process activity crucial for malware analysis. Tools like Strings and Sigcheck assist in analyzing binaries and verifying digital signatures. For offline analysis, Disk2vhd creates virtual disk images of live systems, and PsTools provides command-line capabilities for managing processes locally and remotely.",
         "techniques": [
-            "defensive_security",
-            "defensive_security",
             "enumeration",
             "malware_analysis",
             "sniffing"
@@ -3382,6 +3398,25 @@
             "web_app"
         ],
         "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
+        "name": "VirusTotal",
+        "url": "https://www.virustotal.com/",
+        "source": "https://www.virustotal.com/",
+        "description": "VirusTotal is a free online service that analyzes files, URLs, IPs, and domains for viruses, malware, and other kinds of malicious content using a combination of 70+ antivirus engines, sandboxing tools, and threat intelligence sources.",
+        "techniques": [
+            "digital_forensics",
+            "malware_analysis"
+        ],
+        "categories": [
+            "OSINT",
+            "web_app"
+        ],
+        "targets": [
+            "files",
             "network",
             "web"
         ]

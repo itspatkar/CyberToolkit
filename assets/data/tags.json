@@ -22,6 +22,7 @@
         "social_engineering",
         "spoofing",
         "SQL_injection",
+        "steganography",
         "vulnerability_assessment",
         "wireless_attack",
         "XSS"
@@ -33,6 +34,8 @@
         "banner_grabbing",
         "credential_dumping",
         "dark_web",
+        "evasion",
+        "exfiltration",
         "fingerprinting",
         "hash_cracker",
         "header_analysis",

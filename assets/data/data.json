@@ -16,6 +16,22 @@
         ]
     },
     {
+        "name": "AdminPBuster",
+        "url": "https://github.com/blackhatethicalhacking/AdminPBuster",
+        "source": "https://github.com/blackhatethicalhacking/AdminPBuster",
+        "description": "AdminPBuster identifies hidden admin panels for any domain using a built-in wordlist that includes both common and obscure paths, effectively bypassing WAFs.",
+        "techniques": [
+            "content_discovery",
+            "reconnaissance"
+        ],
+        "categories": [
+            "passive"
+        ],
+        "targets": [
+            "web"
+        ]
+    },
+    {
         "name": "AdvPhishing",
         "url": "https://github.com/Ignitetch/AdvPhishing",
         "source": "https://github.com/Ignitetch/AdvPhishing",
@@ -501,9 +517,7 @@
         "categories": [
             "wordlist_generator"
         ],
-        "targets": [
-            "web"
-        ]
+        "targets": []
     },
     {
         "name": "Cloud Container Attack Tool (CCAT)",
@@ -724,7 +738,8 @@
         "description": "Damn Small SQLi Scanner (DSSS) is a fully functional SQL injection vulnerability scanner (supporting GET and POST parameters).",
         "techniques": [
             "exploitation",
-            "SQL_injection"
+            "SQL_injection",
+            "vulnerability_assessment"
         ],
         "categories": [
             "active",
@@ -759,6 +774,22 @@
             "network",
             "people",
             "web"
+        ]
+    },
+    {
+        "name": "Defpass",
+        "url": "https://defpass.com/",
+        "source": "https://defpass.com/",
+        "description": "IoT Device Default Password Lookup",
+        "techniques": [
+            "password_attack"
+        ],
+        "categories": [
+            "web_app"
+        ],
+        "targets": [
+            "hardware",
+            "IoT"
         ]
     },
     {
@@ -1204,6 +1235,26 @@
         ]
     },
     {
+        "name": "Ghauri",
+        "url": "https://github.com/r0oth3x49/ghauri",
+        "source": "https://github.com/r0oth3x49/ghauri",
+        "description": "An advanced cross-platform tool that automates the process of detecting and exploiting SQL injection security flaws.",
+        "techniques": [
+            "exploitation",
+            "SQL_injection",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "database",
+            "network",
+            "web"
+        ]
+    },
+    {
         "name": "Ghidra",
         "url": "https://ghidra-sre.org/",
         "source": "https://github.com/NationalSecurityAgency/ghidra",
@@ -1465,6 +1516,26 @@
         ]
     },
     {
+        "name": "HTTP Observatory",
+        "url": "https://developer.mozilla.org/en-US/observatory",
+        "source": "https://github.com/mdn/mdn-http-observatory",
+        "description": "The Mozilla HTTP Observatory is a passive web security scanner that checks a website’s HTTP response headers and TLS configuration for best practices and known misconfigurations.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "fingerprinting",
+            "header_analysis",
+            "passive",
+            "web_app"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
         "name": "httprint",
         "url": "https://net-square.com/httprint.html",
         "source": "https://net-square.com/httprint.html",
@@ -1478,7 +1549,6 @@
         ],
         "targets": [
             "network",
-            "OSINT",
             "web"
         ]
     },
@@ -1665,6 +1735,61 @@
         "targets": []
     },
     {
+        "name": "JWTAuditor",
+        "url": "https://jwtauditor.com/",
+        "source": "https://github.com/dr34mhacks/jwtauditor",
+        "description": "JWTAuditor is a specialized tool for analyzing and detecting security issues in JSON Web Tokens (JWTs). It can be used to detect vulnerable JWT implementations, misconfigurations, and exploitable signing techniques.",
+        "techniques": [
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "fingerprinting",
+            "vulnerability_scanner",
+            "web_app"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
+        "name": "JWT Debugger",
+        "url": "https://jwt.io/",
+        "source": "https://jwt.io/",
+        "description": "JWT.io is a JWT (JSON Web Token) debugging and educational tool by Auth0 that allows users to decode tokens, manually verify signatures, inspect token structure, learn about signing algorithms like HS256 and RS256, and explore JWT libraries for various programming languages.",
+        "techniques": [
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "fingerprinting",
+            "vulnerability_scanner",
+            "web_app"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
+        "name": "Katana",
+        "url": "https://github.com/projectdiscovery/katana",
+        "source": "https://github.com/projectdiscovery/katana",
+        "description": "Katana is a powerful web crawler and content discovery tool that parses JavaScript files, sitemaps, and HTML to identify URLs, endpoints, and parameters for security testing.",
+        "techniques": [
+            "content_discovery",
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "fingerprinting",
+            "OSINT"
+        ],
+        "targets": [
+            "web"
+        ]
+    },
+    {
         "name": "KisMAC",
         "url": "https://kismac-ng.org/",
         "source": "https://github.com/IGRSoft/KisMac2",
@@ -1800,6 +1925,26 @@
         "targets": [
             "network",
             "windows"
+        ]
+    },
+    {
+        "name": "LinkFinder",
+        "url": "https://github.com/GerbenJavado/LinkFinder",
+        "source": "https://github.com/GerbenJavado/LinkFinder",
+        "description": "LinkFinder is a python script written to discover endpoints and their parameters in JavaScript files.",
+        "techniques": [
+            "content_discovery",
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "extension",
+            "fingerprinting",
+            "OSINT",
+            "passive"
+        ],
+        "targets": [
+            "web"
         ]
     },
     {
@@ -2081,7 +2226,8 @@
         "source": "https://sourceforge.net/projects/themole/",
         "description": "Mole is an automatic SQL Injection exploitation tool. Only by providing a vulnerable URL and a valid string on the site it can detect the injection and exploit it, either by using the union technique or a boolean query based technique.",
         "techniques": [
-            "SQL_injection"
+            "SQL_injection",
+            "vulnerability_assessment"
         ],
         "categories": [
             "active",
@@ -2317,7 +2463,9 @@
         "source": "https://github.com/codingo/NoSQLMap",
         "description": "NoSQLMap is an open source Python tool designed to audit for as well as automate injection attacks and exploit default configuration weaknesses in NoSQL databases and web applications using NoSQL in order to disclose or clone data from the database.",
         "techniques": [
-            "SQL_injection"
+            "exploitation",
+            "SQL_injection",
+            "vulnerability_assessment"
         ],
         "categories": [
             "active",
@@ -2764,6 +2912,27 @@
         ]
     },
     {
+        "name": "Retire.js",
+        "url": "https://github.com/RetireJS/retire.js",
+        "source": "https://github.com/RetireJS/retire.js",
+        "description": "The scanner detects the use of JavaScript libraries with known vulnerabilities and can also generate an SBOM (Software Bill of Materials) for the libraries it identifies.",
+        "techniques": [
+            "content_discovery",
+            "enumeration",
+            "reconnaissance",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "extension",
+            "OSINT",
+            "passive",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "web"
+        ]
+    },
+    {
         "name": "Reverse Shell generator",
         "url": "https://revshells.com/",
         "source": "https://github.com/0dayCTF/reverse-shell-generator",
@@ -2891,6 +3060,37 @@
         "targets": []
     },
     {
+        "name": "SecLists",
+        "url": "https://www.exploit-db.com/searchsploit",
+        "source": "https://gitlab.com/exploit-database/exploitdb",
+        "description": "SecLists is the security tester's companion. It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more.",
+        "techniques": [],
+        "categories": [
+            "wordlist_generator"
+        ],
+        "targets": []
+    },
+    {
+        "name": "SecretFinder",
+        "url": "https://github.com/m4ll0k/SecretFinder",
+        "source": "https://github.com/m4ll0k/SecretFinder",
+        "description": "A python script for find sensitive data (apikeys, accesstoken,jwt,..) and search anything on javascript files,",
+        "techniques": [
+            "content_discovery",
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "extension",
+            "fingerprinting",
+            "OSINT",
+            "passive"
+        ],
+        "targets": [
+            "web"
+        ]
+    },
+    {
         "name": "Security Headers",
         "url": "https://securityheaders.com/",
         "source": "https://gitlab.com/exploit-database/exploitdb",
@@ -2910,7 +3110,7 @@
         ]
     },
     {
-        "name": "Sherlock",
+        "name": "Shcheck",
         "url": "https://sherlockproject.xyz/",
         "source": "https://github.com/sherlock-project/sherlock",
         "description": "Hunt down social media accounts by username across social networks.",
@@ -2924,6 +3124,24 @@
         ],
         "targets": [
             "people",
+            "web"
+        ]
+    },
+    {
+        "name": "Sherlock",
+        "url": "https://github.com/santoru/shcheck",
+        "source": "https://github.com/santoru/shcheck",
+        "description": "Security Header Checker (shcheck) is a simple tool to check the security headers of a website.",
+        "techniques": [
+            "reconnaissance",
+            "enumeration"
+        ],
+        "categories": [
+            "header_analysis",
+            "passive"
+        ],
+        "targets": [
+            "network",
             "web"
         ]
     },
@@ -2962,6 +3180,23 @@
         ],
         "targets": [
             "android"
+        ]
+    },
+    {
+        "name": "Skipfish",
+        "url": "https://www.kali.org/tools/skipfish/",
+        "source": "https://www.kali.org/tools/skipfish/",
+        "description": "Skipfish is a web application security scanner developed by Google. It crawls and audits websites, looking for a wide range of vulnerabilities through active probing and fuzzing.",
+        "techniques": [
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "active",
+            "fingerprinting",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "web"
         ]
     },
     {
@@ -3153,7 +3388,8 @@
         "source": "https://github.com/americo/sqlifinder",
         "description": "Sqlifinder is a tool with the function of detecting GET-based sql injection vulnerabilities in web applications using waybackurls, web crawlers and sql injection payloads.",
         "techniques": [
-            "SQL_injection"
+            "SQL_injection",
+            "vulnerability_assessment"
         ],
         "categories": [
             "active",
@@ -3171,7 +3407,8 @@
         "source": "https://github.com/sqlmapproject/sqlmap",
         "description": "sqlmap is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.",
         "techniques": [
-            "SQL_injection"
+            "SQL_injection",
+            "vulnerability_assessment"
         ],
         "categories": [
             "active",
@@ -3180,6 +3417,46 @@
         ],
         "targets": [
             "database",
+            "network",
+            "web"
+        ]
+    },
+    {
+        "name": "SSLscan",
+        "url": "https://github.com/rbsec/sslscan",
+        "source": "https://github.com/rbsec/sslscan",
+        "description": "SSLscan is a command-line SSL/TLS scanner used to test a server’s supported protocols, cipher suites, and certificate details.",
+        "techniques": [
+            "reconnaissance",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "fingerprinting",
+            "network_auditor",
+            "SSL_check",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
+        "name": "SSLyze",
+        "url": "https://github.com/nabla-c0d3/sslyze",
+        "source": "https://github.com/nabla-c0d3/sslyze",
+        "description": "SSLyze is a fast and powerful SSL/TLS scanner used by security professionals and system administrators to analyze the SSL configuration of a server.",
+        "techniques": [
+            "reconnaissance",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "fingerprinting",
+            "network_auditor",
+            "SSL_check",
+            "vulnerability_scanner"
+        ],
+        "targets": [
             "network",
             "web"
         ]
@@ -3363,6 +3640,26 @@
         "targets": [
             "files",
             "hardware"
+        ]
+    },
+    {
+        "name": "TestSSL",
+        "url": "https://github.com/testssl/testssl.sh",
+        "source": "https://github.com/testssl/testssl.sh",
+        "description": "Testssl.sh is a free command line tool which checks a server's service on any port for the support of TLS/SSL ciphers, protocols as well as some cryptographic flaws.",
+        "techniques": [
+            "reconnaissance",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "fingerprinting",
+            "network_auditor",
+            "SSL_check",
+            "vulnerability_scanner"
+        ],
+        "targets": [
+            "network",
+            "web"
         ]
     },
     {
@@ -3552,8 +3849,8 @@
         "source": "https://docs.w3af.org/",
         "description": "W3af (Web Application Attack and Audit Framework) is an open-source web application security scanner designed to identify and exploit vulnerabilities in web applications. It is user-friendly, highly extensible, and includes dozens of plugins for web assessment and exploitation. In many ways, it functions like a web-focused version of Metasploit.",
         "techniques": [
-            "vulnerability_assessment",
             "SQL_injection",
+            "vulnerability_assessment",
             "XSS"
         ],
         "categories": [
@@ -3602,6 +3899,26 @@
         ]
     },
     {
+        "name": "Wappalyzer",
+        "url": "https://www.wappalyzer.com/lookup/",
+        "source": "https://www.wappalyzer.com/",
+        "description": "Instantly reveal the technology stack of any website, such as CMS, ecommerce platform or payment processor, as well as company and contact details.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "extension",
+            "fingerprinting",
+            "OSINT",
+            "passive",
+            "web_app"
+        ],
+        "targets": [
+            "web"
+        ]
+    },
+    {
         "name": "Wash",
         "url": "https://github.com/t6x/reaver-wps-fork-t6x",
         "source": "https://github.com/tiagob0b/Reaver-WPS",
@@ -3629,6 +3946,26 @@
             "footprinting",
             "reconnaissance",
             "social_engineering"
+        ],
+        "categories": [
+            "OSINT",
+            "passive",
+            "search_engine"
+        ],
+        "targets": [
+            "web"
+        ]
+    },
+    {
+        "name": "WaybackURLs",
+        "url": "https://github.com/tomnomnom/waybackurls",
+        "source": "https://github.com/tomnomnom/waybackurls",
+        "description": "Accept line-delimited domains on stdin, fetch known URLs from the Wayback Machine for *.domain and output them on stdout.",
+        "techniques": [
+            "content_discovery",
+            "enumeration",
+            "footprinting",
+            "reconnaissance"
         ],
         "categories": [
             "OSINT",

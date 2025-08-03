@@ -1153,6 +1153,21 @@
         ]
     },
     {
+        "name": "FCrackZip",
+        "url": "https://oldhome.schmorp.de/marc/fcrackzip.html",
+        "source": "https://oldhome.schmorp.de/marc/fcrackzip.html",
+        "description": "FCrackZip is a fast password cracker partly written in assembler. It is able to crack password protected zip files with brute force or dictionary based attacks, optionally testing with unzip its results. It can also crack cpmask’ed images.",
+        "techniques": [
+            "password_attack"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "files"
+        ]
+    },
+    {
         "name": "Frida",
         "url": "https://frida.re/",
         "source": "https://github.com/frida/frida",
@@ -4234,6 +4249,21 @@
         "targets": [
             "network",
             "web"
+        ]
+    },
+    {
+        "name": "ZipCrack",
+        "url": "https://github.com/henriksb/ZipCrack",
+        "source": "https://github.com/henriksb/ZipCrack",
+        "description": "ZipCrack is a command-line tool to crack password protected Zip files without using separate programs like 7zip or Winrar to extract, which makes it a great deal faster. ZipCracker supports brute force and dictionary attack.",
+        "techniques": [
+            "password_attack"
+        ],
+        "categories": [
+            "active"
+        ],
+        "targets": [
+            "files"
         ]
     },
     {

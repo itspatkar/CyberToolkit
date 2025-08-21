@@ -324,6 +324,7 @@
         "categories": [
             "active",
             "credential_dumping",
+            "fuzzing",
             "network_scanner",
             "port_scanner",
             "wireless_analyzer"
@@ -430,6 +431,31 @@
         ],
         "targets": [
             "cloud"
+        ]
+    },
+    {
+        "name": "Bug-Bounty-Search-Engine",
+        "url": "https://nitinyadav00.github.io/Bug-Bounty-Search-Engine/",
+        "source": "https://github.com/NitinYadav00/Bug-Bounty-Search-Engine",
+        "description": "Search Engine For Bug Bounty Hunters",
+        "techniques": [
+            "content_discovery",
+            "enumeration",
+            "footprinting",
+            "reconnaissance",
+            "vulnerability_assessment"
+        ],
+        "categories": [
+            "fuzzing",
+            "network_scanner",
+            "OSINT",
+            "search_engine",
+            "subdomain_enum",
+            "web_app"
+        ],
+        "targets": [
+            "network",
+            "web"
         ]
     },
     {
@@ -1063,6 +1089,25 @@
         "targets": []
     },
     {
+        "name": "Fast Google Dorks Scan",
+        "url": "https://github.com/IvanGlinkin/Fast-Google-Dorks-Scan",
+        "source": "https://github.com/IvanGlinkin/Fast-Google-Dorks-Scan",
+        "description": "The OSINT project, the main idea of which is to collect all the possible Google dorks search combinations and to find the information about the specific web-site: common admin panels, the widespread file types and path traversal. The 100% automated.",
+        "techniques": [
+            "content_discovery",
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "OSINT",
+            "passive",
+            "search_engine"
+        ],
+        "targets": [
+            "web"
+        ]
+    },
+    {
         "name": "Fern Wifi Cracker",
         "url": "https://github.com/savio-code/fern-wifi-cracker",
         "source": "https://github.com/savio-code/fern-wifi-cracker",
@@ -1615,10 +1660,31 @@
             "reconnaissance"
         ],
         "categories": [
-            "website_mirroring",
-            "active"
+            "active",
+            "website_mirroring"
         ],
         "targets": [
+            "web"
+        ]
+    },
+    {
+        "name": "Hurricane Electric BGP Toolkit",
+        "url": "https://bgp.he.net/",
+        "source": "https://bgp.he.net/",
+        "description": "Hurricane Electric BGP Toolkit.",
+        "techniques": [
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "host_discovery",
+            "network_scanner",
+            "OSINT",
+            "subdomain_enum"
+        ],
+        "targets": [
+            "network",
             "web"
         ]
     },
@@ -1789,16 +1855,17 @@
         "targets": []
     },
     {
-        "name": "JWTAuditor",
-        "url": "https://jwtauditor.com/",
-        "source": "https://github.com/dr34mhacks/jwtauditor",
-        "description": "JWTAuditor is a specialized tool for analyzing and detecting security issues in JSON Web Tokens (JWTs). It can be used to detect vulnerable JWT implementations, misconfigurations, and exploitable signing techniques.",
+        "name": "JWT Debugger",
+        "url": "https://jwt.io/",
+        "source": "https://jwt.io/",
+        "description": "JWT.io is a JWT (JSON Web Token) debugging and educational tool by Auth0 that allows users to decode tokens, manually verify signatures, inspect token structure, learn about signing algorithms like HS256 and RS256, and explore JWT libraries for various programming languages.",
         "techniques": [
-            "vulnerability_assessment"
+            "authentication",
+            "exploitation"
         ],
         "categories": [
-            "fingerprinting",
-            "vulnerability_scanner",
+            "active",
+            "JWT",
             "web_app"
         ],
         "targets": [
@@ -1807,16 +1874,56 @@
         ]
     },
     {
-        "name": "JWT Debugger",
-        "url": "https://jwt.io/",
-        "source": "https://jwt.io/",
-        "description": "JWT.io is a JWT (JSON Web Token) debugging and educational tool by Auth0 that allows users to decode tokens, manually verify signatures, inspect token structure, learn about signing algorithms like HS256 and RS256, and explore JWT libraries for various programming languages.",
+        "name": "JWT Security Checker",
+        "url": "https://xjwt.io/",
+        "source": "https://github.com/exploit-forge/xjwt",
+        "description": "JWT Security Checker is a professional-grade security testing platform designed for penetration testers, security researchers, and developers to analyze and test JSON Web Token implementations.",
         "techniques": [
+            "authentication",
+            "exploitation"
+        ],
+        "categories": [
+            "active",
+            "JWT",
+            "web_app"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
+        "name": "JWTAuditor",
+        "url": "https://jwtauditor.com/",
+        "source": "https://github.com/dr34mhacks/jwtauditor",
+        "description": "JWTAuditor is a specialized tool for analyzing and detecting security issues in JSON Web Tokens (JWTs). It can be used to detect vulnerable JWT implementations, misconfigurations, and exploitable signing techniques.",
+        "techniques": [
+            "authentication",
+            "exploitation"
+        ],
+        "categories": [
+            "active",
+            "JWT",
+            "web_app"
+        ],
+        "targets": [
+            "network",
+            "web"
+        ]
+    },
+    {
+        "name": "JWTLens",
+        "url": "https://jwtlens.netlify.app/",
+        "source": "https://github.com/chawdamrunal/JWTLens-Local",
+        "description": "Advanced JWT Security Analysis & Vulnerability Detection",
+        "techniques": [
+            "authentication",
+            "exploitation",
             "vulnerability_assessment"
         ],
         "categories": [
-            "fingerprinting",
-            "vulnerability_scanner",
+            "active",
+            "JWT",
             "web_app"
         ],
         "targets": [
@@ -2681,6 +2788,25 @@
         ]
     },
     {
+        "name": "ParamSpider",
+        "url": "https://github.com/devanshbatham/ParamSpider",
+        "source": "https://github.com/devanshbatham/ParamSpider",
+        "description": "paramspider allows you to fetch URLs related to any domain or a list of domains from Wayback achives. It filters out \"boring\" URLs, allowing you to focus on the ones that matter the most.",
+        "techniques": [
+            "content_discovery",
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "active",
+            "fuzzing",
+            "OSINT"
+        ],
+        "targets": [
+            "web"
+        ]
+    },
+    {
         "name": "Pdfinfo",
         "url": "https://www.xpdfreader.com/",
         "source": "https://www.xpdfreader.com/download.html",
@@ -2835,6 +2961,7 @@
             "active",
             "banner_grabbing",
             "fingerprinting",
+            "fuzzing",
             "network_scanner",
             "OSINT",
             "port_scanner",
@@ -2919,6 +3046,7 @@
         ],
         "categories": [
             "active",
+            "fuzzing",
             "network_scanner",
             "OSINT",
             "subdomain_enum",
@@ -3120,6 +3248,7 @@
         "description": "SecLists is the security tester's companion. It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more.",
         "techniques": [],
         "categories": [
+            "fuzzing",
             "wordlist_generator"
         ],
         "targets": []
@@ -3247,6 +3376,7 @@
         "categories": [
             "active",
             "fingerprinting",
+            "fuzzing",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -3945,6 +4075,7 @@
         ],
         "categories": [
             "active",
+            "fuzzing",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -4229,6 +4360,7 @@
         ],
         "categories": [
             "active",
+            "fuzzing",
             "vulnerability_scanner"
         ],
         "targets": [

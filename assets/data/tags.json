@@ -1,5 +1,6 @@
 {
     "techniques": [
+        "authentication",
         "cloud_attack",
         "content_discovery",
         "digital_forensics",
@@ -38,9 +39,11 @@
         "exfiltration",
         "extension",
         "fingerprinting",
+        "fuzzing",
         "hash_cracker",
         "header_analysis",
         "host_discovery",
+        "JWT",
         "network_auditor",
         "network_scanner",
         "OSINT",

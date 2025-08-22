@@ -62,7 +62,7 @@ function generateList() {
         listItem.classList.add('list-item');
 
         // Title
-        let title = document.createElement('h6');
+        let title = document.createElement('div');
         title.classList.add('title');
         title.textContent = item.name;
 
@@ -140,7 +140,8 @@ function generateFilter() {
     let technique = document.createElement('div');
     technique.classList.add('filter-item');
 
-    let techniqueTitle = document.createElement('h6');
+    let techniqueTitle = document.createElement('div');
+    techniqueTitle.classList.add('title');
     techniqueTitle.textContent = "Techniques";
 
     let techniqueBtn = document.createElement('div');
@@ -166,7 +167,8 @@ function generateFilter() {
     let category = document.createElement('div');
     category.classList.add('filter-item');
 
-    let categoryTitle = document.createElement('h6');
+    let categoryTitle = document.createElement('div');
+    categoryTitle.classList.add('title');
     categoryTitle.textContent = "Categories";
 
     let categoryBtn = document.createElement('div');
@@ -192,7 +194,8 @@ function generateFilter() {
     let target = document.createElement('div');
     target.classList.add('filter-item');
 
-    let targetTitle = document.createElement('h6');
+    let targetTitle = document.createElement('div');
+    targetTitle.classList.add('title');
     targetTitle.textContent = "Targets";
 
     let targetBtn = document.createElement('div');
@@ -218,7 +221,7 @@ function generateFilter() {
     let resetBtn = document.createElement('div');
     let btn = document.createElement('button');
     btn.setAttribute('type', 'button');
-    btn.classList.add('btn', 'btn-dark', 'btn-sm');
+    btn.classList.add('btn', 'btn-dark', 'btn-sm', 'mt-2');
     btn.setAttribute('data-tag', 'reset');
     btn.textContent = "RESET";
     btn.addEventListener('click', function () {

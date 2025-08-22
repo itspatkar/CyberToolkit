@@ -3,7 +3,7 @@ body {
     background-color: #edf2f7;
 }
 main {
-    margin: 1.5rem 6rem;
+    margin: 1.5rem 3rem;
 }
 header {
     width: 100%;
@@ -20,29 +20,35 @@ a {
     text-overflow: ellipsis;
 }
 .navbar {
-    padding: 0.5rem 2rem;
+    padding: 0.25rem 1rem;
 }
 .navbar-brand {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 .btn {
-    margin-right: 4px;
-    margin-bottom: 4px;
-    padding: 1px 4px;
-    font-size: 12.5px;
+    margin-right: 1px;
+    padding: 0 2px;
+    font-size: 12px;
+}
+.text-muted {
+    font-size: 12px;
 }
 .alert {
-    margin: 4px 4px 0 0;
+    margin: 4px 2px 0 0;
     padding: 0 2px;
-    font-size: 12.5px;
+    font-size: 10.5px;
 }
 .head-title {
     font-family: "Lobster Two", serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
 }
+.title {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
 .about {
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-align: center;
 }
 .search-box {
@@ -54,37 +60,39 @@ a {
     position: absolute;
     justify-content: center;
     align-items: center;
-    height: 46px;
+    height: 34px;
     width: 50px;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 #search {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     padding-left: 3.5rem;
     border: 1px solid #ccc;
     border-radius: 8px;
+    font-size: 0.85rem;
 }
 .filter-box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
+    gap: 0;
+    line-height: 1.25rem;
 }
 .lists {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 5px;
+    gap: 4px;
 }
 .list-item {
-    padding: 1rem;
+    padding: 10px;
     background: white;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #ccc;
     border-radius: 10px;
 }
 .list-item a {
-    font-size: 15px;
+    font-size: 12px;
 }
 .description {
     display: -webkit-box;
@@ -102,14 +110,14 @@ a {
 .read-more {
     display: block;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
     color: blue;
 }
 
 /* Responsiveness */
 @media only screen and (max-width: 1400px) {
     main {
-        margin: 1.5rem 3rem;
+        margin: 1.5rem 2rem;
     }
     .lists {
         grid-template-columns: 1fr 1fr;
@@ -120,25 +128,12 @@ a {
         margin: 1.5rem 0;
     }
     .navbar {
-        padding: 10px 5px;
+        padding: 8px 5px;
     }
-    .text-muted {
-        font-size: 14px;
-    }
-    .btn, .alert {
-        font-size: 12px;
-    }
-    .head-title {
-        font-size: 2.25rem;
-    }
-    .about {
-        font-size: 1rem;
-    }
-    .search-icon {
-        height: 42px;
+    .btn {
+        font-size: 11px;
     }
     #search {
-        padding: 8px;
         padding-left: 3rem;
     }
     .lists {

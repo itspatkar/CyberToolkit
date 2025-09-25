@@ -55,7 +55,6 @@ function generateList() {
     const dataList = document.getElementById('dataList');
 
     dataList.innerHTML = '';
-    let counter = 0;
 
     dataJSON.forEach(function(item) {
         let listItem = document.createElement('div');
@@ -122,10 +121,7 @@ function generateList() {
         listItem.appendChild(source);
         listItem.appendChild(filters);
         dataList.appendChild(listItem);
-        counter++;
     });
-
-    document.getElementById("counter").textContent = --counter;
 
     addReadMoreBtns();
 }

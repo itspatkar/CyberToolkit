@@ -1,17 +1,17 @@
 {
     "techniques": [
-        "authentication",
-        "cloud_attack",
         "content_discovery",
-        "digital_forensics",
+        "cryptography",
         "directory_traversal",
-        "DoS",
+        "denial_of_service",
         "enumeration",
         "exploitation",
         "footprinting",
+        "forensics",
         "hijacking",
-        "IoT_attack",
+        "HTTP_tampering",
         "malware_analysis",
+        "networking",
         "password_attack",
         "phishing",
         "post_exploitation",
@@ -25,14 +25,16 @@
         "SQL_injection",
         "steganography",
         "vulnerability_assessment",
-        "wireless_attack",
         "XSS"
     ],
     "categories": [
-        "active",
         "active_directory",
         "APK_analyzer",
+        "authentication",
         "banner_grabbing",
+        "browser",
+        "bypass",
+        "crawler",
         "credential_dumping",
         "dark_web",
         "evasion",
@@ -44,10 +46,11 @@
         "header_analysis",
         "host_discovery",
         "JWT",
-        "network_auditor",
+        "misconfigs",
         "network_scanner",
         "OSINT",
         "passive",
+        "payload",
         "port_scanner",
         "RAT",
         "reverse_shell",
@@ -60,8 +63,7 @@
         "WAF_detection",
         "web_app",
         "website_mirroring",
-        "wireless_analyzer",
-        "wordlist_generator"
+        "wordlists"
     ],
     "targets": [
         "android",
@@ -76,6 +78,7 @@
         "network",
         "people",
         "web",
-        "windows"
+        "windows",
+        "wireless"
     ]
 }

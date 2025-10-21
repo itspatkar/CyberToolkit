@@ -45,6 +45,7 @@
         "hash_cracker",
         "header_analysis",
         "host_discovery",
+        "javascript",
         "JWT",
         "misconfigs",
         "network_scanner",

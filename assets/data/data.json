@@ -50,12 +50,30 @@
         "source": "https://github.com/Ignitetch/AdvPhishing",
         "description": "AdvPhishing is an advanced phishing tool used for creating fake login pages to steal credentials. This tool generates realistic-looking login pages for various popular websites, such as Facebook, Instagram, Twitter, and Gmail, and captures the credentials entered by victims.",
         "techniques": [
-            "phishing",
             "social_engineering"
         ],
-        "categories": [],
+        "categories": [
+            "phishing"
+        ],
         "targets": [
             "people",
+            "web"
+        ]
+    },
+    {
+        "name": "Ahmia",
+        "url": "https://ahmia.fi/",
+        "source": "https://github.com/ahmia/ahmia-site",
+        "description": "Ahmia is the search engine for .onion domains on the Tor anonymity network.",
+        "techniques": [
+            "reconnaissance",
+            "footprinting"
+        ],
+        "categories": [
+            "dark_web",
+            "search_engine"
+        ],
+        "targets": [
             "web"
         ]
     },
@@ -299,6 +317,22 @@
         ]
     },
     {
+        "name": "Beheader",
+        "url": "https://github.com/p2r3/beheader",
+        "source": "https://github.com/p2r3/beheader",
+        "description": "Polyglot generator for media files.",
+        "techniques": [
+            "malware_analysis",
+            "steganography"
+        ],
+        "categories": [
+            "polyglot"
+        ],
+        "targets": [
+            "files"
+        ]
+    },
+    {
         "name": "Bettercap",
         "url": "https://www.bettercap.org/",
         "source": "https://github.com/bettercap/bettercap",
@@ -392,7 +426,9 @@
         "techniques": [
             "exploitation"
         ],
-        "categories": [],
+        "categories": [
+            "root"
+        ],
         "targets": [
             "android"
         ]
@@ -425,27 +461,40 @@
         ]
     },
     {
+        "name": "Bug Bounty Helper",
+        "url": "https://dorks.faisalahmed.me/",
+        "source": "https://dorks.faisalahmed.me/",
+        "description": "Google Dorks",
+        "techniques": [
+            "content_discovery",
+            "reconnaissance"
+        ],
+        "categories": [
+            "dorks",
+            "OSINT",
+            "search_engine",
+            "web_app"
+        ],
+        "targets": [
+            "web"
+        ]
+    },
+    {
         "name": "Bug-Bounty-Search-Engine",
         "url": "https://nitinyadav00.github.io/Bug-Bounty-Search-Engine/",
         "source": "https://github.com/NitinYadav00/Bug-Bounty-Search-Engine",
         "description": "Search Engine For Bug Bounty Hunters",
         "techniques": [
             "content_discovery",
-            "enumeration",
-            "footprinting",
-            "reconnaissance",
-            "vulnerability_assessment"
+            "reconnaissance"
         ],
         "categories": [
-            "fuzzing",
-            "network_scanner",
+            "dorks",
             "OSINT",
             "search_engine",
-            "subdomain_enum",
             "web_app"
         ],
         "targets": [
-            "network",
             "web"
         ]
     },
@@ -487,11 +536,10 @@
         "source": "https://github.com/EntySec/CamOver",
         "description": "CamOver is a camera exploitation tool designed to disclose network camera admin passwords. It exploits vulnerabilities in popular camera models such as CCTV, GoAhead, and Netwave. The tool is optimized for efficiency, allowing users to target multiple cameras simultaneously using threading.",
         "techniques": [
+            "exploitation",
             "hijacking"
         ],
-        "categories": [
-            "exploitation"
-        ],
+        "categories": [],
         "targets": [
             "hardware",
             "network"
@@ -504,10 +552,11 @@
         "description": "CamPhish is a technique used to capture cam shots from a target's phone front camera or PC webcam. It hosts a fake website on an in-built PHP server and utilizes Ngrok and Cloudflare Tunnel to generate a shareable link, allowing access over the internet. When the target opens the link, the website requests camera permissions, and if granted, the tool captures cam shots from the target's device. Additionally, it can obtain GPS location data, all by simply sending a link.",
         "techniques": [
             "hijacking",
-            "phishing",
             "social_engineering"
         ],
-        "categories": [],
+        "categories": [
+            "phishing"
+        ],
         "targets": [
             "people",
             "web"
@@ -754,10 +803,10 @@
         "description": "Damn Small SQLi Scanner (DSSS) is a fully functional SQL injection vulnerability scanner (supporting GET and POST parameters).",
         "techniques": [
             "exploitation",
-            "SQL_injection",
             "vulnerability_assessment"
         ],
         "categories": [
+            "SQL_injection",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -931,10 +980,11 @@
         "source": "https://github.com/whitel1st/docem",
         "description": "A tool to embed XXE and XSS payloads in docx, odt, pptx, xlsx files (oxml_xxe on steroids)",
         "techniques": [
-            "XSS"
+            "vulnerability_assessment"
         ],
         "categories": [
-            "payload"
+            "payload",
+            "XSS"
         ],
         "targets": [
             "files"
@@ -979,10 +1029,11 @@
         "source": "https://github.com/Expert-Hacker/E-TOOL",
         "description": "E-TOOL is a tool that can capture microphone voice notes and retrieve photos from a victim's phone. It works on both rooted and non-rooted Android devices.",
         "techniques": [
-            "hijacking",
+            "hijacking"
+        ],
+        "categories": [
             "phishing"
         ],
-        "categories": [],
         "targets": [
             "android",
             "hardware"
@@ -1089,6 +1140,7 @@
             "reconnaissance"
         ],
         "categories": [
+            "dorks",
             "OSINT",
             "search_engine"
         ],
@@ -1241,7 +1293,8 @@
             "vulnerability_assessment"
         ],
         "categories": [
-            "APK_analyzer"
+            "APK_analyzer",
+            "root"
         ],
         "targets": [
             "android",
@@ -1268,8 +1321,7 @@
         "categories": [
             "credential_dumping",
             "network_scanner",
-            "OSINT",
-            "vulnerability_scanner"
+            "OSINT"
         ],
         "targets": [
             "network",
@@ -1342,10 +1394,10 @@
         "description": "An advanced cross-platform tool that automates the process of detecting and exploiting SQL injection security flaws.",
         "techniques": [
             "exploitation",
-            "SQL_injection",
             "vulnerability_assessment"
         ],
         "categories": [
+            "SQL_injection",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -1382,6 +1434,7 @@
             "remote_code_execution"
         ],
         "categories": [
+            "ADB",
             "RAT"
         ],
         "targets": [
@@ -1411,10 +1464,11 @@
         "source": "https://github.com/gophish/gophish",
         "description": "Gophish is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.",
         "techniques": [
-            "phishing",
             "social_engineering"
         ],
-        "categories": [],
+        "categories": [
+            "phishing"
+        ],
         "targets": [
             "people",
             "web"
@@ -1462,6 +1516,22 @@
         ]
     },
     {
+        "name": "Grabify",
+        "url": "https://grabify.link/",
+        "source": "https://grabify.link/",
+        "description": "Grabify IP Logger and URL Shortener helps you find and track the IP address of anyone, providing advanced and detailed statistical data and metadata for every click on your links.",
+        "techniques": [
+            "social_engineering"
+        ],
+        "categories": [
+            "tracker",
+            "web_app"
+        ],
+        "targets": [
+            "people"
+        ]
+    },
+    {
         "name": "Grep.app",
         "url": "https://grep.app/",
         "source": "https://grep.app/",
@@ -1487,10 +1557,11 @@
         "description": "Hack a victim's Android camera using a link with Termux or Kali Linux. Capture IP address, location, device type, and browser information. Supports dual tunneling using Cloudflare and Ngrok for secure access.",
         "techniques": [
             "hijacking",
-            "phishing",
             "social_engineering"
         ],
-        "categories": [],
+        "categories": [
+            "phishing"
+        ],
         "targets": [
             "android",
             "IoT",
@@ -2255,20 +2326,35 @@
         "techniques": [
             "enumeration",
             "reconnaissance",
-            "SQL_injection",
-            "vulnerability_assessment",
-            "XSS"
+            "vulnerability_assessment"
         ],
         "categories": [
             "fingerprinting",
             "network_scanner",
             "OSINT",
+            "SQL_injection",
             "subdomain_enum",
-            "vulnerability_scanner"
+            "XSS"
         ],
         "targets": [
             "network",
             "web"
+        ]
+    },
+    {
+        "name": "Magisk",
+        "url": "https://github.com/topjohnwu/Magisk",
+        "source": "https://github.com/topjohnwu/Magisk",
+        "description": "Magisk is a suite of open source software for customizing Android, supporting devices higher than Android 6.0.",
+        "techniques": [
+            "exploitation",
+            "privilege_escalation"
+        ],
+        "categories": [
+            "root"
+        ],
+        "targets": [
+            "android"
         ]
     },
     {
@@ -2428,10 +2514,10 @@
         "source": "https://sourceforge.net/projects/themole/",
         "description": "Mole is an automatic SQL Injection exploitation tool. Only by providing a vulnerable URL and a valid string on the site it can detect the injection and exploit it, either by using the union technique or a boolean query based technique.",
         "techniques": [
-            "SQL_injection",
             "vulnerability_assessment"
         ],
         "categories": [
+            "SQL_injection",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -2446,10 +2532,11 @@
         "source": "https://github.com/noob-hackers/mrphish",
         "description": "MrPhish is a Bash-based script officially designed for phishing social media accounts with port forwarding and OTP bypass control. This tool works on both rooted and non-rooted Android devices.",
         "techniques": [
-            "phishing",
             "social_engineering"
         ],
-        "categories": [],
+        "categories": [
+            "phishing"
+        ],
         "targets": [
             "people",
             "web"
@@ -2644,7 +2731,6 @@
             "host_discovery",
             "network_scanner",
             "port_scanner",
-            "vulnerability_scanner",
             "WAF_detection"
         ],
         "targets": [
@@ -2658,10 +2744,10 @@
         "description": "NoSQLMap is an open source Python tool designed to audit for as well as automate injection attacks and exploit default configuration weaknesses in NoSQL databases and web applications using NoSQL in order to disclose or clone data from the database.",
         "techniques": [
             "exploitation",
-            "SQL_injection",
             "vulnerability_assessment"
         ],
         "categories": [
+            "SQL_injection",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -2824,6 +2910,20 @@
         "targets": []
     },
     {
+        "name": "Payload Box",
+        "url": "https://github.com/payloadbox",
+        "source": "https://github.com/payloadbox",
+        "description": "Attack payloads only.",
+        "techniques": [
+            "exploitation",
+            "malware_analysis"
+        ],
+        "categories": [
+            "payload"
+        ],
+        "targets": []
+    },
+    {
         "name": "ParamSpider",
         "url": "https://github.com/devanshbatham/ParamSpider",
         "source": "https://github.com/devanshbatham/ParamSpider",
@@ -2900,7 +3000,9 @@
             "hijacking",
             "remote_code_execution"
         ],
-        "categories": [],
+        "categories": [
+            "ADB"
+        ],
         "targets": [
             "android"
         ]
@@ -3000,7 +3102,6 @@
             "network_scanner",
             "OSINT",
             "port_scanner",
-            "vulnerability_scanner",
             "WAF_detection"
         ],
         "targets": [
@@ -3227,12 +3328,12 @@
         "source": "https://github.com/EntySec/SeaShell",
         "description": "SeaShell Framework is an iOS post-exploitation framework developed by EntySec that enables you to access a device remotely, control it, and extract sensitive information. The attacker generates an IPA file, and starts a TCP listener. The IPA needs to be installed through TrollStore or another app that exploits a similar CoreTrust bug and launched to execute the payload. The attacker will then receive an interactive session with the device. Its default payload is Pwny, with features including evasion, TLS encryption, and dynamic extensions.",
         "techniques": [
+            "exploitation",
             "hijacking",
             "post_exploitation",
             "remote_code_execution"
         ],
         "categories": [
-            "exploitation",
             "RAT"
         ],
         "targets": [
@@ -3245,13 +3346,13 @@
         "source": "https://gitlab.com/exploit-database/exploitdb",
         "description": "SearchSploit is a command-line utility that enables users to search through the Exploit Database (Exploit-DB) for publicly available exploits and shellcode. It's particularly useful for penetration testers and security researchers who require access to exploit information, even in environments without internet connectivity.",
         "techniques": [
-            "reconnaissance",
             "enumeration",
+            "exploitation",
             "post_exploitation",
+            "reconnaissance",
             "vulnerability_assessment"
         ],
         "categories": [
-            "exploitation",
             "OSINT",
             "vulnerability_database"
         ],
@@ -3387,8 +3488,7 @@
             "vulnerability_assessment"
         ],
         "categories": [
-            "fingerprinting",
-            "vulnerability_scanner"
+            "fingerprinting"
         ],
         "targets": [
             "web"
@@ -3502,11 +3602,11 @@
         "source": "https://github.com/trustedsec/social-engineer-toolkit",
         "description": "The Social-Engineer Toolkit is an open-source penetration testing framework designed for social engineering.",
         "techniques": [
-            "phishing",
             "social_engineering"
         ],
         "categories": [
-            "credential_dumping"
+            "credential_dumping",
+            "phishing"
         ],
         "targets": [
             "people",
@@ -3569,10 +3669,10 @@
         "source": "https://github.com/americo/sqlifinder",
         "description": "Sqlifinder is a tool with the function of detecting GET-based sql injection vulnerabilities in web applications using waybackurls, web crawlers and sql injection payloads.",
         "techniques": [
-            "SQL_injection",
             "vulnerability_assessment"
         ],
         "categories": [
+            "SQL_injection",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -3587,11 +3687,11 @@
         "source": "https://github.com/sqlmapproject/sqlmap",
         "description": "sqlmap is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.",
         "techniques": [
-            "SQL_injection",
+            "exploitation",
             "vulnerability_assessment"
         ],
         "categories": [
-            "exploitation",
+            "SQL_injection",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -3678,10 +3778,11 @@
         "description": "Storm-Breaker is a social engineering tool that allows access to a target's webcam, microphone, and location using Python, JavaScript, and PHP. It can obtain device information without requiring explicit permission, access location data specifically from smartphones, and remotely control the webcam and microphone.",
         "techniques": [
             "hijacking",
-            "phishing",
             "social_engineering"
         ],
-        "categories": [],
+        "categories": [
+            "phishing"
+        ],
         "targets": [
             "android",
             "hardware",
@@ -3807,6 +3908,21 @@
         ],
         "targets": [
             "network"
+        ]
+    },
+    {
+        "name": "Termux-ADB",
+        "url": "https://github.com/nohajc/termux-adb",
+        "source": "https://github.com/nohajc/termux-adb",
+        "description": "Run adb and fastboot in Termux without root permissions.",
+        "techniques": [
+            "privilege_escalation"
+        ],
+        "categories": [
+            "ADB"
+        ],
+        "targets": [
+            "android"
         ]
     },
     {
@@ -3974,6 +4090,23 @@
         ]
     },
     {
+        "name": "URL Validation Bypass",
+        "url": "https://portswigger.net/web-security/ssrf/url-validation-bypass-cheat-sheet",
+        "source": "https://portswigger.net/web-security/ssrf/url-validation-bypass-cheat-sheet",
+        "description": "This cheat sheet contains payloads for bypassing URL validation. These wordlists are useful for attacks such as server-side request forgery, CORS misconfigurations, and open redirection.",
+        "techniques": [
+            "exploitation"
+        ],
+        "categories": [
+            "bypass",
+            "web_app",
+            "wordlists"
+        ],
+        "targets": [
+            "web"
+        ]
+    },
+    {
         "name": "Urlscan.io",
         "url": "https://urlscan.io/",
         "source": "https://urlscan.io/",
@@ -4034,14 +4167,14 @@
         "source": "https://docs.w3af.org/",
         "description": "W3af (Web Application Attack and Audit Framework) is an open-source web application security scanner designed to identify and exploit vulnerabilities in web applications. It is user-friendly, highly extensible, and includes dozens of plugins for web assessment and exploitation. In many ways, it functions like a web-focused version of Metasploit.",
         "techniques": [
-            "SQL_injection",
-            "vulnerability_assessment",
-            "XSS"
+            "exploitation",
+            "vulnerability_assessment"
         ],
         "categories": [
-            "exploitation",
             "network_scanner",
-            "vulnerability_scanner"
+            "SQL_injection",
+            "vulnerability_scanner",
+            "XSS"
         ],
         "targets": [
             "web",
@@ -4329,12 +4462,12 @@
         "source": "https://github.com/wifiphisher/wifiphisher",
         "description": "Wifiphisher is a rogue access point framework designed for red team engagements and Wi-Fi security testing. It allows penetration testers to achieve a man-in-the-middle position against wireless clients by performing targeted Wi-Fi association attacks. Wifiphisher can also be used for victim-customized web phishing attacks, capturing credentials from third-party login pages or WPA/WPA2 Pre-Shared Keys, and even infecting victim devices with malware. Key features include Evil Twin attacks, Deauthentication attacks, Captive Portal Phishing, Payload Injection, Multiple Attack Modes, and the ability to bypass password cracking.",
         "techniques": [
-            "phishing",
+            "exploitation",
             "social_engineering"
         ],
         "categories": [
             "credential_dumping",
-            "exploitation",
+            "phishing",
             "rogue_access_point"
         ],
         "targets": [
@@ -4372,8 +4505,7 @@
             "reconnaissance"
         ],
         "categories": [
-            "fuzzing",
-            "vulnerability_scanner"
+            "fuzzing"
         ],
         "targets": [
             "web"
@@ -4401,11 +4533,11 @@
         "source": "https://code.03c8.net/epsylon/xsser",
         "description": "Cross-Site Scripter (aka XSSer) is an automated penetration testing tool designed to detect, exploit, and report Cross-Site Scripting (XSS) vulnerabilities in web applications. It supports automated scanning for XSS vulnerabilities, multiple types of XSS attacks, the ability to generate and obfuscate payloads, and integration with Tor for anonymous testing.",
         "techniques": [
-            "XSS"
+            "exploitation"
         ],
         "categories": [
-            "exploitation",
-            "vulnerability_scanner"
+            "vulnerability_scanner",
+            "XSS"
         ],
         "targets": [
             "network",

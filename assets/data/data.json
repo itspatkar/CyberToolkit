@@ -50,11 +50,10 @@
         "source": "https://github.com/Ignitetch/AdvPhishing",
         "description": "AdvPhishing is an advanced phishing tool used for creating fake login pages to steal credentials. This tool generates realistic-looking login pages for various popular websites, such as Facebook, Instagram, Twitter, and Gmail, and captures the credentials entered by victims.",
         "techniques": [
+            "phishing",
             "social_engineering"
         ],
-        "categories": [
-            "phishing"
-        ],
+        "categories": [],
         "targets": [
             "people",
             "web"
@@ -100,8 +99,7 @@
         "description": "Airgeddon is a powerful, multi-functional Wi-Fi auditing tool designed for penetration testing and security assessments of wireless networks. It provides an automated framework to perform various attacks, including wireless network scanning, Evil Twin attacks (rogue AP), WPA/WPA2 handshake capture and cracking, WPS attacks using Reaver, Bully, and Pixie-Dust, Denial-of-Service (DoS) attacks, and Man-in-the-Middle (MITM) attacks. Additionally, it features an automated mode for easy execution, making it accessible for both beginners and advanced users in Wi-Fi security testing.",
         "techniques": [
             "denial_of_service",
-            "exploitation",
-            "vulnerability_assessment"
+            "exploitation"
         ],
         "categories": [
             "network_scanner",
@@ -211,6 +209,19 @@
         ],
         "categories": [
             "APK_analyzer"
+        ],
+        "targets": [
+            "android"
+        ]
+    },
+    {
+        "name": "App Manager",
+        "url": "https://muntashirakon.github.io/AppManager/",
+        "source": "https://github.com/MuntashirAkon/AppManager",
+        "description": "A full-featured package manager and viewer for Android.",
+        "techniques": [],
+        "categories": [
+            "ADB"
         ],
         "targets": [
             "android"
@@ -419,6 +430,20 @@
         ]
     },
     {
+        "name": "Broken Phone Recovery",
+        "url": "https://github.com/v1nc/Broken-Phone-Recovery",
+        "source": "https://github.com/v1nc/Broken-Phone-Recovery",
+        "description": "A guide how to backup data from your locked android phone if you broke your screen (and more)",
+        "techniques": [
+            "forensics"
+        ],
+        "categories": [],
+        "targets": [
+            "android",
+            "hardware"
+        ]
+    },
+    {
         "name": "BrutDroid",
         "url": "https://github.com/Brut-Security/BrutDroid",
         "source": "https://github.com/Brut-Security/BrutDroid",
@@ -439,8 +464,7 @@
         "source": "https://github.com/nikhil1232/Bucket-Flaws",
         "description": "Bucket Flaws (S3 Bucket Mass Scanner) is a simple, lightweight script that takes a list of bucket names and checks for common S3 bucket misconfigurations.",
         "techniques": [
-            "enumeration",
-            "vulnerability_assessment"
+            "enumeration"
         ],
         "categories": [],
         "targets": [
@@ -453,7 +477,7 @@
         "source": "https://github.com/redhuntlabs/BucketLoot",
         "description": "BucketLoot is an automated S3-compatible Bucket inspector that can help users extract assets, flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text.",
         "techniques": [
-            "vulnerability_assessment"
+            "enumeration"
         ],
         "categories": [],
         "targets": [
@@ -504,8 +528,7 @@
         "source": "https://github.com/PortSwigger",
         "description": "Burp Suite is a Java-based web application vulnerability scanner and penetration testing framework, allowing for the interception and manipulation of HTTP/HTTPS traffic between a browser and server.",
         "techniques": [
-            "HTTP_tampering",
-            "vulnerability_assessment"
+            "HTTP_tampering"
         ],
         "categories": [
             "fuzzing"
@@ -552,11 +575,10 @@
         "description": "CamPhish is a technique used to capture cam shots from a target's phone front camera or PC webcam. It hosts a fake website on an in-built PHP server and utilizes Ngrok and Cloudflare Tunnel to generate a shareable link, allowing access over the internet. When the target opens the link, the website requests camera permissions, and if granted, the tool captures cam shots from the target's device. Additionally, it can obtain GPS location data, all by simply sending a link.",
         "techniques": [
             "hijacking",
+            "phishing",
             "social_engineering"
         ],
-        "categories": [
-            "phishing"
-        ],
+        "categories": [],
         "targets": [
             "people",
             "web"
@@ -573,7 +595,7 @@
         ],
         "categories": [
             "network_scanner",
-            "passive",
+            "search_engine",
             "web_app"
         ],
         "targets": [
@@ -602,8 +624,7 @@
         "description": "Cloud Container Attack Tool (CCAT) is a tool for testing security of container environments.",
         "techniques": [
             "enumeration",
-            "exploitation",
-            "vulnerability_assessment"
+            "exploitation"
         ],
         "categories": [],
         "targets": [
@@ -631,8 +652,7 @@
         "source": "https://github.com/0xsha/CloudBrute",
         "description": "A tool to find a company (target) infrastructure, files, and apps on the top cloud providers (Amazon, Google, Microsoft, DigitalOcean, Alibaba, Vultr, Linode). The outcome is useful for bug bounty hunters, red teamers, and penetration testers alike.",
         "techniques": [
-            "enumeration",
-            "vulnerability_assessment"
+            "enumeration"
         ],
         "categories": [],
         "targets": [
@@ -645,8 +665,7 @@
         "source": "https://github.com/BishopFox/cloudfox",
         "description": "A collection of enumeration commands that illuminate attack paths for cloud penetration testing. CloudFox helps you gain situational awareness in unfamiliar cloud environments. It’s an open source command line tool created to help penetration testers and other offensive security professionals find exploitable attack paths in cloud infrastructure.",
         "techniques": [
-            "enumeration",
-            "vulnerability_assessment"
+            "enumeration"
         ],
         "categories": [],
         "targets": [
@@ -672,8 +691,7 @@
         "source": "https://github.com/salesforce/cloudsplaining",
         "description": "Cloudsplaining is an AWS IAM security assessment tool that identifies violations of the principle of least privilege and generates a risk-prioritized HTML report. It can analyze all IAM policies in your AWS account or a single policy file. The tool produces an easy-to-read HTML report along with a triage worksheet for efficient policy review.",
         "techniques": [
-            "enumeration",
-            "vulnerability_assessment"
+            "enumeration"
         ],
         "categories": [
             "misconfigs"
@@ -688,8 +706,7 @@
         "source": "https://github.com/aquasecurity/cloudsploit",
         "description": "CloudSploit by Aqua is an open-source project designed to allow detection of security risks in cloud infrastructure accounts, including: Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), Oracle Cloud Infrastructure (OCI), and GitHub. These scripts are designed to return a series of potential misconfigurations and security risks.",
         "techniques": [
-            "exploitation",
-            "vulnerability_assessment"
+            "exploitation"
         ],
         "categories": [
             "misconfigs"
@@ -725,7 +742,6 @@
         ],
         "categories": [
             "hash_cracker",
-            "passive",
             "web_app"
         ],
         "targets": []
@@ -787,8 +803,7 @@
         "source": "https://www.cycript.org/",
         "description": "Cycript allows developers to explore and modify running applications on iOS or macOS using a hybrid of Objective-C++ and JavaScript syntax through an interactive console featuring syntax highlighting and tab completion. (It also runs standalone on Android and Linux, providing access to Java but without injection.)",
         "techniques": [
-            "reverse_engineering",
-            "vulnerability_assessment"
+            "reverse_engineering"
         ],
         "categories": [],
         "targets": [
@@ -803,10 +818,9 @@
         "description": "Damn Small SQLi Scanner (DSSS) is a fully functional SQL injection vulnerability scanner (supporting GET and POST parameters).",
         "techniques": [
             "exploitation",
-            "vulnerability_assessment"
+            "SQL_injection"
         ],
         "categories": [
-            "SQL_injection",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -829,7 +843,6 @@
             "dark_web",
             "network_scanner",
             "OSINT",
-            "passive",
             "subdomain_enum",
             "web_app"
         ],
@@ -950,7 +963,6 @@
         ],
         "categories": [
             "network_scanner",
-            "passive",
             "web_app"
         ],
         "targets": [
@@ -980,11 +992,10 @@
         "source": "https://github.com/whitel1st/docem",
         "description": "A tool to embed XXE and XSS payloads in docx, odt, pptx, xlsx files (oxml_xxe on steroids)",
         "techniques": [
-            "vulnerability_assessment"
+            "XSS"
         ],
         "categories": [
-            "payload",
-            "XSS"
+            "payload"
         ],
         "targets": [
             "files"
@@ -1000,8 +1011,7 @@
             "reconnaissance"
         ],
         "categories": [
-            "network_scanner",
-            "passive"
+            "network_scanner"
         ],
         "targets": [
             "network"
@@ -1013,8 +1023,7 @@
         "source": "https://github.com/WithSecureLabs/drozer",
         "description": "Drozer is an open-source security assessment framework for the Android platform. It helps identify vulnerabilities in apps and devices by interacting with the Android Runtime, other apps' IPC endpoints, and the underlying operating system. Drozer also provides tools to analyze and utilize public Android exploits. It can perform actions similar to an installed application, such as leveraging Android’s Inter-Process Communication (IPC) mechanism. Its key features include Application Attack Surface Analysis, Privilege Escalation, Exploit Misconfigurations, Reverse Engineering, and Remote Exploitation.",
         "techniques": [
-            "reverse_engineering",
-            "vulnerability_assessment"
+            "reverse_engineering"
         ],
         "categories": [
             "APK_analyzer"
@@ -1031,9 +1040,7 @@
         "techniques": [
             "hijacking"
         ],
-        "categories": [
-            "phishing"
-        ],
+        "categories": [],
         "targets": [
             "android",
             "hardware"
@@ -1104,8 +1111,7 @@
             "forensics"
         ],
         "categories": [
-            "OSINT",
-            "passive"
+            "OSINT"
         ],
         "targets": [
             "files"
@@ -1120,8 +1126,7 @@
             "enumeration",
             "exploitation",
             "reconnaissance",
-            "post_exploitation",
-            "vulnerability_assessment"
+            "post_exploitation"
         ],
         "categories": [
             "OSINT",
@@ -1263,8 +1268,7 @@
             "steganography"
         ],
         "categories": [
-            "exfiltration",
-            "passive"
+            "exfiltration"
         ],
         "targets": [
             "files"
@@ -1289,8 +1293,7 @@
         "source": "https://github.com/frida/frida",
         "description": "Frida is a powerful dynamic instrumentation toolkit used for reverse engineering, security research, and application debugging. It allows developers and researchers to inject JavaScript or Python code into running applications on platforms like Windows, macOS, Linux, iOS, and Android. Frida is commonly used for mobile app testing, bypassing root or jailbreak detection, reverse engineering, and cybersecurity research.",
         "techniques": [
-            "reverse_engineering",
-            "vulnerability_assessment"
+            "reverse_engineering"
         ],
         "categories": [
             "APK_analyzer",
@@ -1334,8 +1337,7 @@
         "source": "https://github.com/google/gcp_scanner",
         "description": "This is a GCP resource scanner that can help determine what level of access certain credentials possess on GCP. The scanner is designed to help security engineers evaluate the impact of a certain VM/container compromise, GCP service account, or OAuth2 token key leak.",
         "techniques": [
-            "enumeration",
-            "vulnerability_assessment"
+            "enumeration"
         ],
         "categories": [],
         "targets": [
@@ -1348,8 +1350,7 @@
         "source": "https://github.com/RhinoSecurityLabs/GCPBucketBrute",
         "description": "A script to enumerate Google Storage buckets, determine what access you have to them, and determine if they can be privilege escalated.",
         "techniques": [
-            "enumeration",
-            "vulnerability_assessment"
+            "enumeration"
         ],
         "categories": [],
         "targets": [
@@ -1394,10 +1395,9 @@
         "description": "An advanced cross-platform tool that automates the process of detecting and exploiting SQL injection security flaws.",
         "techniques": [
             "exploitation",
-            "vulnerability_assessment"
+            "SQL_injection"
         ],
         "categories": [
-            "SQL_injection",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -1442,6 +1442,34 @@
         ]
     },
     {
+        "name": "Gnirehtet",
+        "url": "https://github.com/Genymobile/gnirehtet",
+        "source": "https://github.com/Genymobile/gnirehtet",
+        "description": "Gnirehtet provides reverse tethering over adb for Android: it allows devices to use the internet connection of the computer they are plugged on. It does not require any root access.",
+        "techniques": [],
+        "categories": [
+            "ADB"
+        ],
+        "targets": [
+            "android"
+        ]
+    },
+    {
+        "name": "Google Maps API Scanner",
+        "url": "https://github.com/ozguralp/gmapsapiscanner",
+        "source": "https://github.com/ozguralp/gmapsapiscanner",
+        "description": "Used for determining whether a leaked/found Google Maps API Key is vulnerable to unauthorized access by other applications or not.",
+        "techniques": [
+            "exploitation"
+        ],
+        "categories": [
+            "credential"
+        ],
+        "targets": [
+            "API"
+        ]
+    },
+    {
         "name": "Gobuster",
         "url": "https://github.com/OJ/gobuster",
         "source": "https://github.com/OJ/gobuster",
@@ -1464,11 +1492,10 @@
         "source": "https://github.com/gophish/gophish",
         "description": "Gophish is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.",
         "techniques": [
+            "phishing",
             "social_engineering"
         ],
-        "categories": [
-            "phishing"
-        ],
+        "categories": [],
         "targets": [
             "people",
             "web"
@@ -1482,12 +1509,10 @@
         "techniques": [
             "reconnaissance",
             "enumeration",
-            "post_exploitation",
-            "vulnerability_assessment"
+            "post_exploitation"
         ],
         "categories": [
             "OSINT",
-            "passive",
             "search_engine",
             "vulnerability_database"
         ],
@@ -1507,7 +1532,6 @@
             "crawler",
             "javascript",
             "OSINT",
-            "passive",
             "search_engine",
             "subdomain_enum"
         ],
@@ -1542,7 +1566,6 @@
         ],
         "categories": [
             "OSINT",
-            "passive",
             "search_engine",
             "web_app"
         ],
@@ -1556,12 +1579,9 @@
         "source": "https://github.com/hackerxphantom/HACK-CAMERA",
         "description": "Hack a victim's Android camera using a link with Termux or Kali Linux. Capture IP address, location, device type, and browser information. Supports dual tunneling using Cloudflare and Ngrok for secure access.",
         "techniques": [
-            "hijacking",
-            "social_engineering"
+            "hijacking"
         ],
-        "categories": [
-            "phishing"
-        ],
+        "categories": [],
         "targets": [
             "android",
             "IoT",
@@ -1575,7 +1595,6 @@
         "description": "HackTools, is a web extension facilitating your web application penetration tests, it includes cheat sheets as well as all the tools used during a test such as XSS payloads, Reverse shells and much more.",
         "techniques": [
             "exploitation",
-            "vulnerability_assessment",
             "social_engineering"
         ],
         "categories": [
@@ -1594,9 +1613,7 @@
         "techniques": [
             "password_attack"
         ],
-        "categories": [
-            "passive"
-        ],
+        "categories": [],
         "targets": []
     },
     {
@@ -1618,8 +1635,7 @@
         "source": "https://github.com/ZerBea/hcxtools",
         "description": "Hcxtools is a small set of tools designed to convert packets from capture files into hash files for use with Hashcat or John the Ripper. It is a collection of WiFi penetration testing tools that capture and analyze WPA/WPA2/WPA3 authentication handshakes for offline password cracking. Widely used in network security assessments, it supports multiple attack vectors, including PMKID attacks, hash extraction, and raw frame capturing. Key features include WPA/WPA2/WPA3 handshake capture, PMKID attack support, deauthentication and disassociation attacks, AP-less attacks, conversion tools, and support for IoT & industrial WiFi networks.",
         "techniques": [
-            "exploitation",
-            "vulnerability_assessment"
+            "exploitation"
         ],
         "categories": [
             "rogue_access_point"
@@ -1915,8 +1931,8 @@
         ],
         "categories": [
             "OSINT",
-            "passive",
-            "search_engine"
+            "search_engine",
+            "web_archive"
         ],
         "targets": [
             "people",
@@ -1927,7 +1943,7 @@
         "name": "Investigator",
         "url": "https://abhijithb200.github.io/investigator/",
         "source": "https://github.com/abhijithb200/investigator",
-        "description": "Internet Archive is a non-profit library of millions of free texts, movies, software, music, websites, and more.",
+        "description": "A web based handy-recon tool that uses different Google Dorking techniques and some open sources service to find juicy information about target websites.",
         "techniques": [
             "enumeration",
             "footprinting",
@@ -1949,9 +1965,7 @@
         "url": "https://information.rapid7.com/iotseeker.html",
         "source": "https://github.com/rapid7/IoTSeeker",
         "description": "IoTSeeker allows you to scan your network for known device types that could be used as unwilling participants in a distributed denial-of-service attack.  With this tool you can find out if you have connected “Things” which are using the default factory password leaving them potentially vulnerable to a hostile takeover. Use the local scan output to determine which devices need to be secured or removed from the network.",
-        "techniques": [
-            "vulnerability_assessment"
-        ],
+        "techniques": [],
         "categories": [
             "network_scanner",
             "OSINT"
@@ -1995,6 +2009,7 @@
         "source": "https://github.com/cc1a2b/jshunter",
         "description": "JShunter is a command-line tool designed for analyzing JavaScript files and extracting endpoints. This tool specializes in identifying sensitive data, such as API endpoints and potential security vulnerabilities.",
         "techniques": [
+            "content_discovery",
             "reconnaissance"
         ],
         "categories": [
@@ -2065,8 +2080,7 @@
         "source": "https://github.com/chawdamrunal/JWTLens-Local",
         "description": "Advanced JWT Security Analysis & Vulnerability Detection",
         "techniques": [
-            "exploitation",
-            "vulnerability_assessment"
+            "exploitation"
         ],
         "categories": [
             "authentication",
@@ -2096,6 +2110,41 @@
         ],
         "targets": [
             "web"
+        ]
+    },
+    {
+        "name": "Katana",
+        "url": "https://github.com/projectdiscovery/katana",
+        "source": "https://github.com/projectdiscovery/katana",
+        "description": "Katana is a powerful web crawler and content discovery tool that parses JavaScript files, sitemaps, and HTML to identify URLs, endpoints, and parameters for security testing.",
+        "techniques": [
+            "content_discovery",
+            "enumeration",
+            "reconnaissance"
+        ],
+        "categories": [
+            "crawler",
+            "fingerprinting",
+            "javascript",
+            "OSINT"
+        ],
+        "targets": [
+            "web"
+        ]
+    },
+    {
+        "name": "Keyhacks",
+        "url": "https://github.com/streaak/keyhacks",
+        "source": "https://github.com/streaak/keyhacks",
+        "description": "KeyHacks shows methods to validate different API keys found on a Bug Bounty Program or a pentest.",
+        "techniques": [
+            "exploitation"
+        ],
+        "categories": [
+            "credential"
+        ],
+        "targets": [
+            "API"
         ]
     },
     {
@@ -2150,9 +2199,7 @@
         "url": "https://github.com/aquasecurity/kube-bench",
         "source": "https://github.com/aquasecurity/kube-bench",
         "description": "Kube-hunter hunts for security weaknesses in Kubernetes clusters. The tool was developed to increase awareness and visibility for security issues in Kubernetes environments.",
-        "techniques": [
-            "vulnerability_assessment"
-        ],
+        "techniques": [],
         "categories": [
             "misconfigs"
         ],
@@ -2165,9 +2212,7 @@
         "url": "https://github.com/aquasecurity/kube-hunter",
         "source": "https://github.com/aquasecurity/kube-hunter",
         "description": "Kube-hunter hunts for security weaknesses in Kubernetes clusters. The tool was developed to increase awareness and visibility for security issues in Kubernetes environments.",
-        "techniques": [
-            "vulnerability_assessment"
-        ],
+        "techniques": [],
         "categories": [
             "misconfigs"
         ],
@@ -2180,9 +2225,7 @@
         "url": "https://kubescape.io/",
         "source": "https://github.com/kubescape/kubescape",
         "description": "Kubescape is an open-source Kubernetes security platform that provides comprehensive security coverage, from left to right across the entire development and deployment lifecycle. It offers hardening, posture management, and runtime security capabilities to ensure robust protection for Kubernetes environments. It saves Kubernetes users and admins precious time, effort, and resources.",
-        "techniques": [
-            "vulnerability_assessment"
-        ],
+        "techniques": [],
         "categories": [
             "misconfigs"
         ],
@@ -2295,8 +2338,7 @@
         "description": "The LES tool is designed to assist in detecting security deficiencies in a given Linux kernel or Linux-based machine by assessing kernel exposure to publicly known exploits and verifying the state of kernel hardening security measures.",
         "techniques": [
             "exploitation",
-            "privilege_escalation",
-            "vulnerability_assessment"
+            "privilege_escalation"
         ],
         "categories": [
             "vulnerability_scanner"
@@ -2326,15 +2368,14 @@
         "techniques": [
             "enumeration",
             "reconnaissance",
-            "vulnerability_assessment"
+            "SQL_injection",
+            "XSS"
         ],
         "categories": [
             "fingerprinting",
             "network_scanner",
             "OSINT",
-            "SQL_injection",
-            "subdomain_enum",
-            "XSS"
+            "subdomain_enum"
         ],
         "targets": [
             "network",
@@ -2401,8 +2442,7 @@
         "description": "MDK4 is a network penetration testing tool used for Wi-Fi security assessments. MDK4 is a new version of MDK3. It is specifically designed to test wireless networks by exploiting vulnerabilities in various Wi-Fi protocols, including WEP, WPA, WPA2, and WPA3. MDK4 can be used for multiple Wi-Fi attack scenarios, such as deauthentication attacks, authentication flooding, beacon flooding, probe request/response attacks, EAPOL attacks, TKIP MIC attacks, and Wi-Fi channel hopping attacks.",
         "techniques": [
             "exploitation",
-            "password_attack",
-            "vulnerability_assessment"
+            "password_attack"
         ],
         "categories": [
             "network_scanner"
@@ -2461,8 +2501,7 @@
         "description": "MicroBurst includes functions and scripts that support Azure Services discovery, weak configuration auditing, and post exploitation actions such as credential dumping. It is intended to be used during penetration tests where Azure is in use.",
         "techniques": [
             "exploitation",
-            "post_exploitation",
-            "vulnerability_assessment"
+            "post_exploitation"
         ],
         "categories": [
             "credential_dumping"
@@ -2495,8 +2534,7 @@
         "source": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
         "description": "Mobile Security Framework (MobSF) is an automated, all-in-one platform for mobile application (Android, iOS, Windows) security assessment, penetration testing, malware analysis, and privacy analysis. It supports both static and dynamic analysis, processing popular app binaries like APK, IPA, and APPX, as well as source code. The Dynamic Analyzer enables interactive instrumented testing, runtime data monitoring, and network traffic analysis for Android and iOS applications. MobSF also integrates seamlessly with DevSecOps and CI/CD pipelines via REST APIs and CLI tools, enhancing security workflows efficiently.",
         "techniques": [
-            "malware_analysis",
-            "vulnerability_assessment"
+            "malware_analysis"
         ],
         "categories": [
             "APK_analyzer"
@@ -2514,10 +2552,9 @@
         "source": "https://sourceforge.net/projects/themole/",
         "description": "Mole is an automatic SQL Injection exploitation tool. Only by providing a vulnerable URL and a valid string on the site it can detect the injection and exploit it, either by using the union technique or a boolean query based technique.",
         "techniques": [
-            "vulnerability_assessment"
+            "SQL_injection"
         ],
         "categories": [
-            "SQL_injection",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -2532,11 +2569,10 @@
         "source": "https://github.com/noob-hackers/mrphish",
         "description": "MrPhish is a Bash-based script officially designed for phishing social media accounts with port forwarding and OTP bypass control. This tool works on both rooted and non-rooted Android devices.",
         "techniques": [
+            "phishing",
             "social_engineering"
         ],
-        "categories": [
-            "phishing"
-        ],
+        "categories": [],
         "targets": [
             "people",
             "web"
@@ -2629,9 +2665,7 @@
         "url": "https://www.tenable.com/products/nessus",
         "source": "https://www.tenable.com/products/nessus",
         "description": "Nessus is a widely used vulnerability scanner developed by Tenable. It helps identify potential vulnerabilities, misconfigurations, and security issues in your systems, network devices, and web applications. It scans for a variety of known security flaws, including those related to software versions, missing patches, and weak configurations, to help organizations improve their security posture.",
-        "techniques": [
-            "vulnerability_assessment"
-        ],
+        "techniques": [],
         "categories": [
             "misconfigs",
             "vulnerability_scanner"
@@ -2652,7 +2686,6 @@
             "sniffing"
         ],
         "categories": [
-            "banner_grabbing",
             "network_scanner",
             "reverse_shell"
         ],
@@ -2674,7 +2707,7 @@
         ],
         "categories": [
             "network_scanner",
-            "passive"
+            "web_app"
         ],
         "targets": [
             "network",
@@ -2687,8 +2720,7 @@
         "source": "https://github.com/sullo/nikto",
         "description": "Nikto is an Open Source web server scanner which performs comprehensive tests against web servers for multiple items, including over 7,000 potentially dangerous files/programs, checks for outdated versions of over 1250 servers, and version specific problems on over 270 servers. It also checks for server configuration items such as the presence of multiple index files, HTTP server options, and will attempt to identify installed web servers and software.",
         "techniques": [
-            "reconnaissance",
-            "vulnerability_assessment"
+            "reconnaissance"
         ],
         "categories": [
             "vulnerability_scanner"
@@ -2726,7 +2758,6 @@
             "reconnaissance"
         ],
         "categories": [
-            "banner_grabbing",
             "fingerprinting",
             "host_discovery",
             "network_scanner",
@@ -2738,16 +2769,28 @@
         ]
     },
     {
+        "name": "NoRLCheck",
+        "url": "https://github.com/shifa123/NoRLCheck",
+        "source": "https://github.com/shifa123/NoRLCheck",
+        "description": "This is the python script to check for the website if vulnerable to No RL.",
+        "techniques": [],
+        "categories": [
+            "rate_limit"
+        ],
+        "targets": [
+            "web"
+        ]
+    },
+    {
         "name": "NoSQLMap",
         "url": "https://github.com/codingo/NoSQLMap",
         "source": "https://github.com/codingo/NoSQLMap",
         "description": "NoSQLMap is an open source Python tool designed to audit for as well as automate injection attacks and exploit default configuration weaknesses in NoSQL databases and web applications using NoSQL in order to disclose or clone data from the database.",
         "techniques": [
             "exploitation",
-            "vulnerability_assessment"
+            "SQL_injection"
         ],
         "categories": [
-            "SQL_injection",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -2812,9 +2855,7 @@
         "url": "https://openvas.org/",
         "source": "https://github.com/greenbone/openvas-scanner",
         "description": "OpenVAS is a full-featured vulnerability scanner. Its capabilities include unauthenticated and authenticated testing, various high-level and low-level internet and industrial protocols, performance tuning for large-scale scans and a powerful internal programming language to implement any type of vulnerability test.",
-        "techniques": [
-            "vulnerability_assessment"
-        ],
+        "techniques": [],
         "categories": [
             "network_scanner",
             "vulnerability_scanner"
@@ -2887,8 +2928,7 @@
         "description": "Pacu is an open-source AWS exploitation framework, designed for offensive security testing against cloud environments. Created and maintained by Rhino Security Labs, Pacu allows penetration testers to exploit configuration flaws within an AWS account, using modules to easily expand its functionality. Current modules enable a range of attacks, including user privilege escalation, backdooring of IAM users, attacking vulnerable Lambda functions, and much more.",
         "techniques": [
             "exploitation",
-            "privilege_escalation",
-            "vulnerability_assessment"
+            "privilege_escalation"
         ],
         "categories": [],
         "targets": [
@@ -2896,7 +2936,7 @@
         ]
     },
     {
-        "name": "PayloadsAllThePDFs",
+        "name": "Payloads All The PDFs",
         "url": "https://github.com/luigigubello/PayloadsAllThePDFs",
         "source": "https://github.com/luigigubello/PayloadsAllThePDFs",
         "description": "A list of crafted malicious PDF files to test the security of PDF readers and tools.",
@@ -2907,7 +2947,9 @@
         "categories": [
             "payload"
         ],
-        "targets": []
+        "targets": [
+            "web"
+        ]
     },
     {
         "name": "Payload Box",
@@ -2938,6 +2980,40 @@
             "OSINT"
         ],
         "targets": [
+            "web"
+        ]
+    },
+    {
+        "name": "PDF Injection",
+        "url": "https://github.com/kaanatmacaa/pdf-injection",
+        "source": "https://github.com/kaanatmacaa/pdf-injection",
+        "description": "Tool to create XSS PDF files.",
+        "techniques": [
+            "exploitation",
+            "XSS"
+        ],
+        "categories": [
+            "payload"
+        ],
+        "targets": [
+            "files",
+            "web"
+        ]
+    },
+    {
+        "name": "PDF Payload Injection Tool",
+        "url": "https://github.com/Sic4rio/pdf-payload-injection-tool",
+        "source": "https://github.com/Sic4rio/pdf-payload-injection-tool",
+        "description": "A tool for injecting custom JavaScript payloads into PDF files for penetration testing and XSS proof-of-concept generation.",
+        "techniques": [
+            "exploitation",
+            "XSS"
+        ],
+        "categories": [
+            "payload"
+        ],
+        "targets": [
+            "files",
             "web"
         ]
     },
@@ -2979,8 +3055,7 @@
         "description": "Pentest-Tools.com develops offensive cybersecurity tools and proprietary vulnerability scanning software for penetration testers and other infosec professionals.",
         "techniques": [
             "enumeration",
-            "reconnaissance",
-            "vulnerability_assessment"
+            "reconnaissance"
         ],
         "categories": [
             "network_scanner"
@@ -3031,6 +3106,7 @@
             "reconnaissance"
         ],
         "categories": [
+            "crawler",
             "OSINT",
             "website_mirroring"
         ],
@@ -3047,8 +3123,7 @@
             "forensics"
         ],
         "categories": [
-            "OSINT",
-            "passive"
+            "OSINT"
         ],
         "targets": [
             "hardware"
@@ -3059,9 +3134,7 @@
         "url": "https://prowler.com/",
         "source": "https://github.com/prowler-cloud/prowler",
         "description": "Prowler is an Open Cloud Security tool for AWS, Azure, GCP and Kubernetes. It helps for continuos monitoring, security assessments and audits, incident response, compliance, hardening and forensics readiness. Includes CIS, NIST 800, NIST CSF, CISA, FedRAMP, PCI-DSS, GDPR, HIPAA, FFIEC, SOC2, GXP, Well-Architected Security, ENS and more.",
-        "techniques": [
-            "vulnerability_assessment"
-        ],
+        "techniques": [],
         "categories": [],
         "targets": [
             "cloud"
@@ -3096,7 +3169,6 @@
             "reconnaissance"
         ],
         "categories": [
-            "banner_grabbing",
             "fingerprinting",
             "fuzzing",
             "network_scanner",
@@ -3174,8 +3246,7 @@
         "description": "ReconFTW is a tool designed to perform automated recon on a target domain by running the best set of tools to perform scanning and finding out vulnerabilities. It also performs various vulnerability checks like XSS, Open Redirects, SSRF, CRLF, LFI, SQLi, SSL tests, SSTI, DNS zone transfers, and much more. Along with these, it performs OSINT techniques, directory fuzzing, dorking, ports scanning, screenshots, nuclei scan on your target.",
         "techniques": [
             "enumeration",
-            "reconnaissance",
-            "vulnerability_assessment"
+            "reconnaissance"
         ],
         "categories": [
             "fuzzing",
@@ -3195,8 +3266,7 @@
         "source": "https://github.com/reqable",
         "description": "Reqable is a modern cross-platform project, designed for API development, testing, and debugging. Reqable fully supports HTTP1 and HTTP2 and partially supports HTTP3(QUIC).",
         "techniques": [
-            "HTTP_tampering",
-            "vulnerability_assessment"
+            "HTTP_tampering"
         ],
         "categories": [],
         "targets": [
@@ -3228,8 +3298,7 @@
         "source": "https://github.com/RetireJS/retire.js",
         "description": "The scanner detects the use of JavaScript libraries with known vulnerabilities and can also generate an SBOM (Software Bill of Materials) for the libraries it identifies.",
         "techniques": [
-            "reconnaissance",
-            "vulnerability_assessment"
+            "reconnaissance"
         ],
         "categories": [
             "extension",
@@ -3266,8 +3335,7 @@
         "source": "https://github.com/threat9/routersploit",
         "description": "The RouterSploit Framework is an open-source exploitation framework dedicated to embedded devices.",
         "techniques": [
-            "exploitation",
-            "vulnerability_assessment"
+            "exploitation"
         ],
         "categories": [],
         "targets": [
@@ -3297,8 +3365,7 @@
         "source": "https://github.com/sa7mon/S3Scanner",
         "description": "A tool for discovering open or misconfigured S3 buckets across AWS and other cloud providers using S3-compatible APIs.",
         "techniques": [
-            "enumeration",
-            "vulnerability_assessment"
+            "enumeration"
         ],
         "categories": [
             "misconfigs"
@@ -3349,8 +3416,7 @@
             "enumeration",
             "exploitation",
             "post_exploitation",
-            "reconnaissance",
-            "vulnerability_assessment"
+            "reconnaissance"
         ],
         "categories": [
             "OSINT",
@@ -3454,7 +3520,7 @@
         "categories": [
             "network_scanner",
             "OSINT",
-            "passive",
+            "port_scanner",
             "search_engine",
             "web_app"
         ],
@@ -3469,8 +3535,7 @@
         "source": "https://sisik.eu/apk-tool",
         "description": "Sixo Online APK Analyzer is a tool that allows you to analyze various details of Android APK files. It can decompile binary XML files and resources.",
         "techniques": [
-            "reverse_engineering",
-            "vulnerability_assessment"
+            "reverse_engineering"
         ],
         "categories": [
             "APK_analyzer"
@@ -3484,11 +3549,10 @@
         "url": "https://www.kali.org/tools/skipfish/",
         "source": "https://www.kali.org/tools/skipfish/",
         "description": "Skipfish is a web application security scanner developed by Google. It crawls and audits websites, looking for a wide range of vulnerabilities through active probing and fuzzing.",
-        "techniques": [
-            "vulnerability_assessment"
-        ],
+        "techniques": [],
         "categories": [
-            "fingerprinting"
+            "fingerprinting",
+            "vulnerability_scanner"
         ],
         "targets": [
             "web"
@@ -3513,14 +3577,27 @@
         "url": "https://www.thesmartscanner.com/",
         "source": "https://www.thesmartscanner.com/",
         "description": "SmartScanner is an AI-powered web vulnerability scanner designed to enhance web application security testing. It automates the detection of various vulnerabilities, including those listed in the OWASP Top 10, such as SQL Injection (SQLi) and Cross-Site Scripting (XSS).",
-        "techniques": [
-            "vulnerability_assessment"
-        ],
+        "techniques": [],
         "categories": [
             "vulnerability_scanner"
         ],
         "targets": [
             "network",
+            "web"
+        ]
+    },
+    {
+        "name": "Smuggler",
+        "url": "https://github.com/defparam/smuggler",
+        "source": "https://github.com/defparam/smuggler",
+        "description": "An HTTP Request Smuggling / Desync testing tool written in Python 3.",
+        "techniques": [
+            "HTTP_smuggling"
+        ],
+        "categories": [
+            "vulnerability_scanner"
+        ],
+        "targets": [
             "web"
         ]
     },
@@ -3531,8 +3608,7 @@
         "description": "Sn0int is a semi-automatic OSINT framework and package manager. It's used by IT security professionals, bug bounty hunters, law enforcement agencies and in security awareness trainings to gather intelligence about a given target or about yourself. sn0int is enumerating attack surface by semi-automatically processing public information and mapping the results in a unified format for followup investigations.",
         "techniques": [
             "enumeration",
-            "reconnaissance",
-            "vulnerability_assessment"
+            "reconnaissance"
         ],
         "categories": [
             "network_scanner",
@@ -3550,8 +3626,7 @@
         "description": "Sn1per is an automated penetration testing tool for reconnaissance, vulnerability scanning, and web security assessment. It gathers subdomains, WHOIS data, DNS details, and other OSINT while scanning for vulnerabilities using tools like Nmap, Nikto, and OpenVAS. It detects web application threats such as SQL injection and XSS, performs brute-force attacks on SSH and FTP, and identifies open ports and running services.",
         "techniques": [
             "enumeration",
-            "reconnaissance",
-            "vulnerability_assessment"
+            "reconnaissance"
         ],
         "categories": [
             "network_scanner",
@@ -3570,8 +3645,7 @@
         "description": "SNMP-Check is a command-line tool used for enumerating SNMP-enabled devices, gathering valuable network information from routers, switches, servers, and other SNMP-supported devices by querying them using SNMP protocols. It can extract system information such as OS details, uptime, hostname, and contact info, as well as list network interfaces, including IP and MAC addresses. Additionally, it retrieves installed software, identifies running processes and services, maps open ports, and detects available network services. SNMP-Check also supports SNMP community strings like public and private for access, making it a powerful tool for security assessments and network auditing.",
         "techniques": [
             "enumeration",
-            "reconnaissance",
-            "vulnerability_assessment"
+            "reconnaissance"
         ],
         "categories": [
             "network_scanner"
@@ -3602,12 +3676,10 @@
         "source": "https://github.com/trustedsec/social-engineer-toolkit",
         "description": "The Social-Engineer Toolkit is an open-source penetration testing framework designed for social engineering.",
         "techniques": [
+            "phishing",
             "social_engineering"
         ],
-        "categories": [
-            "credential_dumping",
-            "phishing"
-        ],
+        "categories": [],
         "targets": [
             "people",
             "web"
@@ -3669,10 +3741,9 @@
         "source": "https://github.com/americo/sqlifinder",
         "description": "Sqlifinder is a tool with the function of detecting GET-based sql injection vulnerabilities in web applications using waybackurls, web crawlers and sql injection payloads.",
         "techniques": [
-            "vulnerability_assessment"
+            "SQL_injection"
         ],
         "categories": [
-            "SQL_injection",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -3688,10 +3759,9 @@
         "description": "sqlmap is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.",
         "techniques": [
             "exploitation",
-            "vulnerability_assessment"
+            "SQL_injection"
         ],
         "categories": [
-            "SQL_injection",
             "vulnerability_scanner"
         ],
         "targets": [
@@ -3778,11 +3848,10 @@
         "description": "Storm-Breaker is a social engineering tool that allows access to a target's webcam, microphone, and location using Python, JavaScript, and PHP. It can obtain device information without requiring explicit permission, access location data specifically from smartphones, and remotely control the webcam and microphone.",
         "techniques": [
             "hijacking",
+            "phishing",
             "social_engineering"
         ],
-        "categories": [
-            "phishing"
-        ],
+        "categories": [],
         "targets": [
             "android",
             "hardware",
@@ -3797,8 +3866,7 @@
         "description": "Stratus Red Team is 'Atomic Red Team' for the cloud, allowing to emulate offensive attack techniques in a granular and self-contained manner.",
         "techniques": [
             "enumeration",
-            "exploitation",
-            "vulnerability_assessment"
+            "exploitation"
         ],
         "categories": [
             "vulnerability_scanner"
@@ -3902,7 +3970,6 @@
             "reconnaissance"
         ],
         "categories": [
-            "banner_grabbing",
             "network_scanner",
             "OSINT"
         ],
@@ -3947,8 +4014,7 @@
         "source": "https://github.com/testssl/testssl.sh",
         "description": "Testssl.sh is a free command line tool which checks a server's service on any port for the support of TLS/SSL ciphers, protocols as well as some cryptographic flaws.",
         "techniques": [
-            "reconnaissance",
-            "vulnerability_assessment"
+            "reconnaissance"
         ],
         "categories": [
             "fingerprinting",
@@ -4001,13 +4067,32 @@
         "source": "https://github.com/aquasecurity/tracee",
         "description": "Tracee is a runtime security and observability tool that helps you understand how your system and applications behave. It is using eBPF technology to tap into your system and expose that information as events that you can consume.",
         "techniques": [
-            "vulnerability_assessment"
+            "forensics"
         ],
         "categories": [
             "vulnerability_scanner"
         ],
         "targets": [
-            "cloud"
+            "cloud",
+            "linux"
+        ]
+    },
+    {
+        "name": "Trape",
+        "url": "https://github.com/jofpin/trape",
+        "source": "https://github.com/jofpin/trape",
+        "description": "People tracker on the Internet: Learn to track the world, to avoid being traced.",
+        "techniques": [
+            "footprinting",
+            "phishing",
+            "social_engineering"
+        ],
+        "categories": [
+            "OSINT",
+            "tracker"
+        ],
+        "targets": [
+            "people"
         ]
     },
     {
@@ -4015,14 +4100,12 @@
         "url": "https://trivy.dev/",
         "source": "https://github.com/aquasecurity/trivy",
         "description": "Trivy is a comprehensive and versatile security scanner that analyzes a variety of targets—including container images, filesystems, remote Git repositories, virtual machine images, and Kubernetes environments—to identify potential security issues. It employs multiple scanners to detect OS packages and software dependencies (SBOM), known vulnerabilities (CVEs), infrastructure-as-code (IaC) misconfigurations, sensitive information and secrets, and software license details.",
-        "techniques": [
-            "vulnerability_assessment"
+        "techniques": [],
+        "categories": [
+            "vulnerability_scanner"
         ],
-        "categories": [],
         "targets": [
-            "cloud",
-            "network",
-            "web"
+            "cloud"
         ]
     },
     {
@@ -4136,7 +4219,6 @@
         ],
         "categories": [
             "OSINT",
-            "passive",
             "web_app"
         ],
         "targets": [
@@ -4151,8 +4233,7 @@
         "source": "https://vulners.com/",
         "description": "Vulners is an API-first vulnerability intelligence platform that aggregates data from over 200 diverse sources, including CVE databases, exploit repositories, vendor advisories, and bug bounty reports.",
         "techniques": [
-            "reconnaissance",
-            "vulnerability_assessment"
+            "reconnaissance"
         ],
         "categories": [
             "OSINT",
@@ -4168,13 +4249,12 @@
         "description": "W3af (Web Application Attack and Audit Framework) is an open-source web application security scanner designed to identify and exploit vulnerabilities in web applications. It is user-friendly, highly extensible, and includes dozens of plugins for web assessment and exploitation. In many ways, it functions like a web-focused version of Metasploit.",
         "techniques": [
             "exploitation",
-            "vulnerability_assessment"
+            "SQL_injection",
+            "XSS"
         ],
         "categories": [
             "network_scanner",
-            "SQL_injection",
-            "vulnerability_scanner",
-            "XSS"
+            "vulnerability_scanner"
         ],
         "targets": [
             "web",
@@ -4202,9 +4282,7 @@
         "url": "https://wapiti-scanner.github.io/",
         "source": "https://github.com/wapiti-scanner/wapiti",
         "description": "Wapiti is an open-source web vulnerability scanner that audits web application security through black-box testing. It scans by crawling web pages and injecting payloads to detect vulnerabilities. After gathering URLs, forms, and inputs, Wapiti acts as a fuzzer, injecting payloads to test for vulnerabilities such as SQL Injection (SQLi), Cross-Site Scripting (XSS), File Inclusion, Command Execution, and SSRF.",
-        "techniques": [
-            "vulnerability_assessment"
-        ],
+        "techniques": [],
         "categories": [
             "fuzzing",
             "vulnerability_scanner"
@@ -4262,8 +4340,8 @@
         ],
         "categories": [
             "OSINT",
-            "passive",
-            "search_engine"
+            "search_engine",
+            "web_archive"
         ],
         "targets": [
             "web"
@@ -4281,7 +4359,7 @@
         ],
         "categories": [
             "OSINT",
-            "passive"
+            "web_archive"
         ],
         "targets": [
             "web"
@@ -4299,7 +4377,7 @@
         ],
         "categories": [
             "OSINT",
-            "passive"
+            "web_archive"
         ],
         "targets": [
             "web"
@@ -4328,8 +4406,7 @@
         "description": "WES-NG (Windows Exploit Suggester - Next Generation) is a tool based on the output of Windows' systeminfo utility which provides the list of vulnerabilities the OS is vulnerable to, including any exploits for these vulnerabilities. Every Windows OS between Windows XP and Windows 11, including their Windows Server counterparts, is supported.",
         "techniques": [
             "exploitation",
-            "privilege_escalation",
-            "vulnerability_assessment"
+            "privilege_escalation"
         ],
         "categories": [
             "vulnerability_scanner"
@@ -4414,8 +4491,7 @@
         ],
         "categories": [
             "network_scanner",
-            "OSINT",
-            "passive"
+            "OSINT"
         ],
         "targets": [
             "network"
@@ -4463,11 +4539,11 @@
         "description": "Wifiphisher is a rogue access point framework designed for red team engagements and Wi-Fi security testing. It allows penetration testers to achieve a man-in-the-middle position against wireless clients by performing targeted Wi-Fi association attacks. Wifiphisher can also be used for victim-customized web phishing attacks, capturing credentials from third-party login pages or WPA/WPA2 Pre-Shared Keys, and even infecting victim devices with malware. Key features include Evil Twin attacks, Deauthentication attacks, Captive Portal Phishing, Payload Injection, Multiple Attack Modes, and the ability to bypass password cracking.",
         "techniques": [
             "exploitation",
+            "phishing",
             "social_engineering"
         ],
         "categories": [
             "credential_dumping",
-            "phishing",
             "rogue_access_point"
         ],
         "targets": [
@@ -4533,11 +4609,11 @@
         "source": "https://code.03c8.net/epsylon/xsser",
         "description": "Cross-Site Scripter (aka XSSer) is an automated penetration testing tool designed to detect, exploit, and report Cross-Site Scripting (XSS) vulnerabilities in web applications. It supports automated scanning for XSS vulnerabilities, multiple types of XSS attacks, the ability to generate and obfuscate payloads, and integration with Tor for anonymous testing.",
         "techniques": [
-            "exploitation"
+            "exploitation",
+            "XSS"
         ],
         "categories": [
-            "vulnerability_scanner",
-            "XSS"
+            "vulnerability_scanner"
         ],
         "targets": [
             "network",
@@ -4550,8 +4626,7 @@
         "source": "https://github.com/zaproxy",
         "description": "ZAP (Zed Attack Proxy), or ZAP Proxy, is an open-source security tool used to identify vulnerabilities in web applications. It is developed and maintained by the OWASP community. ZAP is used for web application security testing, API penetration testing, and automated vulnerability scanning.",
         "techniques": [
-            "HTTP_tampering",
-            "vulnerability_assessment"
+            "HTTP_tampering"
         ],
         "categories": [
             "fuzzing",
@@ -4587,7 +4662,6 @@
         "categories": [
             "network_scanner",
             "OSINT",
-            "passive",
             "search_engine"
         ],
         "targets": [
